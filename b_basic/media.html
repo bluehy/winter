@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- media.html -->
+<html lang="ko-KR">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta charset="UTF-8">
+	<!-- [if lte ie 9]>
+		<script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+			<![endif]-->
+	<link rel="shortcut icon" type="image/png" href="./img/favicon.png"/>
+	<link rel="apple-touch-icon" href="./img/favicon.png" />
+
+
+	<title>웹 기초 이해하기</title>
+<!-- css -->
+	<style type="text/css">
+
+	</style>
+
+</head>
+<!-- ================================================================== -->
+<body>
+	<a href="./index.html">메인으로 돌아가기</a>
+	<!-- layout -->
+	<h1>웹기초 이해하기</h1>
+	<h2>비디오 및 오디오 파일 불러오기</h2>
+
+	<!-- 파일 불러오기 : src
+		 재생장치: controls="controls"
+		 자동재생: autoplay="autoplay"
+		 미리 불러오기: preload="preload"
+		 음소거: muted
+			 -->
+
+	<audio controls preload>
+			<source src="./media/audio/米津玄師-MV馬と鹿Uma-to-Shika.ogg" type="audio/ogg" />
+			<source src="./media/audio/米津玄師-MV馬と鹿Uma-to-Shika.mp3" type="audio/mp3" />
+			<p>여기서 음악을 들으시면 안됩니다.<br />
+				<a href="http://google.com/chrome">지원하는 브라우저</a>를 이용하세요.</p>
+	</audio>
+<!-- ====================================================== --><br/><br/>
+	<video width="500" height="300" controls preload muted poster="./img/agent.png">
+		<source src="./media/video/Marvel's Agent Carter 'Peggy's saga' trailer.webm" type="video/webm" />
+		<source src="./media/video/Marvel's Agent Carter 'Peggy's saga' trailer.mp4" type="video/mp4" />
+		<p>여기서 영상을 보시면 안됩니다.<br />
+			<a href="http://google.com/chrome">지원하는 브라우저</a>를 이용하세요.
+		</p>
+	</video>
+
+	<!-- script -->
+	<script></script>
+
+
+
+<div>
+	<ul>
+	</ul>
+</div>
+<ul>
+	
+</ul>
+</body>
+</html>

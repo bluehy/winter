@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko-KR">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+
+	<!--[if lte IE 6]>
+		<script src="./ie/html5shiv/dist/html5shiv.min.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" type="image/png" href="./img/favicon.png">
+	<link rel="apple-touch-icon" href="./img/favicon.png">
+
+	<title>웹 기초 이해하기</title>
+	<!-- style -->
+	<style>
+		/*.hidden{font-size:0;}*/
+		ul,li{list-style:none;}
+	</style>
+
+</head>
+
+<body>
+<a href="./index.html">메인으로 돌아가기</a>
+	<!-- layout================== -->
+	<h1>웹기초 이해하기</h1>
+	<h2>form 기능이해하기 3 _html5 형식에 추가된 기능 이해하기</h2>
+	
+	<form action="#" method="post">
+		<fieldset>
+			<legend> <span class="hidden">자주 사용하는 형식 </span>	</legend>
+			
+			<ul>
+				<li>
+					<label for="searchBar">검색</label>
+					<input type="search" id="searchBar" name="searchBar" value="" required="required" placeholder="검색하실 내용을 입력하세요."/>
+				</li>
+				<li>
+					<label for="telNum">숫자</label>
+					<input type="tel" id="telNum" name="telNum" value="" required/>
+				</li>
+				<li>
+					<label for="urlText">웹 주소</label>
+					<input type="url" id="urlText" name="urlText" value="" required/>
+				</li>
+				<li>
+					<label for="mailText">이메일입력</label>
+					<input type="email" id="mailText" name="mailText" value="" required="required" />
+				</li>
+			</ul>
+		</fieldset>
+		
+		<fieldset>
+			<legend> 아직은 브라우저 제약이 많은 형식	</legend>
+			<label for="date"> 날짜를 선택하는 기능</label>
+			<input type="date" name="date" id="date" value=""/>
+			<label for="month"> 월 선택하는 기능</label>
+			<input type="month" name="month" id="month" value=""/>
+			<!-- day, year ...다양하게 잇지만 통일이 하나도 안 되어있어서..
+				2019.9.5.현재기준 날짜, 시간과 관련된 type속성은 사용할 수 없다.-->
+		</fieldset>
+		
+		<fieldset>
+			<legend> 사용할 수 있지만, 그 기능이 현재 애매한 상태	</legend>
+			<ul>
+				<li>
+					<label for="num">갯수 입력</label>
+					<input type="number" id="num" name="num" value="" min="1" max="20" step="4" />
+				</li>
+				<li>
+					<label for="ran">갯수 입력</label>
+					<input type="range" id="ran" name="ran" value="" min="1" max="20" step="4" />
+				</li>
+				<li>
+					<label for="colorSel">색상</label>
+					<input type="color" id="colorSel" name="colorSel" value="" />
+				</li>
+				<li>
+					<label for="message">전달할 말</label>
+					<input type="text" id="message" name="message" value="" list="messageSample" />
+					<datalist id="messageSample">
+						<option value="경비실에 맡겨주세요"></option>
+						<option value="집에 보내주세요..."></option>
+						<option value="우산좀..."></option>
+					</datalist>
+				</li>
+			</ul>
+		</fieldset>
+
+<!-- ============================= -->
+
+		<button type="submit">확인 및 전송</button>
+
+	</form>
+
+	<!-- javascript -->
+	<script>
+		
+	</script>
+
+	</body>

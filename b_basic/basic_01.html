@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--basic_01.html-->
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <title>웹 기초 이해하기</title>
+    <style>
+    </style>
+  </head>
+  <body>
+    <!-- 제목 (헤드라인) -->
+    <a href="./index.html">메인으로 돌아가기</a>
+    <div id="heading">
+      <h1> 전체문서에서 가장 중요한 제목 </h1>
+      <h2> 문서에서 두번째로 중요한 제목 </h2>
+      <h3> 문서에서 세번째로 중요한 제목 </h3>
+      <h4> 문서에서 네번째로 중요한 제목 </h4>
+      <h5> 문서에서 다섯번째로 중요한 제목 </h5>
+      <h6> 제목요소중 가장 등급이 낮은 제목 </h6>
+    </div> <!-- block요소의 대표 예시 : div -->
+    <!-- hr: horizontal -상위 내용과 하위 내용을 구분한다. -->
+    <hr>
+    <div id="content">
+      <p>paragraph : 내용을 의미하며, 하나의 단락을 형성하는데 사용하는 기능.</p>
+      <p>중간에 띄어쓰기를 하고 싶어서...&nbsp; &nbsp; &nbsp; &nbsp;이렇게 처리해보고,</p>
+      <!-- pre: 작성한 내용을 있는 그대로 표현하는 요소, 실무에서는 사용할 수가 없기 때문에  실용성은 없다. 실 사용은 코드를 있는 그대로 나타나게 할 때. 마크다운의 ```와 유사한 기능.-->
+      <pre> 눈에 보이는 형태   그대로    먹히게 해주는 pre 태. 그. 
+
+        줄바꿈을 하고 싶어서,
+        이렇게 만들어 봅니다.
+      </pre>
+    </div>
+    <div>
+     <p> 웹을 구성하는 기본 언어는
+        <!-- abbr: 두문자어(축약,약칭)를 사용하는 요소 -->
+        <abbr title="Hiper Text Markup Language">HTML</abbr>과
+        <abbr title="Casecading Style Sheet">CSS</abbr>,
+        javascript가 있으며, 해당 내용은
+         <!-- cite: 요약, 부가적인 설명을 첨부하는 요소. -->
+        <cite title="수원시 ~ 수원역 13번 출구 아이메카빌딩~">그린컴퓨터학원</cite>
+        에서 
+        <cite title="http://xidoweb.com/">xido</cite>강사가 알려드립니다.
+        <!-- abbr, cite모두 인라인 요소 -->
+      </p>
+    </div>
+
+    <hr>
+    <address>
+      주소 
+      주소 
+      <p>주소</p>
+      <p>주소1</p> 
+    </address>
+    <blockquote>
+      <q>인용문1</q>
+      <q>인용문2</q>
+      <q>인용문3</q>
+      인용문
+    </blockquote>
+
+      <hr>
+    <!--
+    block: 하나의 형태를 가질 수 있고, 줄바꿈을 처리할 수 있다. 사이즈를 가질 수 있는 요소.
+    inline: 형태(사이즈)를 가질 수 없고, 옆으로 나열되어 처리된다.
+    * inline요소는 block요소를 이용하여 감싸주어야한다.
+    * 하지만, inline요소로 block요소를 감쌀 수는 없다.(일부 예외 존재. a가 대표적.)
+
+    * block요소라 해도 무조건 block을 감쌀 수 있는 것은 아니다. (규칙과 의미에 맞춰 사용해야함.)
+    -->
+  </body>
+</html>

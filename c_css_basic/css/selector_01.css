@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* selector_01.css */
+
+/*body {color:#fa0;}
+a{color:inherit;} -> inherit를 쓰면 부모속성을 그대로 물려받음.
+*/
+h1 {background-color:#aaa; color:#fe5;
+	text-align:center;}
+h2 {background-color:#0ae; color:#fff; 
+	text-align: center;}
+
+.wrap {background-color:#fe5; color:#0aF; 
+	width:300px; text-align:center; margin:0px auto; }
+.con {border-width:3px; border-style: dashed; 
+	color: #aaa; border-color:#000;
+	width: 300px; text-align:center; margin:10px auto;}
+/* border-style: solid; || dotted; || dashed; || ridge; || double; .... */
+/* text-align: inline요소, margin: block요소? */
+#list {border-width:3px; border-style:dotted; border-color:#aaf; margin:auto; width:80px;}
+/*#list > .red > a {color: #f33;}*/
+/*기본적으로 a요소는 자체 색이 별도로 존재*/
+
+#list > .red > a {color: #f40;}
+#list li > .yellow {color: #fa0;}
+#list > .blue > a {color:#07F;}
+#list > .green > a {color:#0a0;}
+
+.box {background-color:#def; width: 200px; margin:auto;}
+.box a{color:#f70;}
+
+.bg1 {background-color:#ff0;}
+.bg2 {background-color:#0af;}
+.bg3 {background-color:#a00;}
+
+

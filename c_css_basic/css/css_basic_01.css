@@ -1,7 +1,86 @@
 @charset "UTF-8";
 /* css_basic_01.css */
 
-.size_check{ width: 800px; height:800px; margin:auto; background-color:#ccc; }
+.size_check{ width: auto; height:auto; margin:auto; background-color:#ccc; }
+
+h3 {margin:0; padding:1rem; background-color:#ace}
 
 .size_check > p {
-   width:600px; height: 200px; background-color: #0cc; text-align:center;}
+   width:80%; height: auto; background-color: #0cc; text-align:center;}
+
+
+   /* 단위: 1cm => 10mm ==> Xpx
+   임의 단위는 있다. (http://endmemo.com)
+   
+   최초의 설정에서 (16px = 12pt = 100% = 1em = 1rem)
+   */
+
+
+   .size_check > ul {width: 100%; height: auto;
+      margin:0; padding:0px;
+      background-color:#fcc;}
+
+   .size_check > ul > li {width:50px; height: 50px; 
+      display: inline-block;
+      border-width: 5px; border-style: double;
+      border-color:#333;
+      text-align:center; line-height:50px;}
+
+
+      /* 
+      display: 속성은 형태를 변형처리할 때 사용.
+            block (크기를 가짐, 위/ 아래로 쌓인다.)
+            inline (옆으로 나열, 크기를 가질 수 없다.)
+            inline-block (크기를 가짐, 옆으로 나열, 알 수 없는 공백이 생김)
+            none (강제로 사라지게 만드는 기능. 존재도 없어지게 만든다.)
+
+      float : 옆으로 나열하게 만드는 기능 (inline요소일 경우, float을 사용하면 강제로 block요소로 변경된다.)
+            left(부모의 크기를 기준으로, 왼쪽부터 정렬)
+            right(부모의 크기를 기준으로 오른쪽부터 정렬)
+
+      visibility : display속성과 유사한 기능을 가지고 있다. 하지만 기본 2가지의 속성을 가진다.
+            visible (display: block;과 같은 보여지게 만드는 기능)
+            hidden (display: none;과 같은 사라지게 만드는 기능. 단, display:none;과 달리 위치하던 자리는 그대로 남아있다.)
+      */
+
+
+
+.size_check > ul > li:first-child{color:#f07;}
+.size_check > ul > li:nth-child(2){display: none; background-color:#afa}
+.size_check > ul > li:nth-child(3){background-color:#f6f;}
+.size_check > ul > li:nth-child(4){visibility: visible; background-color:#777;}
+.size_check > ul > li:nth-child(5n){visibility: hidden; background-color:#cac;}
+
+
+.over {width:80%; min-width:500px; height:auto;
+      background-color: #0df; padding:1rem; box-sizing:border-box;}
+
+.over>p {margin:auto; margin-bottom:200px;
+      width:450px; height:100px;
+      border-width:2px; border-style:solid; border-color:#fa0}
+
+
+.one {overflow:auto;}
+
+.two {overflow:hidden;}
+
+.three {overflow:visible;}
+
+.four {overflow:scroll; overflow-y:hidden;}
+
+.five {overflow:auto; overflow-x:hidden;}
+
+.six {overflow:hidden;}
+
+.six>span {padding-right: 20px; display:block; overflow:hidden; overflow-y:auto;
+      width:100%; height:100%; background-color:#fff}
+/* scroll은 border에 붙는 요소기 때문에, padding을 추가해서 넣었기 때문에 가로사이즈가 길어지면서, 100%를 벗어scroll도 함께 밀려나간 것 width는 content사이즈, 상위요소의 width안에서 벗어날 수 없음. 들어간다...*/
+
+.seven {}
+
+/* overflow : 지정된 크기를 기준으로 내부의 영역이 넘친다면, 어떻게 처리할 것인가를 판단하는 내용.
+      hidden
+      visible
+      auto
+      scroll
+*/

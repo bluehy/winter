@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* css_basic_01.css */
+
+.size_check{ width: 800px; height:800px; margin:auto; background-color:#ccc; }
+
+.size_check > p {
+   width:600px; height: 200px; background-color: #0cc; text-align:center;}

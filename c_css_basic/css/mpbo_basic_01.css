@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* mpbo_basic_01.css */
+
+h1 {padding: 1rem; background-color: #0af; border-bottom: 1px solid #333; margin-bottom:1rem;}
+h2 {background-color: #333; color:#fff;}
+
+.basic {width:800px; height:600px; border:3px solid #333; margin: auto; margin-top:10px;}
+.basic > h3 {margin:0; width:100%; height: 50px; border-bottom:2px solid #333; text-align: center;}
+
+
+.margin > ul {margin:0; padding:0; list-style: none; background-color:#fa0; height:auto;}
+.margin > ul > li {width:50px; height:50px; box-sizing: border-box; border: 2px solid #377; text-align:center; line-height:50px; float: left;}
+
+.margin > ul > li:nth-child(2n) {background-color:#ae7;}
+
+.margin > ul > li:nth-child(1) {margin:30px;}
+/* 네 방향 */
+.margin > ul > li:nth-child(2) {margin:30px 10px;}
+/* 상하 | 좌우 */
+.margin > ul > li:nth-child(3) {margin:10px 30px 50px;}
+/* 상 | 좌우 | 하 */
+.margin > ul > li:nth-child(4) {margin:10px 30px 50px 80px;}
+/* 시계방향. 공이 튀기면서 적용된다.. 탁구 핑퐁.. */
+.margin > ul:after,
+.margin > ul::after {content: ""; display:block; width:0; height:0; clear:both;}
+/* .margin > p {clear: both; width:300px; height:90px;} */
+/* 
+margin : 여백을 주어 공간을 만드는 것, 공간의 형태는 투명한 영역을 나타낸다.
+         1개 : 위, 우, 아래, 좌 모두 적용
+         2개 : 위아래 , 우좌 적용
+         3개 : 위, 우좌, 아래 적용
+         4개 : 위, 우, 아래, 좌 순서로 시계방향으로 적용.
+      *2개 이상 사용할 경우, 띄어쓰기로 구분하여 사용
+      auto=> 위아래 :0, 좌우 : 균등하게 맞추어라(가운데 배치)
+      *단, auto를 사용시 float(왼쪽정렬;오른쪽정렬;)과 함께 사용하면, 가운데 오지 않는다. (자동과 수동을 한꺼번에 쓸 수는 없으니가)
+*/
+
+
+hr {margin:0; width:100%; clear:both;}
+
+.margin > ol {list-style:none; padding:0; padding-top:20px; margin:0;
+   width:100%; height: 300px; background-color: #dda;}
+
+.margin > ol > li {width: 50px; height: 50px; background-color: #a7f;}
+
+.margin > ol > li:nth-child(2n) {background-color:#fff;}
+
+.margin > ol > li:nth-child(1) {margin:20px;}
+/* 버그마진..,.? 붙어있는 부모까지 같이 끌고가서 마진이 함께 적용되는 듯한 현상 */
+.margin > ol > li:nth-child(2) {margin-top:10px;}
+/* 마진끼리 붙으면 큰 값의 margin만 적용된다. */
+.margin > ol > li:nth-child(3) {margin-top:20px; margin-bottom:20px; margin-left:20px; margin-right: 50px;}
+/* {margin:20px; margin-right: 50px;} <- 동일한 애들은 한번에 주고 다른 애만 따로 주는 게 더 실무적인 접근 */
+.margin > ol > li:nth-child(3) {margin-top:20px; margin-bottom:20px; margin-left:20px; margin-right: 50px;}
+
+
+/* padding ================================================================
+*/
+
+.padding >ul {margin:0; padding:0; width:100%; height:500px; background-color: #ddd; list-style: none; overflow: hidden;}
+
+.padding > ul > li {width: 60px; height: 60px; background-color: #fa0; line-height: 60px;}
+
+.padding > ul {padding-top:20px;}
+.padding > ul > li:nth-child(2n) {background-color: #0cc; color: #fff; }
+
+
+.padding > ul > li:nth-child(1) {padding:10px;}
+
+.padding > ul > li:nth-child(2) {padding:20px 50px;}
+
+.padding > ul > li:nth-child(3) {padding:20px 10px 40px;}
+
+.padding > ul > li:nth-child(4) {padding:20px 10px 50px 40px;}
+
+.padding > ul > li:nth-child(5) {padding-top:30px; background-color:transparent;}
+.padding > ul > li:nth-child(5) > span {display: block; width:100%; height: 100%; background-color:#3a7;}
+
+
+/* border ==================================================================
+ */
+
+.border > ul {list-style:none; margin:0; padding:0; width:100%; height: 500px;}
+
+.border > ul > li {width: 70px; height: 70px; background-color: #ccd; 
+   float: left; margin: 1rem;}
+
+.border > ul > li:nth-child(1) {border-width:5px; border-style:solid; border-color:#dda}
+/* border: 5px solid #dda. border의 경우에는 순서 상관 없음.*/
+
+.border > ul > li:nth-child(2) {border: 5px dotted #0af;}
+
+.border > ul > li:nth-child(3) {border:5px double #faf; 
+   border-top:7px solid #f00;
+   border-bottom-color: #333; 
+   border-left-width:10px; 
+   border-right-color: transparent;}
+
+.border > ul > li:nth-child(4) {border: 20px solid #000;}
+
+.border > ul > li:nth-child(5) {}
+
+
+/* option(tip) ===============================================
+ */
+
+.option {margin:50px; width:200px; height:200px; background-color: #ccc; 
+
+padding: 25px;
+border: 25px solid #777;
+box-sizing: border-box;
+}
+
+/* outline======================================================= 
+*/
+
+.outline > p {
+   margin: auto; 
+   width: 300px; height:300px; background-color: #fa9;
+   /* outline-width:20px; outline-style:solid; outline-color: #345 */
+   outline: 20px double #357;
+   /* outline은 한 방향씩 지정 불가능. */
+   outline-offset:30px;
+   /* outline은 부피를 가지지 않고, hover와 연계해서 사용할 때가 종종 있음. 형태를 흐트러트리지 않고 표현이 가능하기 때문에. */
+}

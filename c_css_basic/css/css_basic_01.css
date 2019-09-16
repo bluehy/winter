@@ -72,11 +72,10 @@ h3 {margin:0; padding:1rem; background-color:#ace}
 
 .six {overflow:hidden;}
 
-.six>span {padding-right: 20px; display:block; overflow:hidden; overflow-y:auto;
+.six>span {padding-right: 20px; display:block; overflow:hidden;
+      overflow-y:auto;
       width:100%; height:100%; background-color:#fff}
 /* scroll은 border에 붙는 요소기 때문에, padding을 추가해서 넣었기 때문에 가로사이즈가 길어지면서, 100%를 벗어scroll도 함께 밀려나간 것 width는 content사이즈, 상위요소의 width안에서 벗어날 수 없음. 들어간다...*/
-
-.seven {}
 
 /* overflow : 지정된 크기를 기준으로 내부의 영역이 넘친다면, 어떻게 처리할 것인가를 판단하는 내용.
       hidden
@@ -84,3 +83,11 @@ h3 {margin:0; padding:1rem; background-color:#ace}
       auto
       scroll
 */
+
+.over > .seven {height:30px; white-space:nowrap; 
+      text-overflow: ellipsis; overflow:hidden; }
+
+/* 
+white-spacs : 임의 공백이 아닌, 의도하지 않은 공백을 처리하는 방법.
+text-overflow : overflow와 유사하지만, 넘치는 영역이 글자일 경우의 처리 방법. 대체로 overflow와 함께 사용한다.
+ */

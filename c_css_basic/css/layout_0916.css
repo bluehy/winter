@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/* layout_basic_02_result.css */
+
+
+/* reset.css =========================== */
+html,body,
+h1,h2,h3,h4,h5,h6,hr,
+ul,ol,li,dl,dt,dd {margin:0; padding:0; border:0;}
+
+hr{border-top:1px solid #333;}
+ul,ol,li {list-style:none;}
+main,header,nav,aside,article, section,footer{display:block;}
+
+
+
+/* common.css ============================= */
+.clearfix:after, .clearfix::after {content:" "; display:block; width:0; height:0; clear:both;}
+
+.hidden {width:0; height:0; position:absolute; overflow:hidden;}
+
+
+
+/* design =================================== */
+#wrap {margin:0 auto; width: 960px; height: auto;}
+
+/* headBox +++++++++++++++++++++++++++++++++++++++++ */
+#headBox {width: 100%; height: 120px;background-color: #f4f; padding:10px; box-sizing:border-box;}
+   #headBox>h1 {float:left; width: 150px; height: 100%; background-color: #fff; text-align:center; font-size:1rem;}
+      h1>a {width: 100%; height: 100%; color: #0af; display:block;}
+   #headBox>h2 {float:left; width:250px;}
+   .nav_wrap {float:right; width:500px; height:100%;}
+      #unb {margin-bottom: 10px; float:right; width: 220px; height:40px; background-color: #fff;}
+      #gnb {float:right; width: 500px; height: 50px; background-color: #fff;}
+
+/* viewBox +++++++++++++++++++++++++++++++++++++++++ */
+#viewBox {width: 100%; height: 450px;background-color: #f80}
+
+/* contentBox +++++++++++++++++++++++++++++++++++++++++ */
+#contentBox {width: 100%; height: auto;}
+#contentBox:after,
+#contentBox::after {content:" "; display:block; clear:both;}
+
+.lnb_side {width: 200px; height: 500px; background-color: #25e; float:left;}
+   .lnb_side ul {width:100%; height: 100%; padding: 20px 10px; padding-bottom:0; box-sizing:border-box;}
+   .lnb_side li {margin-bottom: 20px; width:100%; height: 100px; background-color: #d5e;}
+   .lnb_side li:last-child {margin-bottom:0;}
+
+.lnb_list {width: 760px; height: 200px; background-color: #2c0; float:left;}
+
+.lnb_content {width: 760px; height: 300px; background-color: #243; float:left;}
+   .con_01 {width:50%; height: 100%; float:left;background-color: #c83;}
+   .con_02 {width:50%; height: 100%; float:left;background-color: #c43;}
+
+/* footBox +++++++++++++++++++++++++++++++++++++++++ */
+#footBox {width: 100%; height: 130px;background-color: #777}
+

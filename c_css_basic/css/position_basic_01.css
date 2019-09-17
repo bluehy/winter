@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* position_basic_01.css */
+
+/* reset */
+html,body,
+h1,h2,h3,h4,h5,h6,
+ul,li,ol {margin:0; padding:0; border:0;}
+ul,li,ol {list-style:none;}
+hr {border:none;}
+
+/* common */
+.clearfix:after,
+.clearfix::after {content:" "; display:block; width: 0; height: 0; clear:both;}
+
+
+/* layout */
+body {height: 3000px; }
+
+#wrap {margin:auto; width: 800px; height: 1200px; background-color: #acf; background-image:linear-gradient(#adf, #5fc); padding:30px; box-sizing:border-box; position:relative;}
+
+.position {width: 100%; height:auto; border: 2px solid #333; box-sizing:border-box;}
+
+.position>li {width: 100px; height: 100px; text-align: center; line-height:100px; font-size:1.2rem; font-weight: bold; float:left;}
+
+.basic {background-color: #0cf;}
+.static {background-color: #f0c; position:static;}
+/* position:static; => position:기본형; 위치 표기방법과, z-index 모두 적용되지 않는다. */
+
+.fixed {background-color: #fc0; 
+   position:fixed; top:50px; right:0; margin:auto; z-index:-100;}
+/* position:fixed; => position:고정; 브라우저에서 어느 위치든 관계없이, 화면에 붙어서 고정시키는 형태. z-index에 -값을 줘서 드래그방지 효과 줄 수 있음.*/
+
+.absolute {background-color: #0aa; 
+   position:absolute; top:50px; right:50px; z-index:200;}
+/* position:absolute; => position:절대 위치; 브라우저에서 원하는 위치에 배치가능. 스크롤에 영향을 받지 않기 때문에 스크롤을 해도 처음 배치된 위치에 그대로 남겨진다.(스크롤 처리). 자기보다 상위에 있는 요소에 얽매이게 된다. 부모, 조상, 그보다 더 상위의 개념까지 가능하며 (부모~문서전체까지), 해당하는 조상에 position을 주면 해당 개체에 종속된다. (가장 가까운 조상에 종속) */
+
+.relative {background-color: #aaf; 
+   position:relative; top:50px; left:50px; z-index:-100;}
+/* position:relative; => position:상대 위치; 브라우저에서 위치값으로 변경하지 않는한 변화는 생기지 않는다. 하지만, z-index, top, left, right, bottom 모두 적용이 가능하다. 원래의 위치를 유지하면서 자리를 옮길 수 있다. */
+
+.sticky {background-color: #cf0;
+   position:-webkit-sticky; 
+   position:-moz-sticky; 
+   position:-ms-sticky; 
+   position:-o-sticky; 
+   position:sticky; 
+   behavior:url("../ie/PIE/PIE.htc"); top:10px;}
+/* pisition:sticky; => 여전히 css만으로는 적용이 안될 떄가 아주 많음. jQuery를 활용할 수 있다. */

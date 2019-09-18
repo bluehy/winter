@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- layout_practice.html -->
+<html lang="ko-KR">
+<head>
+   <meta charset="UTF-8">
+   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <link rel="stylesheet" href="../css/reset_test.css">
+   <link rel="stylesheet" href="../css/layout_practice.css">
+   <!--[if IE]>
+      <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+      <script src="../ie/PIE/PIE.js"></script>
+   <![endif]-->
+   <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+   <link rel="apple-touch-icon" href="../img/favicon.png">
+   <title>웹페이지이름</title>
+</head>
+<!--  -->
+<body>
+   <div id="wrap">
+      <header id="headBox">
+         <div class="banner_area clearfix">
+            <h1><img src="../img/favicon.ico" alt="천연기념물센터"></h1>
+            <nav id="gnb">
+               <h2 class="hidden">웹페이지 전체 네비게이션 영역</h2>
+               <ul>
+                  <li><a href="#">관람정보</a></li>
+                  <li><a href="#">전시</a></li>
+                  <li><a href="#">교육행사</a></li>
+                  <li><a href="#">소식참여</a></li>
+                  <li><a href="#">자료실</a></li>
+                  <li><a href="#">센터소개</a></li>
+               </ul>
+            </nav>
+            <aside class="site_map">
+               <h2 class="hidden">사이트맵</h2>
+               
+            </aside>
+         </div>
+         <!-- // banner_area =============================== -->
+         <div class="unb_area clearfix">
+            <div class="unb">
+               <h2 class="hidden">사용자 편의용 네비게이션 영역</h2>
+            </div>
+         </div>
+         <!-- // unb_area -->
+      </header>
+
+      <!--  -->
+
+      <main id="mainBox">
+         <h2 class="hidden">기념물 센터 상세 내용</h2>
+
+         <aside class="page_scroll">
+            <ul>
+               <li><a href="#viewBox"><span class="hidden">광고영역</span></a></li>
+               <li><a href="#newsBox"><span class="hidden">센터소식</span></a></li>
+               <li><a href="#mainBox"><span class="hidden">전시장동영상</span></a></li>
+               <li><a href="#counterBox"><span class="hidden">숫자로보는천연기념물</span></a></li>
+            </ul>
+         </aside>
+
+         <section id="viewBox">
+            <h3 class="hidden">광고영역</h3>
+            <div class="view_title">
+               <p>오랜 역사를 간직한 노거수가 있는</p>
+               <p>식물 전시존</p>
+            </div>
+            <div class="prev_btn view_btn"></div>
+            <div class="next_btn view_btn"></div>
+            <div class="view_list">
+               <ul class="clearfix">
+                  <li><a href="#">식물 전시존</a></li>
+                  <li><a href="#">동물 전시존</a></li>
+                  <li><a href="#">지질 전시존</a></li>
+                  <li><a href="#">천연보호구역</a></li>
+                  <li><a href="#">명승 전시존</a></li>
+                  <li><a href="#">한반도의 자연유산</a></li>
+               </ul>
+            </div>
+
+         </section>
+         <article id="newsBox" class="con_area">
+            <h3>센터 소식</h3>
+            <div class="content"></div>
+         </article>
+
+         <div id="mediaBox" class="con_area">
+            <h3>전시장 <abbr title="virtual reality">vr</abbr></h3>
+            <p>천연기념물센터 전시관을 <abbr title="virtual reality">vr</abbr>로 감상할 수 있습니다.</p>
+            <div class="media"></div>
+         </div>
+
+         <div id="counterBox" class="con_area">
+            <h3>숫자로 보는 천연기념물</h3>
+            <p>천연기념물 중에 궁금한 사항을 알기 쉽게 숫자로 알아볼 수 있습니다.</p>
+            <div class="content"></div>
+         </div>
+
+         <div class="top_btn">
+            <a href="#headBox"><span class="hidden">화면 최상단으로 이동</span></a>
+         </div>
+      </main>
+
+      <!--  -->
+
+      <footer id="footBox">
+         <div class="content">
+            <h2><img src="../img/favicon.ico"><span class="hidden">사이트 정보 내용</span></h2>
+         </div>
+      </footer>
+
+      <!-- // footer -->
+
+   </div>
+</body>
+</html>

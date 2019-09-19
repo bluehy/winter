@@ -1,0 +1,12 @@
+/* nhc_wrap.css */
+
+/* common */
+.clearfix:after,
+.clearfix::after {content:" "; display:block; clear:both; width: 0; height: 0; }
+
+.hidden {display:block; position:absolute; width: 0; height: 0; overflow:hidden;}
+
+
+
+/* layout */
+#wrap {width:100%; height:auto;}

@@ -1,84 +1,23 @@
 @charset "UTF-8";
 /* layout_practice.css */
 
-/* common */
-.clearfix:after,
-.clearfix::after {content:" "; display:block; clear:both; width: 0; height: 0; }
+/** 천연기념물센터 data summary 
+   *position사용시 가운데 배치하는 방법:
+   방법1-1 : margin:auto; top:0; bottom:0;  => 위아래 가운데 정렬
+   방법1-2 : margin:auto; left:0; right:0;  => 좌우 가운데 정렬
+   
+   방법2-1 : (높이값이 정해져 있을 경우) top: 50%; margin-top:-(해당 요소 높이값의 절반)  => 위아래 가운데 정렬
+   방법2-2 : (가로값이 정해져 있을 경우) left: 50%; margin-left:-(해당 요소 가로값의 절반)  => 좌우 가운데 정렬
 
-.hidden {display:block; position:absolute; width: 0; height: 0; overflow:hidden;}
-
-
+   방법3-1 : (최신브라우저일경우) top:50%; transform:translateY(-50%);  => 위아래 가운데 정렬
+   방법3-2 : (최신브라우저일경우) left:50%; transform:translateX(-50%);   => 좌우 가운데 정렬
+**/
 
 /* layout */
-#wrap {width:100%; height:auto;}
-
-   /* headBox  */
-#headBox {width: 100%; height: auto; padding-top:40px; background-color: #777;}
-   
-   .banner_area {position:relative; width:100%; height: 80px; background-color: #aaf;}
-      h1 {float:left; width: 280px; height:80px; background-color: #fff;}
-         h1>img {width:100%; height:100%; margin:auto; }
-      #gnb {position:absolute; width:950px; height:80px; top:0; bottom:0; left:0; right:0; margin:auto; background-color: #fff;}
-      #gnb>ul {width:950px; height:80px; margin:auto;}
-      #gnb>ul>li {float:left; width:150px; height:80px; margin-right:10px; text-align:center; line-height:80px;}
-      #gnb>ul>li:last-child {margin-right:0;}
-      .site_map {float:right; width:240px; height:80px; background-color: #fff;}
-      #gnb>ul>li>a {display:block; width:100%; height:100%;}
-
-   .unb_area {position:absolute; top:0; width:100%; height:auto; background-color: #999;}
-      .unb {float:right; width: 350px; height:40px; padding: 0 20px; background-color: #fa0; box-sizing:border-box;}
-
-   /* mainBox */
-#mainBox {width: 100%; height: auto;}
-
-   .page_scroll {position:fixed; z-index:500; margin:auto; top:0; bottom:0; right:20px; width:40px; height:230px; background-color: rgba(0,0,0,0.3);}
-      .page_scroll>ul {width:20px; height: 150px; padding-top:10px; margin:auto; left:0; right:0; }
-      .page_scroll>ul>li {width:20px; height: 20px; margin-bottom:10px;  border:2px solid #fff; border-radius:100%; box-sizing:border-box;}
-      .page_scroll>ul>li:last-child {margin-bottom:0;}
-      .page_scroll>ul>li>a {display:block; width:100%; height:100%;}
-
-      .page_scroll:after,
-      .page_scroll::after {content:" "; display:block; position:absolute; left:0; right:0; width:20px; height: 50px; margin:auto; border:2px solid #fff; border-radius:5px;
-      animation:mouseMv 650ms linear alternate infinite;}
-
-      @keyframes mouseMv {0%{bottom:40px;} 100%{bottom:10px;}}
 
 
-   #viewBox {position: relative; width:100%; height: 855px; background-color: #aef;}
-      #viewBox>.view_title {position: absolute; top:0; bottom:0; left:0; right:0; width:865px; height: 140px; margin:auto;}
-      #viewBox>.view_title>p {display:block; width:865px; height:75px; font-size:50px; text-align:center;}
 
-      #viewBox .view_btn {position:absolute; margin:auto; top:0; bottom:0; width:140px; height:100px; background-color: #fff;}
-         #viewBox .prev_btn {left: 140px;}
-         #viewBox .prev_btn:hover {background-color: #aaa; cursor:pointer;}
-         #viewBox .next_btn {right:140px;}
-         #viewBox .next_btn:hover {background-color: #aaa; cursor:pointer;}
-
-      #viewBox .view_list {position: absolute; bottom: 65px; right:0; left:0; margin: auto; width:865px; height:70px; background-color: #fff;}
-         #viewBox .view_list>ul {width:100%; height:100%;}
-         #viewBox .view_list>ul>li {float:left; width:135px; height:70px; margin-right: 5px; text-align:center; line-height:70px;}
-         #viewBox .view_list>ul>li:last-child {margin-right:0;}
-         #viewBox .view_list>ul>li>a {display:block; width:100%; height:100%;}
-
-
-   .con_area {padding-top:45px; width:100%; 
-      box-sizing:border-box;}
-      .con_area>h3 {width:100%; height:60px; margin-bottom:15px; font-size:50px; line-height:60px; text-align:center; background-color: rgba(255,255,255,0.5);}
-      .con_area>p {width:100%; height:30px; margin-bottom: 30px; text-align:center; line-height:30px; background-color: rgba(255,255,255,0.7);}
-
-   #newsBox {height:895px; background-color: #555;}
-      #newsBox>.content {width:1200px; height: 650px; margin: auto; background-color: #fff;}
-
-
-   #mediaBox {height:850px; background-color: #999;}
-      #mediaBox>.media {width:950px; height:530px; margin:auto; background-color: #fff;}
-
-   #counterBox {height:710px; background-color: #555;}
-      #counterBox>.content {width:1200px; height:390px; margin:auto; background-color: #fff;}
-
-   .top_btn {position:fixed; z-index:500; bottom: 40px; right:20px; width: 40px; height:40px; background-color: #fff; border:2px solid #333; }
-      .top_btn>a {display:block; width:100%; height:100%;}
-
-
-#footBox {width: 100%; height: auto; padding-top: 20px; padding-bottom: 60px; background-color: #777;}
-   #footBox>.content {width: 1200px; height:90px; margin:auto; background-color: #aee;}
+@import url("./nhc/nhc_wrap.css");
+@import url("./nhc/nhc_header.css");
+@import url("./nhc/nhc_main_content.css");
+@import url("./nhc/nhc_footer.css");

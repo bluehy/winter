@@ -27,8 +27,8 @@
                <ul>
                   <li><a href="#">관람정보</a></li>
                   <li><a href="#">전시</a></li>
-                  <li><a href="#">교육행사</a></li>
-                  <li><a href="#">소식참여</a></li>
+                  <li><a href="#">교육·행사</a></li>
+                  <li><a href="#">소식·참여</a></li>
                   <li><a href="#">자료실</a></li>
                   <li><a href="#">센터소개</a></li>
                </ul>
@@ -42,6 +42,8 @@
          <div class="unb_area clearfix">
             <div class="unb">
                <h2 class="hidden">사용자 편의용 네비게이션 영역</h2>
+               <div class="sns"></div>
+               <ul class="unb_list"></ul>
             </div>
          </div>
          <!-- // unb_area -->
@@ -64,13 +66,7 @@
 
          <section id="viewBox">
             <h3 class="hidden">광고영역</h3>
-            <div class="view_title">
-               <p>오랜 역사를 간직한 노거수가 있는</p>
-               <p>식물 전시존</p>
-            </div>
-            <div class="prev_btn view_btn"></div>
-            <div class="next_btn view_btn"></div>
-            <div class="view_list">
+            <nav class="indicator">
                <ul class="clearfix">
                   <li><a href="#">식물 전시존</a></li>
                   <li><a href="#">동물 전시존</a></li>
@@ -79,9 +75,16 @@
                   <li><a href="#">명승 전시존</a></li>
                   <li><a href="#">한반도의 자연유산</a></li>
                </ul>
-            </div>
-
+            </nav>
+            <aside class="next_btn view_btn"></aside>
+            <aside class="prev_btn view_btn"></aside>
+            <article class="view_zone">
+               <h4 class="hidden">식물 전시존</h4>
+               <p>오랜 역사를 간직한 노거수가 있는<br/>
+               <em>식물 전시존</em></p>
+            </article>
          </section>
+
          <article id="newsBox" class="con_area">
             <h3>센터 소식</h3>
             <div class="content"></div>

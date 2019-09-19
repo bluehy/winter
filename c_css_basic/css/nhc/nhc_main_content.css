@@ -19,23 +19,30 @@
 
 /* viewBox ============================================== */
    #viewBox {position: relative; width:100%; height: 855px; background-color: #aef;}
-      .indicator {position: absolute; z-index:300; bottom: 65px; left:50%; margin-left: -433px; width:866px; height:70px;}
+      .indicator {position: absolute; z-index:1000; bottom: 65px; left:50%; margin-left: -433px; width:866px; height:70px;}
          .indicator>ul>li {width:141px; margin-right: 4px;line-height:70px; background-color: rgba(0,0,0,0.5);}
-         .indicator>ul>li>a:hover {background-color: #fa0; outline:2px solid #fff;}
+         .indicator>ul>li>a:hover {background-color: #fa0; outline:2px solid rgb(134, 121, 121);}
 
-      .view_btn {position:absolute; z-index:400; margin:auto; top:0; bottom:0; width:140px; height:100px; background-color: rgba(255,255,255,0);}
-      .view_btn>button {width:100%; height:100%; background-color: transparent; font-size: 5rem;}
+      .view_btn {position:absolute; z-index:1000; margin:auto; top:0; bottom:0; width:140px; height:100px; background-color: rgba(255,255,255,0);}
+      .view_btn>button {z-index:400; width:100%; height:100%; background-color: transparent; font-size: 5rem;}
       .view_btn>button:hover {color: #fa0; text-shadow:0.2rem 0.2rem 0.2rem rgba(0,0,0,0.3);}
       .view_btn>button:focus {color: #fac;}
       .next_btn {right:140px;}
       .prev_btn {left: 140px;}
 
-      .view_zone {position: relative; top:0; bottom:0; left:0; right:0; width:100%; height: 100%; margin:auto;}
-         .view_zone>p {position:absolute; top:0; bottom:0; left:0; right:0; width:50%; min-width:900px; height:130px;margin:auto; text-align:center; font-size:54px; font-size:3.375rem;}
+      .view_zone {position: relative; z-index:400; top:0; bottom:0; left:0; right:0; width:100%; height: 100%; margin:auto;
+      background-image: url("../../img/cat.jpg");
+      background-repeat: no-repeat;
+      background-position:50% 50%;
+      background-size: cover;
+      background-attachment: fixed;
+      }
+         .view_zone>p {position:absolute; top:0; bottom:0; left:0; right:0; width:50%; min-width:900px; height:130px; margin:auto; text-align:center; font-size:54px; font-size:3.375rem;}
          /* 16px = 100% = 12pt = 1em = 1rem */
          .view_zone>p>em {font-style:normal; font-weight:bold; font-size:3.5rem;}
-         .view_zone>img {width: 100%; height: 100%; opacity:0.5;}
 
+      /* .view_img {position:absolute; top:0; width:100%; height:100%; overflow: hidden; background-color: #fa0;}
+         .view_img>img {position:absolute; top:0; bottom:0; width: 100%; height:auto; margin:auto;} */
 
 /* ===============파트별 공통영역 처리 사항=============== */
    .con_area {padding-top:45px; width:100%; 
@@ -48,6 +55,19 @@
    #newsBox {height:895px; background-color: #555;}
       #newsBox>.content {width:1200px; height: 650px; margin: auto; background-color: #fff;}
 
+      .center_info {width:100%; height:330px; margin-bottom:40px; background-color: rgba(0,0,0,0.3);}
+         .center_info>div {float:left; width:280px; height: 100%; margin-right:28px; background-color: rgba(0,0,0,0.3);}
+         .center_info>.info_board_01 {width:580px;}
+         .center_info>div:last-child {margin-right:0;}
+
+         .title_zone {width:100%; height:44px; margin-bottom:6px; background-color: #fff;}
+            .title_zone>h5 {float:left; height: 100%; line-height:44px; font-size:24px; font-size:1.5rem;}
+            .title_zone>.popup_indicator {float:right; width:100px; height:100%; background-color: #999; line-height:44px; font-size:16px; font-size:1rem;}
+
+         .content_zone {width:100%; height:280px; background-color: #fff;}
+
+      .program_guide {width:100%; height:280px; background-color: rgba(0,0,0,0.3);}
+
 
 /* mediaBox =============================================== */
    #mediaBox {height:850px; background-color: #999;}
@@ -56,7 +76,18 @@
 
 /* counterBox ========================================== */
    #counterBox {height:710px; background-color: #555;}
-      #counterBox>.content {width:1200px; height:390px; margin:auto; background-color: #fff;}
+      #counterBox>.content {width:1100px; height:390px; margin:auto; background-color: #fff;}
+
+      #counterBox>.content>ul {width:100%; height:100%;}
+      #counterBox>.content>ul>li {float:left; width:215px; height:100%; margin-right:80px; background-color:#777;}
+      #counterBox>.content>ul>li:last-child {margin-right:0;}
+
+
+      .gage {width:215px; height:215px; background-color: #ccc; margin-bottom:20px;}
+      .gage + dl {width:215px; height:150px; background-color: #adf;}
+      /* .gage {} */ /* 형제 선택자. */
+      /* .gage + dl{} */ /* .gage의 바로 뒤의 동생을 선택(인접 선택자) */
+     /*  .gage ~ dl{} */ /* .gage의 동생 dl을 선택(이때, dl은 동생 중의 순서는 상관 없다. 일반 선택자)  */
 
 
 /* 최상단으로 가기 버튼 */

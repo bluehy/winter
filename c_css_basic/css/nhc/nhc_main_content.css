@@ -19,22 +19,22 @@
 
 /* viewBox ============================================== */
    #viewBox {position: relative; width:100%; height: 855px; background-color: #aef;}
-      #viewBox .indicator {display:none; position: absolute; bottom: 65px; right:0; left:0; margin: auto; width:865px; height:70px; background-color: #fff;}
-         #viewBox .indicator>ul {width:100%; height:100%;}
-         #viewBox .indicator>ul>li {float:left; width:135px; height:70px; margin-right: 5px; text-align:center; line-height:70px;}
-         #viewBox .indicator>ul>li:last-child {margin-right:0;}
-         #viewBox .indicator>ul>li>a {display:block; width:100%; height:100%;}
+      .indicator {position: absolute; z-index:300; bottom: 65px; left:50%; margin-left: -433px; width:866px; height:70px;}
+         .indicator>ul>li {width:141px; margin-right: 4px;line-height:70px; background-color: rgba(0,0,0,0.5);}
+         .indicator>ul>li>a:hover {background-color: #fa0; outline:2px solid #fff;}
 
-      #viewBox .view_btn {display:none; position:absolute; margin:auto; top:0; bottom:0; width:140px; height:100px; background-color: #fff;}
-      #viewBox .next_btn {right:140px;}
-         #viewBox .next_btn:hover {background-color: #aaa; cursor:pointer;}
-      #viewBox .prev_btn {left: 140px;}
-         #viewBox .prev_btn:hover {background-color: #aaa; cursor:pointer;}
+      .view_btn {position:absolute; z-index:400; margin:auto; top:0; bottom:0; width:140px; height:100px; background-color: rgba(255,255,255,0);}
+      .view_btn>button {width:100%; height:100%; background-color: transparent; font-size: 5rem;}
+      .view_btn>button:hover {color: #fa0; text-shadow:0.2rem 0.2rem 0.2rem rgba(0,0,0,0.3);}
+      .view_btn>button:focus {color: #fac;}
+      .next_btn {right:140px;}
+      .prev_btn {left: 140px;}
 
-      #viewBox>.view_zone {position: relative; top:0; bottom:0; left:0; right:0; width:100%; height: 100%; margin:auto;}
-         #viewBox>.view_zone>p {position:absolute; top:0; bottom:0; left:0; right:0; width:50%; min-width:900px; height:130px;margin:auto; text-align:center; font-size:54px; font-size:3.375rem;}
+      .view_zone {position: relative; top:0; bottom:0; left:0; right:0; width:100%; height: 100%; margin:auto;}
+         .view_zone>p {position:absolute; top:0; bottom:0; left:0; right:0; width:50%; min-width:900px; height:130px;margin:auto; text-align:center; font-size:54px; font-size:3.375rem;}
          /* 16px = 100% = 12pt = 1em = 1rem */
-         #viewBox>.view_zone>p>em {font-style:normal; font-weight:bold; font-size:3.5rem;}
+         .view_zone>p>em {font-style:normal; font-weight:bold; font-size:3.5rem;}
+         .view_zone>img {width: 100%; height: 100%; opacity:0.5;}
 
 
 /* ===============파트별 공통영역 처리 사항=============== */

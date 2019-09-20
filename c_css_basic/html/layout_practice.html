@@ -9,12 +9,14 @@
    <link rel="stylesheet" href="../css/reset_test.css">
    <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
-   
+
    <link rel="stylesheet" href="../css/layout_practice.css">
+
    <!--[if IE]>
       <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
       <script src="../ie/PIE/PIE.js"></script>
    <![endif]-->
+
    <link rel="shortcut icon" href="../img/favicon.ico" type="image/ico">
    <link rel="apple-touch-icon" href="../img/favicon.ico">
    <title>웹페이지이름</title>
@@ -51,7 +53,12 @@
                      <span class="hidden">페이스북 페이지 이동하기</span>
                   </a>
                </div>
-               <ul class="unb_list"></ul>
+               <ul class="unb_list">
+                  <li><a href="#">홈</a></li>
+                  <li><a href="#">정보</a></li>
+                  <li><a href="#">관람시간</a></li>
+                  <li><a href="#">찾아오시는 길</a></li>
+               </ul>
             </div>
          </div>
          <!-- // unb_area -->
@@ -105,8 +112,71 @@
             <h3>센터 소식</h3>
             <div class="content">
                <div class="center_info">
-                  <h4 class="hidden">공지사항 및 확인사항 안내</h4>                  
-                  <div class="info_board_01">공지사항</div>
+                  <h4 class="hidden">공지사항 및 확인사항 안내</h4>              
+<!-- *************************important************************ -->
+                  <div class="info_board_01">
+                     <h5 class="action">공지사항</h5>
+                     <div class="info_01_con con_01 action">
+                        <span class="hidden">공지사항 내용</span>
+                        <ul>
+                        <li>
+                           <p class="date">2019.09.<br/><em>16</em></p>
+                           <dl>
+                              <dt>[공지사항] Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, exercitationem?</dt>
+                              <dd> 국립문화재연구소 천연기념물센터에서는 자라나는 어린이들에게 자연유산의 다양성과 소중함을 알리기 위하여 유치원 단체를 대상으로 천연기념물 체험교육 프로그램을 운영하고 있습니다.</dd>
+                           </dl>
+                        </li>
+
+                        <li>
+                           <p class="date">2019.09.<br/><em>16</em></p>
+                           <dl>
+                              <dt>[공지사항]</dt>
+                              <dd> Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis est ullam atque asperiores corporis, obcaecati perspiciatis illum aliquam error nesciunt.</dd>
+                           </dl>
+                        </li>
+
+                        <li>
+                           <p class="date">2019.09.<br/><em>16</em></p>
+                           <dl>
+                              <dt>[공지사항]</dt>
+                              <dd> 국립문화재연구소 천연기념물센터에서는 자라나는 어린이들에게 자연유산의 다양성과 소중함을 알리기 위하여 유치원 단체를 대상으로 천연기념물 체험교육 프로그램을 운영하고 있습니다.</dd>
+                           </dl>
+                        </li>
+                        </ul>
+                     </div>
+
+                     <!-- +++++++++++++++++++++++++++++++++ -->
+                     <h5>보도자료</h5>
+                     <div class="info_01_con con_02">
+                        <span class="hidden">보도자료 내용</span>
+                        <ul>
+                        <li>
+                           <p class="date">2019.09.<br/><em>16</em></p>
+                           <dl>
+                              <dt>[보도자료]</dt>
+                              <dd> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nulla, consequatur adipisci, accusamus dignissimos, esse voluptate similique dicta quidem veniam quasi! Nisi porro ex perspiciatis corporis, doloremque iste! Eveniet, dolor?</dd>
+                           </dl>
+                        </li>
+                        <li>
+                           <p class="date">2019.09.<br/><em>16</em></p>
+                           <dl>
+                              <dt>[보도자료]</dt>
+                              <dd> 국립문화재연구소 천연기념물센터에서는 자라나는 어린이들에게 자연유산의 다양성과 소중함을 알리기 위하여 유치원 단체를 대상으로 천연기념물 체험교육 프로그램을 운영하고 있습니다.</dd>
+                           </dl>
+                        </li>
+                        <li>
+                           <p class="date">2019.09.<br/><em>16</em></p>
+                           <dl>
+                              <dt>[보도자료]</dt>
+                              <dd> 국립문화재연구소 천연기념물센터에서는 자라나는 어린이들에게 자연유산의 다양성과 소중함을 알리기 위하여 유치원 단체를 대상으로 천연기념물 체험교육 프로그램을 운영하고 있습니다.</dd>
+                           </dl>
+                        </li>
+                        </ul>
+
+                     </div>
+
+                  </div>
+<!-- *************************important************************ -->
                   <div class="info_board_02">
                      <div class="title_zone">
                         <h5>퀵링크</h5>
@@ -136,13 +206,24 @@
                                  관람인원이 10인 이상인 경우<br/>
                                  단체관람 예약을 운영하고 있습니다.
                               </dd>
-                           </dl>                           
+                           </dl>
                         </a>
                      </li>
                      
                      <li><a href="#"><span class="hidden">교육프로그램</span></a></li>
 
-                     <li><a href="#"><span class="hidden"></span></a></li>
+                     <li><a href="#">
+                           <dl class="jump_up">
+                              <dt>
+                                 <span>
+                                    <b>천연기념물센터<br/>관람안내</b>
+                                 </span>
+                              </dt>
+                              <dd>
+                                 바로가기
+                              </dd>
+                           </dl>
+                     </a></li>
 
                      <li><a href="#"><span class="hidden"></span></a></li>
                   </ul>
@@ -213,5 +294,24 @@
       <!-- // footer -->
 
    </div>
+
+   <!-- script ======================================== -->
+   <script src="http://unpkg.com/jquery"></script>
+   <script>
+      (function($){
+         var ib_01 = $('.info_board_01');
+         var ibTitle = ib_01.children('h5');
+         var ib_con = $('.info_01_con');
+
+         ibTitle.on('click', function(e){
+            e.preventDefault();
+            $(this).addClass('action');
+            $(this).siblings(ibTitle).removeClass('action');
+            ib_con.removeClass('action');
+            $(this).next(ib_con).addClass('action');
+         });         
+      })(jQuery);
+   </script>
+
 </body>
 </html>

@@ -20,7 +20,7 @@
 /* viewBox ============================================== */
    #viewBox {position: relative; width:100%; height: 855px; background-color: #aef;}
       .indicator {position: absolute; z-index:1000; bottom: 65px; left:50%; margin-left: -433px; width:866px; height:70px;}
-         .indicator>ul>li {width:141px; margin-right: 4px;line-height:70px; background-color: rgba(0,0,0,0.5);}
+         .indicator>ul>li {width:141px; margin-right: 4px;line-height:70px;background-color: rgba(0,0,0,0.5);}
          .indicator>ul>li>a:hover {background-color: #fa0; outline:2px solid rgb(134, 121, 121);}
 
       .view_btn {position:absolute; z-index:1000; margin:auto; top:0; bottom:0; width:140px; height:100px; background-color: rgba(255,255,255,0);}
@@ -56,9 +56,32 @@
       #newsBox>.content {width:1200px; height: 650px; margin: auto; background-color: #fff;}
 
       .center_info {width:100%; height:330px; margin-bottom:40px; background-color: rgba(0,0,0,0.3);}
-         .center_info>div {float:left; width:280px; height: 100%; margin-right:28px; background-color: rgba(0,0,0,0.3);}
-         .center_info>.info_board_01 {width:580px;}
+         .center_info>div {float:left; width:280px; height: 100%; margin-right:30px; background-color: rgba(0,0,0,0.3);}
+         .center_info>.info_board_01 {position:relative; width:580px;}
          .center_info>div:last-child {margin-right:0;}
+
+         /* +++++++++++++++++++++++++++++++++++++++++++ */
+         .info_board_01>h5 {float:left; width: 120px; height: 40px; margin-right:2px; background-color: #fff; text-align:center; line-height:40px;}
+         .info_board_01>h5.action {background-color: #930; color:#fff; font-weight:bold;}
+
+         .info_board_01> .info_01_con {display:none; position: absolute; left:0; bottom:0; width:100%; height:260px; padding-top:10px; box-sizing:border-box;}
+         .info_board_01> .info_01_con.action {display:block;}
+
+         .con_01 {background-color: #aff;;}
+         .con_02 {background-color: #ffa;;} 
+
+         .info_01_con ul {width:100%; height:100%;}
+         .info_01_con li {width: 100%; height: 70px;  background-color: #fff; margin-bottom:20px;}
+         .info_01_con li:last-child {margin-bottom:0;}
+
+         .info_01_con li .date {float: left; width: 80px; height: 100%; padding:5px; box-sizing:border-box; text-align:center; font-size: 1rem; font-size: 16px; color:#fff; background-color: #fa0;}
+         .info_01_con li .date em {font-style:normal; font-size:1.5rem; font-size:24px; font-weight:bold;}
+
+         .info_01_con li dl {float: right; width: 490px; height: 100%; background-color: #333;}
+         .info_01_con li dl dt {width: 100%; height: 20px; padding:0 10px; box-sizing:border-box; margin-bottom:5px; font-size: 1rem;  line-height:20px; font-size: 16px; font-weight:bold; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; background-color: rgba(255,255,255,0.7);}
+         .info_01_con li dl dd {width: 100%; height:45px; padding: 0 10px; box-sizing:border-box; overflow:hidden; text-overflow:ellipsis; font-size:0.875rem; font-size:14px; background-color: rgba(255,255,255,0.5);}
+         
+         /* +++++++++++++++++++++++++++++++++++++++++++ */
 
          .title_zone {width:100%; height:44px; margin-bottom:6px; background-color: #fff;}
             .title_zone>h5 {float:left; height: 100%; line-height:44px; font-size:24px; font-size:1.5rem;}
@@ -67,7 +90,48 @@
          .content_zone {width:100%; height:280px; background-color: #fff;}
 
       .program_guide {width:100%; height:280px; background-color: rgba(0,0,0,0.3);}
+         .program_guide>ul>li {width:280px; margin-right:26px;}
+         .program_guide>ul>li>a {position: relative; padding:50px 30px; box-sizing:border-box; background-color: #059;}
+         .program_guide>ul>li>a:after,
+         .program_guide>ul>li>a::after {content:" "; display:block; position:absolute; top:0; left:0; width:100%; height:100%; box-sizing:border-box; border:0px solid #039; 
+         transition:border 300ms ease;}
+            .program_guide>ul>li>a:hover:after,
+            .program_guide>ul>li>a:hover::after {border-width:30px;}
+         .program_guide>ul li:nth-of-type(3) a:after, 
+         .program_guide>ul li:nth-of-type(3) a::after {bottom:0; right:0; margin:auto; width: 50%; height:50%; background-color: rgba(0, 51, 153, 0.8); border-radius:100%; transition:all 350ms ease; border:none;}          
 
+         .program_guide .icon {width:100%; height:64px;  margin-bottom:10px; font-size:4rem; font-size:64px; line-height:64px;}
+         .program_guide dl {width:100%; height:auto;}
+     
+         .program_guide dl dt {width:100%; height:28px; margin-bottom:16px; font-size:1.625rem; font-size:16px; font-weight:bold; line-height:28px;}
+         .program_guide dl dd {width:100%; height:auto; font-size:14px; letter-spacing:-1px; letter-spacing:-0.0825rem; /* word-spacing:-1px; */}
+
+         .program_guide dl.jump_up {position:relative; z-index:300; height: 100%; }
+         .program_guide dl.jump_up > dt {width: 100%; height: 100%; transition:all 250ms ease 50ms;}
+         .program_guide dl.jump_up > dt:before {
+            content:" "; display:block; position:absolute; left:0; right:0; margin:auto; top:10%; width:15%; border-top:0 solid #fff; }
+         .program_guide dl.jump_up > dt >span {display:block; position:absolute; top:50%; left:0; width: 100%; height:0; }
+         .program_guide dl.jump_up > dt >span >b{display:block; width: 100%; height:auto; transform:translateY(-50%); }
+         .program_guide dl.jump_up > dd {transition:all 200ms ease 100ms;
+            position:absolute; top:50%; left:0; right:0; margin:20px auto; 
+            width:50%; height:auto; padding:0.5rem; border:2px solid #fff; opacity:0;}
+
+
+
+         .program_guide a:hover dl.jump_up > dt {margin-top:-1.5rem; font-size:1.3rem;}
+         .program_guide a:hover dl.jump_up > dt:before {border-width:3px; top:20%;}
+         .program_guide a:hover dl.jump_up > dd {opacity:1; margin-top:40px; transition:all 100ms ease-out 200ms;}
+/* 
+            linear : 지속적인:동일한속도
+            ease: 가변속도(빨라지다 느려짐)
+            ease-in: 점점빠르게
+            ease-out:점점느리게
+            ease-in-out:빨라지나느려지게(ease와 약간의 차이가 있음)
+            easing.io
+*/
+
+         .program_guide>ul li:nth-of-type(3) a:hover:after, 
+         .program_guide>ul li:nth-of-type(3) a:hover::after {border-radius:0; width:100%; height:100%}
 
 /* mediaBox =============================================== */
    #mediaBox {height:850px; background-color: #999;}
@@ -83,7 +147,7 @@
       #counterBox>.content>ul>li:last-child {margin-right:0;}
 
 
-      .gage {width:215px; height:215px; background-color: #ccc; margin-bottom:20px;}
+      .gage {width:215px; height:215px; background-color: #ccc; margin-bottom:25px;}
       .gage + dl {width:215px; height:150px; background-color: #adf;}
       /* .gage {} */ /* 형제 선택자. */
       /* .gage + dl{} */ /* .gage의 바로 뒤의 동생을 선택(인접 선택자) */

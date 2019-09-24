@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* font_basic_02.css */
+
+/* font data Summary
+ * 웹폰트
+ * @font-face {}  : 서체를 강제로 정의할 때 사용하는 기능.
+               (비디오 요소와 마찬가지로 외부 폰트 문서를 불러와서 설정하는 기능)
+ * @font-face { font-family:...; } : 불러온 폰트파일의 이름을 지정하는 것.
+ * @font-face { src: ....; }  : 사용할 서체의 위치를 불러오는 것
+ * @font-face { src:url(); }  : 사용할 서체를 브라우저 환경에 맞게 세팅
+ * @font-face { src:url() format(); }  : 불러온(url) 서체의 format방식을 정의
+
+ *format : eot - IE6버전 ~8버전
+         : woff - 일반 브라우저 ~IE9
+         : woff2 - 일반 브라우저 ~IE10
+         : ttf - 일반 브라우저, window, mac
+         : svg - 특정 브라우저에서 font호환율이 낮을경우, 이미지형식으로 대체.
+
+ * @font-face { font-weight: ; font-style: ; } : 해당 서체에 정의된 폰트 두께와 스타일.
+
+ <video>
+   <source src=".ogg" type="video/ogg" />
+   <source src=".webm" type="video/webm" />
+   <source src=".mp4" type="video/mp4" />
+ </video>
+
+
+*/
+
+
+p {font-family:'ggT'; }
+.convert_01 {font-weight: normal;}
+.convert_02 {font-weight: bold;}
+.convert_03 {font-weight: 300; }
+.convert_04 {font-weight: normal;}
+.convert_05 {font-weight: bold; color: #fa0;}

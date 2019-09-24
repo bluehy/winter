@@ -14,7 +14,7 @@
  html, body,
  h1,h2,h3,h4,h5,h6,
  ul,li,ol,dl,dt,dd,
- p,pre,img{margin:0; padding:0; border:0; font-family: 'Nanum Gothic', 'Noto Sans KR', "돋움", sans-serif; ;}
+ p,pre,img{margin:0; padding:0; border:0; font-family: 'ggT','Nanum Gothic', 'Noto Sans KR', "돋움", sans-serif; ;}
  ul,ol,li{list-style:none;}
 
  table, thead, tbody, tfoot, tr, th, td{margin:0; padding:0; border-spacing:0; border-collapse:collapse; border:1px solid #777;}

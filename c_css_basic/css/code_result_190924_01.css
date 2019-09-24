@@ -80,12 +80,31 @@ padding:5px 0;}
 .bdr {width:100%; height:auto; background-color: #9a3;}
 .bdr:after,
 .bdr::after {content:" "; display: block; clear:both;}
-.bdr >li {float:left; width: 150px; height: 150px; background-color: #fcc; margin:1rem; text-align: center; line-height:150px;}
+.bdr >li {float:left; width: 150px; height: 150px; background-color: #fcc; margin:1rem; text-align: center; line-height:150px; font-size:0.5rem; font-size:8px;}
 
 .bdr >li:nth-child(1) {border-radius: 75px; }
 .bdr >li:nth-child(2) {border-radius: 10% 50%; }
 .bdr >li:nth-child(3) {width:200px; border-radius: 50%; }
 .bdr >li:nth-child(4) {border-radius:10px 30px 50px 0; }
-.bdr >li:nth-child(5) {border-radius: 20px 50px;}
+.bdr >li:nth-child(5) {border-top-left-radius:20px;}
+/* 모서리는 하나의 선만 존재하는 것이 아닌 두개의 선의 연결로 처리
+: 위아래가 먼저, 좌우를 나중에 선언한다. 
+-----------------------------------------
+border-top-left-radius:;
+border-top-right-radius:;
+border-bottom-right-radius:;
+border-bottom-left-radius:;
+*/
+.bdr >li:nth-child(6) {border-radius: 10px 30px 50px;}
+/* margin:10px 20px 30px 40px; 위 우 아래 좌 */
+/* border-radius: 10px 20px 30px 40px; 왼쪽상단 오른쪽상단 오른쪽하단 왼쪽하단 */
 
-.bdr >li:nth-child(6) {border-top-left-radius:20px; }
+.bdr >li:nth-child(7) {border-top-left-radius:70px; border-bottom-left-radius:100px;}
+.bdr >li:nth-child(8) {border-top-left-radius: 50px 150px;}
+/* 삼각형만들기 ! ------------------- */
+.bdr >li:nth-child(9) {box-sizing:border-box; border:75px solid transparent; border-bottom-color:#0af; border-left-color:#a0f; background-color: transparent;}
+.bdr >li:nth-child(9):after,
+.bdr >li:nth-child(9)::after {content:"삼각형"; display:block; width:3rem; height: 1rem; margin-top:-75px;}
+
+.line_height {position:relative; width:400px; height:200px; background-color: #999;}
+.line_height>p {position:absolute; top :50%; transform:translateY(-50%); width:100%; height:auto; background-color: #fff; text-align:center;}

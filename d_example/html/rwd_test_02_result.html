@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- rwd_test_02.html -->
+<!-- rwd_test_02_result.html -->
 <html lang="ko-KR">
     <head>
       <noscript>
@@ -21,7 +21,7 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean">
       <link rel="stylesheet" href="../css/base/reset.css">
       <link rel="stylesheet" href="../css/base/common.css">
-      <link rel="stylesheet" href="../css/src/rwd_test_02.css">
+      <link rel="stylesheet" href="../css/src/rwd_test_02_result.css">
 
       <!--[if lte IE 9]>
          <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
@@ -32,40 +32,25 @@
       <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
       <link rel="apple-touch-icon" href="../img/favicon.png">
 
-      <title>반응형웹 이해하기</title>
+      <title>반응형 웹페이지 만들기02 해설편</title>
    </head>
 <!--  --> 
    <body>
    <!-- layout =============== -->
    <div id="wrap">
       <header id="headBox">
-         <section class="head_title">
+         <div class="area_wrap">
             <h1><a href="./content.html">제목</a></h1>
-            <nav class="nav_b clearfix">
-               <div class="sns"></div>
-               <div class="user"></div>
-            </nav>
-         </section>
+         </div>
       </header>
-      <main id="conBox" >
+      <main id="conBox">
          <h2 class="hidden">부제</h2>
-         <section id="viewBox"></section>
-
-         <article id="interviewBox">
-            <h2>인터뷰</h2>
-         </article>
-
-         <article id="listBox">
-            <ul class="clearfix">
-               <li>list_01</li>
-               <li>list_01</li>
-               <li>list_01</li>
-            </ul>
-         </article>
+         <section class="view_area"></section>
+         <article class="tip_area"></article>
+         <article class="info_area"></article>
       </main>
-
       <footer id="footBox">
-         <div class="company_info">
+         <div class="area_wrap">
             <h2>정보</h2>
          </div>
       </footer>

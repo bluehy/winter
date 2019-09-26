@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* rwd_test_02.css */
+
+
+#wrap {min-width: 320px; width:100%; height:92.5rem; background-color: #ccc;}
+#headBox {position:fixed; width:100%; height: 12.5vw; min-height:40px; background-color: rgba(0,0,0,0.5);}
+#conBox {width: 100%; height: 450vw; min-height: 1440px; background-color: #BBAA77;}
+#footBox {width: 100%; height: 12.5vw; background-color: #000; }
+
+
+@media screen and (min-width:481px) and (max-width:768px) {
+#headBox {height: 60px;}
+#conBox {height: 1200px;}
+#footBox {height: 120px;}
+}
+
+
+@media screen and (min-width:769px) and (max-width:960px) {
+#headBox {width:100vw; height:60px;}
+#conBox {height: 1200px;}
+#footBox {height: 120px; }
+}

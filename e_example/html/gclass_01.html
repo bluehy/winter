@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- content.html -->
+<!-- gclass_01.html -->
 <html lang="ko-KR">
     <head>
       <noscript>
@@ -7,6 +7,7 @@
          자바스크립트의 기능을 활성화해주세요.</p>
          <p><a target="_blank" href="http://enable-javascript.com/ko/">자바스크립트 활성화 처리하기</a></p>
       </noscript>
+
 
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,7 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean">
       <link rel="stylesheet" href="../css/base/reset.css">
       <link rel="stylesheet" href="../css/base/common.css">
-      <link rel="stylesheet" href="../css/src/content.css">
+      <link rel="stylesheet" href="../css/src/gclass_01.css">
 
       <!--[if lte IE 9]>
          <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
@@ -31,33 +32,38 @@
       <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
       <link rel="apple-touch-icon" href="../img/favicon.png">
 
-      <title>웹페이지</title>
+      <title>gclass</title>
    </head>
 <!--  --> 
    <body>
    <!-- layout =============== -->
-   <div id="wrap">
+   <div id="wrap" class="clearfix">
       <header id="headBox">
-         <h1><a href="">제목</a></h1>
+         <h1><a href="./content.html"><img src="../img/favicon.png"/></a></h1>
+         <ul>
+            <li><a href="#">about</a></li>
+            <li><a href="#">study</a></li>
+            <li><a href="#">photo</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">press</a></li>
+            <li><a href="#">q&a</a></li>
+         </ul>
       </header>
       <main id="conBox">
-         <h2>Web디자인 실습</h2>
-         <ul class="clearfix">
-            <li><a href="./rwd_test_01.html">반응형웹 테스트 01</a></li>
-            <li><a href="./rwd_test_01_result.html">반응형웹 테스트 01 해설</a></li>
-            <li><a href="./rwd_test_02.html">반응형웹 테스트 02</a></li>
-            <li><a href="./rwd_test_02_result.html">반응형웹 테스트 02 해설</a></li>
-            <li><a href="./gclass_01.html">번외편 -gclass- </a></li>
-         </ul>
-
-         <h2>번외편</h2>
-         <ul class="clearfix">
-            <li><a href="./re_nth.html">번외편 -nth- </a></li>
-            
-         </ul>   
+         <h2 class="hidden">gclass 본문 영역</h2>
+         <nav id="subBox" class="clearfix">
+            <div class="unb">
+               <ul>
+                  <li><a href="#">home</a></li>
+                  <li><a href="#">study</a></li>
+                  <li><a href="#">education</a></li>
+               </ul>
+            </div>
+         </nav>
+         <section id="viewBox"></section>
       </main>
       <footer id="footBox">
-         <h2>정보</h2>
+         <h2 class="hidden">정보</h2>
       </footer>
    </div>
    <!-- script ================ -->

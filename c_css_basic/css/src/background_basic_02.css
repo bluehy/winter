@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* background_basic_02.css */
+
+
+/* ================== background-attachment =================== */
+
+#conBox {width:800px; height:auto; margin:auto; border:2px solid #333; box-sizing:border-box;}
+#conBox>div {width: 100%; height:500px; background-repeat:no-repeat; background-position: 50% 50%;}
+
+.box_01 {background-image:url("../../img/image_h_01.jpg");
+         background-attachment:local;}
+.box_02 {background-image:url("../../img/image_v_02.jpg");
+         background-attachment:fixed;}
+.box_03 {background-image:url("../../img/image_h_02.jpg");
+         background-attachment:scroll;}
+
+#conBox>div {overflow:hidden; overflow-y:auto;}
+#conBox>div>h3 {width: 100%; height: 70px; background-color: rgba(255,100,0,0.3);}
+#conBox>div>ul {width: 100%; padding-left:2rem; box-sizing:border-box;}
+#conBox>div>ul>li {list-style:decimal; height:50px; margin-bottom:20px; background-color: rgba(255,255,255,0.3);}
+
+
+
+/**
+background-attachment: 배경이미지를 고정처리할지 정하는 것
+      local(기본형) | fixed(고정) | scroll(요소 내부에 스크롤시 고정)
+
+* 주의사항 : fixed처리시 background-position의 위치값이 브라우저 기준으로 처리됨.
+**/
+
+
+/* =================== gradient Box ================ */
+
+#gradientBox {width: 800px; height: auto; margin: auto; margin-top: 2rem;
+               border:3px solid #333; }
+#gradientBox>div {width: 100%; height:500px; margin-bottom:1rem; border-bottom:1px solid #333;}
+#gradientBox>div:last-of-type {margin-bottom:0;}
+
+.gr_01 {background-color: #34f; 
+   background-image:linear-gradient(#fa0, #0af);}
+.gr_02 {background-color: #f4f; 
+   background-image:linear-gradient(210deg, #f90, #faf);}
+.gr_03 {background-color: #3af; 
+   background-image:linear-gradient(30deg, #0af 30%, #fac 30%);}
+.gr_04 {background-color: #f14; 
+   background-image:linear-gradient(-45deg, #fac 30%, #86f 30%, 
+                                             #fac 70%, #333 70%);}
+.gr_04:hover {background-image: linear-gradient(-45deg, #f00 30%, #f6f 30%, 
+                                                #86f 80%, #333 80%);}         
+.gr_05 {position:relative; 
+         background-image:linear-gradient(-45deg, #fac, #acf);}
+.gr_05:after,
+.gr_05::after {content:" "; display:block; position:absolute; top:0; left:0;
+               width: 100%; height: 100%; opacity:0;
+               background-image:linear-gradient(-45deg, #0ac, #a0f);
+               transition:all 300ms ease;}
+.gr_05:hover:after,
+.gr_05:hover::after {opacity:1;}
+
+
+.gr_06 {background-image:radial-gradient(circle, #fa0 50%, #a0f 70%);}
+.gr_07 {background-image:radial-gradient(ellipse, #fa0 50%, #a0f 70%);}
+.gr_08 {background-image:radial-gradient(circle at 10% 10%, #fa0 50%, #a0f 70%);}
+
+.gr_09 {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,edd587+45,ff5c5c+100 */
+   background-image: rgb(254,187,187); /* Old browsers */
+   background-image: -moz-linear-gradient(top,  rgba(254,187,187,1) 0%, rgba(237,213,135,1) 45%, rgba(255,92,92,1) 100%); /* FF3.6-15 */
+   background-image: -webkit-linear-gradient(top,  rgba(254,187,187,1) 0%,rgba(237,213,135,1) 45%,rgba(255,92,92,1) 100%); /* Chrome10-25,Safari5.1-6 */
+   background-image: linear-gradient(to bottom,  rgba(254,187,187,1) 0%,rgba(237,213,135,1) 45%,rgba(255,92,92,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#febbbb', endColorstr='#ff5c5c',GradientType=0 ); /* IE6-9 */
+   }
+/* 
+background-image:
+               url("") | linear-gradient() | radial-gradient() 
+=========================================================================
+   url()   : 이미지 삽입
+   linear-gradient   : 직선형의 그라디에션 효과 (각도deg, 색 위치(%), 색 위치(%) ...)
+   radial-gradient   : 원형의 그라데이션 효과 (형태 at xy위치, 색 위치(%), 색 위치(%) ...)
+                                           > circle | ellipse
+   url()을 제외한 gradient는 벤더 프리픽스를 사용해야함
+   ex. background-image:-webkit-radial-gradient();
+       background-image:-moz-radial-gradient();
+       background-image:-ms-radial-gradient();
+       background-image:-o-radial-gradient();
+       background-image:radial-gradient();
+*/

@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* rwd_test_01.css */
+
+
+#wrap {max-width:60rem; height: auto; background-color: #fff; text-align:center;}
+
+#headBox {width: 100%; height:9.375rem; background-color: #666;}
+   #headBox>nav {width: 100%; height:100%; background-color: #fe0;}
+   #headBox>nav>h1 {float:left; width:6.25rem; height: 100%; background-color: #3c3;}
+   #headBox>nav>h1>a {display:block; width:100%; height:100%; text-align:center;}
+
+
+#conBox {width: 100%; height:65.625rem; background-color: #777;}
+   #conBox>section {height: 28.125rem; background-color: #90c;}
+   #conBox>article {height: 37.5rem; background-color: #999;}
+   #conBox>article>ul {width: 100%; height: 100%;}
+   #conBox>article>ul>li {float:left; width: 25%; height: 100%; background-color: #aca; }
+   #conBox>article>ul>li:nth-child(2n) {background-color: #0ac; }
+   #conBox>aside {display:none; width: 100%; height:18.75rem; background-color: #fff;}
+   #conBox>aside>.d_01 {display: none; width: 100%; height:6.25rem; background-color: #fe0;}
+   #conBox>aside>.d_02 {display: none; width: 100%; height:12.5rem; background-color: #fa0;}
+
+
+#footBox {width: 100%; height:6.25rem; background-color: #fff;}
+   #footBox>div {height:100%; background-color: #fca; }
+   #footBox>div>h2 {float:left; width: 6.25rem; height: 100%; background-color: #0af; }
+
+
+   /* =============================== */
+   @media screen and (min-width:48rem) and (max-width:60rem) {
+      #headBox {width: 100vw; height:9.375rem; background-color: #666;}
+      #headBox>nav {width: 100%; height:100%; background-color: #fe7;}
+      #headBox>nav>h1 {float:left; width:6.25rem; height: 100%; background-color: #3c3;}
+   
+   #conBox {width: 100vw; height:65.625rem; background-color: #777;}
+      #conBox>section {height: 28.125rem; background-color: #90c;}
+      #conBox>article {height: 37.5rem; background-color: #999;}
+      #conBox>article>ul {width: 100%; height: 100%;}
+
+   
+   #footBox {width: 100vw; height:6.25rem; background-color: #fff;}
+      #footBox>div {height:100%; background-color: #fca; }
+      #footBox>div>h2 {float:left; width: 6.25rem; height: 100%; background-color: #0af; }
+   }
+
+   /* ========================== */
+   @media screen and (min-width:30rem) and (max-width:48rem) {
+   #headBox {width: 100vw; height:9.375rem; background-color: #666;}
+      #headBox>nav {width: 100%; height: 100%; background-color: #fe0;}
+      #headBox>nav>h1 {float:left; width: 6.25rem; height: 100%; background-color: #3c3;}
+   
+   #conBox {width: 100vw; height:62.5rem; background-color: #777;}
+      #conBox>section {width: 100vw; height: 18.75rem; background-color: #90c;}
+      #conBox>article {height: 25rem; background-color: #999;}
+      #conBox>article>ul {width:100%; height:100%;}
+      #conBox>aside {display:block;}
+      #conBox>aside>.d_01 {display:block;}
+      #conBox>aside>.d_02 {display:block;}
+   
+   #footBox {width: 100vw; height:6.25rem; background-color: #555;}
+      #footBox>div {height:100%; background-color: #fca; }
+      #footBox>div>h2 {float:left; width: 6.25rem; height: 100%; background-color: #0af;}
+   }
+
+/* =============================================================== */
+@media screen and (max-width:30rem) {
+#headBox {width:100vw; height:6.25rem;background-color: #666;}
+   #headBox>nav {position:relative; width: 100%; height: 100%; background-color: #fe0;}
+   #headBox>nav>h1 {width: 100%; height: 100%; background-color: #3c3;}
+   #headBox .unb {position: absolute; top:0; bottom:0; right: 5vw; width: 2.8125rem; height: 2.8125rem; margin:auto; background-color: #fff;}
+
+#conBox {width:100vw; height:68.75rem; background-color: #777;}
+   #conBox>section {width: 100vw; height: 25rem; background-color: #90c;}
+   #conBox>article {height: 25rem; background-color: #999;}
+   #conBox>article>ul {width:100%; height:100%;}
+   #conBox>article>ul>li {width:50vw; height:50%;}
+      #conBox>article>ul>li:nth-child(3) {border-top:1px solid #333; box-sizing:border-box;}
+      #conBox>article>ul>li:nth-child(4) {border-top:1px solid #333; box-sizing:border-box;}
+   #conBox>aside {display:block;}
+   #conBox>aside>.d_01 {display:block;}
+   #conBox>aside>.d_02 {display:block;}
+
+#footBox {width:100vw; height: 6.25rem; background-color: #555;}
+   #footBox>div {position:relative; height:100%; background-color: #fca; }
+   #footBox>div>h2 {position:absolute; left:50%; transform:translateX(-50%); width: 50%; height: 100%; background-color: #0af; }
+}

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* rwd_test_02_result.css */
+
+/** @media screen and (min-width:960px) 
+-디자인 기준 : 480px
+@media screen and (max-width:479px) {  }
+
+-디자인 기준 : 480px
+@media screen and (min-width:480px) and (max-width:767px) { }
+
+-디자인 기준 : 768px
+@media screen and (min-width:768px) and (max-width:959px) { }
+
+-디자인 기준 : 960px
+@media screen and (min-width:960px) { }
+**/
+
+/* 작업순서:
+1. 큰틀 체크(반응형일시- 모바일 먼저 작업)
+2. 각 범위의 큰 형태가 틀어지지 않게 체크
+3. 중간 범위의 형태들 내용 잡고, 큰틀의 높이값 한번 더 체크하기
+
+4. 숨겨진 기능들(큰 범위)을 미리 세팅 후, 제대로 작동하는지 확인.
+5. 링크, 버튼 등 상세내용들을 체크
+6. 이미지 처리, 애니메이션, 제어 등의 기능을 처리
+*/
+
+/* 공통영역 ===================================== */
+
+#wrap { width: 100%; min-width:20rem; height: auto; min-height: 500px; padding-top: 60px; background-color: #ccc; }
+#headBox {position:fixed; top:0; left:0; z-index: 1000; width: 100%; min-width: 20rem; height: 60px; background-color: rgba(0,0,0,0.5);}
+   .area_wrap {margin:auto; width:100%; max-width:960px; height:40px; background-color: #fff;}
+
+#conBox { width: 100%; height: auto;}
+   .view_area { width: 100%;  height: 720px; background-color: #0cf; }
+   .tip_area { margin:auto; width: 100%; max-width:960px; height: 720px; background-color: #0b4; }
+   .info_area { margin:auto; width: 100%; max-width:960px; height: 720px; background-color: #0ad; }
+
+#footBox { width: 100%; height: 60px; background-color: #a43; }
+
+/* -디자인 기준 : 480px */
+@media screen and (max-width:479px) {  
+
+}
+
+/* -디자인 기준 : 480px */
+@media screen and (min-width:480px) and (max-width:767px) { 
+
+}
+
+/* -디자인 기준 : 768px */
+@media screen and (min-width:768px) and (max-width:959px) { 
+
+#footBox {height: 120px; }
+
+}
+
+/* -디자인 기준 : 960px */
+@media screen and (min-width:960px) { 
+
+#footBox {height: 120px; }
+}

@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* gcass_main_01_result.css */
+
+#wrap {width: 980px; height: 850px;}
+   .temp {position:relative; width: 100%; height:auto; padding-top:30px;}
+   .temp:after,
+   .temp::after {content:" "; display: block; width: 0; height: 0; clear:both;}
+/* ##headBox ------------------------------- */
+      #headBox {float:left; width:250px; height:710px; background-color: #777; padding:50px 50px 100px 20px; box-sizing:border-box;}
+      h1 {widows: 100%; height: 110px;}
+      h1>a {background-color: #acf;}
+
+      #gnb {width: 100%; height:auto; margin-top:35px;}
+      #gnb>ul {width: 100%; height:auto; }
+      #gnb>ul>li {width: 100%; height: 40px; margin-bottom:24px;}
+      #gnb>ul>li:last-child {height:112px; margin-bottom:0;}
+      #gnb>ul>li:nth-last-child(2) {margin-bottom:10px;}
+      #gnb>ul>li>a {background-color: #caa;}
+
+
+/* ##viewBox --------------------------------- */
+      #viewBox {float:left; width: 730px; height: 710px;
+         padding:50px; box-sizing:border-box; background-color: #adadad;}
+         .view_link {float:right; width: 610px; height: 595px; background-color: #999;}
+         .view_link>a {position:relative;}
+         .com_img {position:absolute; bottom:0; left:0; width: 330px; height: 520px; background-color: #777;}
+         .text_img {float:right; width:353px; height:554px; background-color: #fac;}
+
+
+/* ##sideBox ===================================== */
+      #sideBox {position:absolute; top:0; left:0; width: 100%; height:30px; background-color: #888;}
+      .lnb {float:right; width:435px; height:100%;}
+      .lnb>li {float:left; width: 95px; height:100%; background-color: #acc;}
+      .lnb>li:last-child {width: 245px;}
+      /* .lnb>li>a {display:block; width: 100%; height: 100%;} */
+
+/* #footBox ========================================  */
+   #footBox {position:relative; width:100%; height:110px; padding:15px 40px 25px;  box-sizing:border-box; background-color: #f7f;}
+   #footBox:before,
+   #footBox:before {content:" "; display:block; position:absolute; top:0; left:0; z-index:1000; width: 100%; border-top: 1px solid #999;}
+
+   #footBox>h2 {float:left; width:72px; height:50px; margin-right:46px; background-color: #452;}
+   .info {float:left; width:70px; height:50px; margin-right:26px; padding-top:15px; box-sizing:border-box; background-color: #faa;}
+   .info >ul {width:100%; height:100%;}
+   .info >ul>li {float:left; width: 45%;; height:100%}
+   .info >ul>li:last-child {float:right;}
+   .info >ul>li>a {display:block; width: 100%; height: 100%;}
+
+   .info_company {float:left; width:340px; height:50px; background-color: #0da; }
+   .family_area {position:relative; float:right; width: 300px; height:150px; margin-top:-81px; background-color: #fe0;}

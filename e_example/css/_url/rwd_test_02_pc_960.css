@@ -1,0 +1,24 @@
+/* rwd_test_02_pc_960.css */
+
+/* -디자인 기준 : 960px */
+@media screen and (min-width:960px) { 
+
+   .area_wrap {min-width: 960px; width: 80%; max-width: 2000px;}
+
+/* #headBox =========================================== */
+      #headBox h1 {width: 250px;}
+      #navBox ul > li {width: 50px;}
+      #navBox ul > li:last-child {width: 430px;}
+
+/* #conBox ================================================= */
+   .view_area {height:450px; height:46.875vw; max-height: 600px;}
+   .tip_area {width:80%; min-width: 960px; max-width: 2000px; height:210px; height:21.875vw; max-height:410px;}
+   .tip_area p {width:192px; width:20vw; max-width: 300px; height:156px; height: 16.25vw; max-height:240px;}
+   .info_area {width:80%; min-width: 960px; max-width: 2000px; height:auto;}
+   .info_area>div {display:block; width: 33.333333%; height: 540px; }
+   .info_03 {width:33.333334%;}
+
+/* #footBox =================================================== */
+   #footBox {padding:16px 0 60px;}
+
+}/* @media screen 960px~ */

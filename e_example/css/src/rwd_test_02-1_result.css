@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* rwd_test_02-1_result.css */
+
+@import url("../_url/rwd_test_02_common.css");
+@import url("../_url/rwd_test_02_mobile_480.css");
+@import url("../_url/rwd_test_02_tablet_768.css");
+@import url("../_url/rwd_test_02_pc_960.css");
+
+/* 공통영역 */
+
+
+
+/* -디자인 기준 : 480px */
+/* @media screen and (max-width:479px) {  } */
+
+
+
+
+
+

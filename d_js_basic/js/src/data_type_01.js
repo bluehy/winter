@@ -146,5 +146,125 @@ console.log(now);
 
 // =====================================================
 console.log("")
-console.log("===#  ===")
+console.log("===# 증감 연산자 ===")
 
+var now = 1207;
+
+now += 1;
+now += 1;
+now += 1;
+now += 1;
+now += 1;
+now += 1;
+now += 1;
+console.log(now);
+
+console.log("증가연산자_후치")
+now ++;
+console.log(now);
+now ++;
+now ++;
+now ++;
+console.log(now);
+
+console.log("감소연산자_후치")
+now -=1;
+now -=1;
+now -=1;
+console.log(now);
+
+now --;
+now --;
+now --;
+now --;
+console.log(now);
+
+console.log("증가연산자_전치")
+++ now;
+++ now;
+++ now;
+console.log(now);
+
+
+console.log("감소연산자_전치")
+-- now;
+-- now;
+-- now;
+console.log(now);
+
+
+
+/* 
+* 증감연산자
+   : 1씩 더하거나, 1씩 빼는 기능.
+   1씩 더하거나 뺄때 (++,--)는 앞(전치연산) 또는 뒤(후치연산)에 붙일 수 있다.
+
+   * 전치는 먼저 연산 후 결과를 도출.
+   * 후치는 먼저 결과를 도출 후 연산.
+*/
+
+
+// ==============================================================
+console.log("")
+console.log("===# 전치, 후치 연산자의 차이 ===")
+
+var myi = 100;
+console.log(myi);
+console.log(++myi);
+console.log(++myi);
+console.log(--myi);
+console.log(--myi);
+console.log("전치연산 결과값:",myi);
+
+console.log(myi++);
+console.log(myi++);
+console.log(myi++);
+console.log(myi++);
+console.log("후치증가연산 결과값:",myi);
+
+console.log(myi--);
+console.log(myi--);
+console.log(myi--);
+console.log(myi--);
+console.log("후치감소연산 결과값:",myi);
+
+
+console.log(++myi);
+console.log(myi++);
+console.log(myi--);
+console.log(myi++);
+console.log("혼용 결과값:",myi);
+
+
+
+
+// ============================================================
+console.log("")
+console.log("===# 변수 혼합 ===")
+
+var ls = 77;
+var tx = "번가의 기적";
+
+var myMv = ls + tx; // 77 + "번가의 기적" : 숫자와 문자를 연결하는 연산자 +
+console.log(myMv);
+
+ls = 010; // ????
+tx = "번가"
+myMv = ls + tx;
+console.log(myMv);
+
+(ls < 10) ? myMv = "0" + ls + tx : myMv = ls + tx;
+console.log(myMv)
+
+
+var myN = parseInt(myMv); 
+console.log(myN);
+
+var myN = parseFloat(myMv); 
+console.log(myN)
+// width:100px -> 수치값(value) 100만 가져오는 연산을 할 때 사용..
+
+
+// ==============================================================
+console.log("")
+console.log("===#  ===")

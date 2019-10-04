@@ -1,0 +1,28 @@
+// sample.scss
+/* sample.css */
+
+@import "var";
+
+
+h1{width:$full; height:$full; background-color: rgba($bg1, 0.3);
+   color: lighten($bg1, 60%);
+   border:2px solid nth($color,-1);}
+
+.list_01 {background-position: 0 0;}
+.list_02 {background-position: 0 10px;}
+.list_03 {background-position: 0 40px;}
+.list_04 {background-position: 0 100px;}
+
+/* ========================================= */
+$myp : (0, 10px, 40px, 100px, 200px, 400px, 600px );
+@for $i from 1 through length($myp) {
+   .list_0#{$i} {background-position:0 nth($myp, $i);}
+} // scss 어렵다 익숙해질수록 빨라진다...
+
+$myp : ('food.jpg', 'nat.jpg', 'cup.jpg','phone.jpg','usb.png','wain.png');
+$url : "../../img/myi/content/product/";
+
+@for $i from 1 through length($myp) {
+   .myp-#{$i}{background-image:url($url+nth($myp,$i));}
+   
+}

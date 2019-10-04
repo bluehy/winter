@@ -1,0 +1,59 @@
+/* sample.css */
+h1 {
+  width: 70%;
+  height: 70%;
+  background-color: rgba(17, 17, 17, 0.3);
+  color: #aaaaaa;
+  border: 2px solid #f06; }
+
+.list_01 {
+  background-position: 0 0; }
+
+.list_02 {
+  background-position: 0 10px; }
+
+.list_03 {
+  background-position: 0 40px; }
+
+.list_04 {
+  background-position: 0 100px; }
+
+/* ========================================= */
+.list_01 {
+  background-position: 0 0; }
+
+.list_02 {
+  background-position: 0 10px; }
+
+.list_03 {
+  background-position: 0 40px; }
+
+.list_04 {
+  background-position: 0 100px; }
+
+.list_05 {
+  background-position: 0 200px; }
+
+.list_06 {
+  background-position: 0 400px; }
+
+.list_07 {
+  background-position: 0 600px; }
+
+.myp-1 {
+  background-image: url("../../img/myi/content/product/food.jpg"); }
+
+.myp-2 {
+  background-image: url("../../img/myi/content/product/nat.jpg"); }
+
+.myp-3 {
+  background-image: url("../../img/myi/content/product/cup.jpg"); }
+
+.myp-4 {
+  background-image: url("../../img/myi/content/product/phone.jpg"); }
+
+.myp-5 {
+  background-image: url("../../img/myi/content/product/usb.png"); }
+
+.myp-6 {
+  background-image: url("../../img/myi/content/product/wain.png"); }

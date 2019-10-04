@@ -3,6 +3,9 @@
 
 @import "var";
 
+@import url("../css/sample02.css");
+
+
 
 h1{width:$full; height:$full; background-color: rgba($bg1, 0.3);
    color: lighten($bg1, 60%);
@@ -25,4 +28,8 @@ $url : "../../img/myi/content/product/";
 @for $i from 1 through length($myp) {
    .myp-#{$i}{background-image:url($url+nth($myp,$i));}
    
+}
+
+@media screen and (max-width:600px){
+   h1{width:100px;}
 }

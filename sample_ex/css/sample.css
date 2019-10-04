@@ -1,4 +1,5 @@
 /* sample.css */
+@import url("../css/sample02.css");
 h1 {
   width: 70%;
   height: 70%;
@@ -57,3 +58,7 @@ h1 {
 
 .myp-6 {
   background-image: url("../../img/myi/content/product/wain.png"); }
+
+@media screen and (max-width: 600px) {
+  h1 {
+    width: 100px; } }

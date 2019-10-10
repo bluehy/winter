@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* animation_basic.css */
+
+.ani_one {width:100%; min-width:1200px; height:200px; padding:0.5rem; background-color: #fdc; border:2px solid #333;}
+
+.ani_one > .test{width:200px; height:200px; border-radius:100%; background-color: #5cf; text-align:center; line-height:200px;
+
+-webkit-animation-name:rotateball;
+-moz-animation-name:rotateball;
+-ms-animation-name:rotateball;
+-o-animation-name:rotateball;
+animation-name:rotateball;
+
+-webkit-animation-duration:5000ms;
+-moz-animation-duration:5000ms;
+-ms-animation-duration:5000ms;
+-o-animation-duration:5000ms;
+animation-duration:5000ms;
+
+animation-timing-function: ease;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+
+animation:rotateball 3000ms ease-out infinite alternate paused; 
+}
+
+.test:hover {animation-play-state:running;}
+
+
+@-webkit-keyframes rotateball{}
+@-moz-keyframes rotateball{}
+@-ms-keyframes rotateball{}
+@-o-keyframes rotateball{}
+@keyframes rotateball{
+   0% {transform:translate(-150px); background-color: #f05;}
+   50% {color:#fff;}
+   100% {transform:translate(80vw) rotate(720deg);}
+}
+
+/* *animation
+- animation-name : 애니메이션 기능을 수행할 이름을 만드는 곳
+- animation-duration : 한번의 흐름이 이루어지는데 걸리는 시간
+- animation-timing-function : 한번의 흐름이 이루어지는 동안 속도분배(ex. ease, linear, ease-out...)
+- animation-iteration-count : 반복수행여부 (1번=1, 10번=10, 무한반복=infinite)
+- animation-direction : 애니메이션 수행 전/후 방향을 어떻게? (normal, reverse, alternate, alternate-reverse...)
+- animation-delay : 애니메이션 지연시간
+- animation-play-state : 움직임과 일시정지 처리
+- animation-fill-mode : 애니메이션의 전/후에 처리할 값(내용)
+*/
+
+
+.myani {width:20px; height:20px; border-radius:100%; background-color: #333;
+         animation: rotateball 500ms ease infinite alternate-reverse;}

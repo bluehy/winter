@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- content.html -->
+<!-- grammar_basic.html -->
 <html lang="ko-KR">
     <head>
       <noscript>
@@ -17,11 +17,11 @@
       <meta name="author" content="hy">
       <meta name="generator" content="illustrator, photoshop, sublimetext, vscode">
 
-      <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
+      <link rel="stylesheet" href="../../fonts/fontawesome/css/all.min.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean">
-      <link rel="stylesheet" href="../css/base/reset.css">
-      <link rel="stylesheet" href="../css/base/common.css">
-      <link rel="stylesheet" href="../css/src/content.css">
+      <link rel="stylesheet" href="../../css/base/reset.css">
+      <link rel="stylesheet" href="../../css/base/common.css">
+      <!-- <link rel="stylesheet" href="../../css/src/grammar_basic.css"> -->
 
       <!--[if lte IE 9]>
          <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
@@ -29,35 +29,33 @@
          <script src="../ie/respond/dest/respond.min.js"></script>
       <![endif]-->
 
-      <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
-      <link rel="apple-touch-icon" href="../img/favicon.png">
+      <link rel="shortcut icon" href="../../img/favicon.png" type="image/png">
+      <link rel="apple-touch-icon" href="../../img/favicon.png">
 
-      <title>javascript 이해하기</title>
+
+      <style>
+      #coffeeMenu {width:120px; height:30px; }
+      </style>
+
+      <title>웹기초 이해하기</title>
    </head>
 <!--  --> 
    <body>
    <!-- layout =============== -->
    <div id="wrap">
       <header id="headBox">
-         <h1><a href="#">자바스크립트 이해하기</a></h1>
+         <h1><a href="../content.html">javascript 조건문 이해하기</a></h1>
       </header>
       <main id="conBox">
-         <h2>자바스크립트 기초1</h2>
-         <ul class="clearfix">
-            <li><a href="./script/basic_01.html">자바스크립트 기초개념</a></li>
-            <li><a href="./script/basic_02.html">자료형 기본, 변수</a></li>
-            <li><a href="./script/data_type_01.html">자료 기본형 이해하기</a></li>
-            <li><a href="./script/object_basic_01.html">배열, 객체 이해하기</a></li>
-            <li><a href="./script/data_type_02.html">javascript 기초개념이해하기</a></li>
-            <li><a href="./script/function_basic_01.html">javascript 함수</a></li>
-            <li><a href="./script/grammar_basic.html">문법기초1_조건문</a></li>
-         </ul>
+         <h2>부제</h2>
+         <button type="button" id="coffeeMenu">커피주문하기</button>
+         <p></p>
       </main>
-
+      <footer id="footBox">
+         <h2>정보</h2>
+      </footer>
    </div>
    <!-- script ================ -->
-      <script>
-         console.log("세번째 체크사항");
-      </script>
+      <script src="../../js/src/grammar_basic.js"></script>
    </body>
 </html>

@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/* transform_basic.css */
+
+
+#conBox{width: 800px; width: 50rem; height: auto; min-height: 31.25rem; }
+.box{width: 100%; height:auto; min-height:100%; margin-bottom: 5rem; padding: 16px; padding: 1rem; box-sizing:border-box; background-color: #fd5; border-bottom: 2px solid #333; border-bottom: 0.125rem solid #333;}
+.box > ul{width: 100%; height: auto; }
+.box > ul:after{content:" "; display:block; width:0; height:0; clear:both;}
+.box > ul > li {float:left; width: 300px; height: 300px; width: 18.75rem; height: 18.75rem; margin:2rem; background-color: #07f; border-radius:1rem; border: 1px solid #acf; box-sizing:border-box;  color: #fff; font-weight: bold;}
+
+/* # translate : 위치이동 ================= */
+.translate li {transition:all 300ms ease;}
+.translate:hover li {transition:all 1000ms ease;}
+
+.translate:hover li:first-child {transform: translate(400px, -200px); z-index:300; background-color: #f00;}
+.translate:hover li:nth-child(2) {transform: translateX(400px); background-color: #fa0;}
+.translate:hover li:nth-child(3) {transform: translateY(-100px); background-color: #0f0;}
+.translate:hover li:nth-child(4) {transform: translate3D(0,-200px, -100px); background-color: #00f;}
+
+
+/* # scale : 크기조절 ======================= */
+.scale li {transition:all 500ms linear;}
+/* 
+ease: 자연스러운 변형(빠른속도에서 느리게)
+ease-in:점점 빠르게
+ease-out :점점느리게
+ease-in-out: 빨라지다 느리게
+linear: 지속적인, 동일한 속도
+*/
+
+.scale:hover li:nth-child(1) {transform:scale(1.3, 1.5); background-color: #f00;}
+.scale:hover li:nth-child(2) {transform:scaleX(0.5); background-color: #fa0;}
+.scale:hover li:nth-child(3) {transform:scaleY(0.5); background-color: #fa0;}
+.scale:hover li:nth-child(4) {transform:scale3D(2, 2, 3); background-color: #0af;}
+
+
+/* # rotate : 회전 ========================= */
+.rotate li {transition: all 700ms ease-in-out;}
+
+.rotate:hover li:nth-child(1) {transform: rotate(45deg); background-color: #a00;}
+.rotate:hover li:nth-child(2) {transform: perspective(1000px) rotateX(45deg); background-color: #fa0;}
+.rotate:hover li:nth-child(3) {transform: perspective(1000px) rotateY(45deg); background-color: #fa0;}
+.rotate:hover li:nth-child(4) {transform: perspective(500px) rotate3D(1,2,2, -45deg); background-color: #0af;} /* x,y,z,angle */
+
+
+/* # skew : shear ===================== */
+.skew li {transition:all 700ms ease;}
+
+.skew li:nth-child(1) {transform: skew(-20deg, 10deg); background-color: #a00;}
+.skew li:nth-child(2) {transform: skewX(20deg); background-color: #fa0;}
+.skew li:nth-child(3) {transform: skewY(20deg); background-color: #fa0;}
+.skew li:nth-child(4) {transform: skewX(20deg); background-color: #0af; font-size: 2rem; text-align:center;}
+.skew li:nth-child(4)>span {transform:skewX(-20deg); display:block;}
+
+
+/* # transform-origin : 기준점 ================= */
+.origin {background-color: #dfd;}
+.origin li {transition:all 500ms/* =0.5s */ ease;}
+
+.origin li {transform-origin:0 0;}
+.origin li:nth-child(1):hover {transform: skew(45deg) rotate(45deg);}
+.origin li:nth-child(2):hover {transform: translate(500px,400px) rotate(45deg) scale(1.5) ;}
+
+
+/* # perspective : ================ */
+.perspective {margin-bottom: 100rem;}
+.perspective > ul > li {width: 100px; height: 170px; transform-origin:0 0; transition:all 500ms ease;background-color: #0ac;}
+
+.perspective > ul {perspective:200px;}
+.perspective li:nth-child(1) {transform:rotateY(60deg);}
+.perspective li:nth-child(2) {transform:rotateY(30deg);}
+.perspective li:nth-child(3) {transform:rotateY(-30deg);}
+.perspective li:nth-child(4) {transform:rotateY(-60deg);}

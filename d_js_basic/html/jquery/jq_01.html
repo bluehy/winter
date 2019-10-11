@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- basic_02.html -->
+<!-- jq_01.html -->
 <html lang="ko-KR">
-<head>
+    <head>
       <noscript>
          <p>현재 접속하고 있는 사이트의 기능의 일부가 원활하게 실행되고 있지 않습니다.<br/>
          자바스크립트의 기능을 활성화해주세요.</p>
@@ -21,33 +21,40 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean">
       <link rel="stylesheet" href="../../css/base/reset.css">
       <link rel="stylesheet" href="../../css/base/common.css">
-      <!-- <link rel="stylesheet" href="../../css/src/basic_02.css"> -->
+      <!-- <link rel="stylesheet" href="../css/src/jq_01.css"> -->
 
       <!--[if lte IE 9]>
          <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
          <script src="../ie/PIE/PIE.js"></script>
          <script src="../ie/respond/dest/respond.min.js"></script>
       <![endif]-->
-
+      
+      <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+      
       <link rel="shortcut icon" href="../../img/favicon.png" type="image/png">
       <link rel="apple-touch-icon" href="../../img/favicon.png">
 
-      <title>javascript 기초 이해하기</title>
-</head>
+      <title>자바스크립트 기초2</title>
+   </head>
 <!--  --> 
-<body>
+   <body>
    <!-- layout =============== -->
    <div id="wrap">
       <header id="headBox">
-         <h1><a href="../content.html">js기초 이해하기</a></h1>
+         <h1><a href="../content.html">jQuery 기초</a></h1>
       </header>
       <main id="conBox">
-         <h2>js 자료형</h2>
+         <h2>jQuery 파일 불러오기, 간단세팅 및 테스트</h2>
 
       </main>
-      
    </div>
    <!-- script ================ -->
-   <script src="../../js/src/script/base_02.js"></script>
-</body>
+      <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> --> <!-- CDN에서 링크 가져오는 방법 -->
+      <script src="../../js/base/jquery-3.4.1.min.js"></script> <!-- 저장 후 불러와서 사용하는 법 -->
+      <script src="../../js/base/jquery-ui.min.js"></script>
+      <script src="../../js/src/jquery/jq_01.js"></script>
+
+      
+
+   </body>
 </html>

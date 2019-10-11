@@ -1,0 +1,7 @@
+//basic_02.scss
+/* basic_02.css */ 
+
+$test : #f00;
+
+html,body {background-color: #fff;}
+#wrap{color:rgba($test,0.5);}

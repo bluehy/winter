@@ -1,6 +1,8 @@
 /* 변수 */
 //scss전용 주석
 
+// --output-style 
+// nested, expanded, compact, compressed
 
 // var text1 = "#333";
 $textColor : #333; 
@@ -18,3 +20,27 @@ h1{color:$textColor;}
    &:active{color:lighten($textColor, 30%);}
    &:focus {color:$textColor, 30%;}
 }
+
+// .product_list ul li a span{}
+// .product_list{width:100%;}
+// .product_list>ul{width:90%;}
+// .product_list>ul>li{width:100%;}
+// .product_list>ul>li>a{display:block; width:100%;}
+// .product_list>ul>li>a>span{display:block; width:0;}
+
+.product_list{width:100%;
+   & > ul{width:90%;
+      & > li{width:100%; margin-bottom:0;
+         &:last-child{margin-bottom:0;
+            &:after,
+            &::after{content:"1234";}}// li:last-child
+         & > a{display:block; width:100%;
+            &:hover{background-color: #fff;}
+            &:focus{background-color: #fff;
+            &> span {color: rgba($textColor, 0.5);}}//a:focus
+            & > span{display:block; width:0;}
+               } // a
+            } // li
+         } // ul
+} //.product_list 네스팅? _ 한번에 너무 많이 하는 건 좋지 않음,,., 많아봣자4개?
+

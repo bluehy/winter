@@ -3,5 +3,43 @@
 
 $test : #f00;
 
+$base: "../../img/main/";
+
+$url0 : $base + "icon/";
+$url1 : $base + "nature/";
+$url2 : $base + "animal/";
+$url3 : $base + "plant/";
+
+$myUrl : ("icon/", "model/", "nature/", "box/");
+
 html,body {background-color: #fff;}
 #wrap{color:rgba($test,0.5);}
+
+.icon_01 {background-image: url($url0 + "logo.jpg");}
+.icon_02 {background-image: url($url1 + "logo.jpg");}
+.icon_03 {background-image: url($url2 + "logo.jpg");}
+.icon_04 {background-image: url($url0 + nth($myUrl,4) + "logo.jpg");}
+
+
+
+@mixin mybox($u,$r:no-repeat){
+   display:block; width:100%; height:100%;
+   background-image:url($u);
+   background-repeat: $r;
+   background-position: 50% 50%;
+   background-size: contain;
+   background-attachment: fixed;
+   
+} // @mixin을 불러올 때에는 @include name();
+
+.my_01 {float:left; @include mybox($url1 + nth($myUrl,2) + "i.jpg",repeat-x);}
+#wrap {@include mybox($url0 + nth($myUrl,2) + "ie.jpg");}
+#headBox {@include mybox($url3 + nth($myUrl,2) + "in.jpg");}
+
+
+@mixin unit($u){
+   width:$u+'px'; width: ($u/16) +'rem';
+}
+
+
+.testUnit {@include unit(960);}

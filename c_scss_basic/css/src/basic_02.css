@@ -2,3 +2,19 @@
 html, body { background-color: #fff; }
 
 #wrap { color: rgba(255, 0, 0, 0.5); }
+
+.icon_01 { background-image: url("../../img/main/icon/logo.jpg"); }
+
+.icon_02 { background-image: url("../../img/main/nature/logo.jpg"); }
+
+.icon_03 { background-image: url("../../img/main/animal/logo.jpg"); }
+
+.icon_04 { background-image: url("../../img/main/icon/box/logo.jpg"); }
+
+.my_01 { float: left; display: block; width: 100%; height: 100%; background-image: url("../../img/main/nature/model/i.jpg"); background-repeat: repeat-x; background-position: 50% 50%; background-size: contain; background-attachment: fixed; }
+
+#wrap { display: block; width: 100%; height: 100%; background-image: url("../../img/main/icon/model/ie.jpg"); background-repeat: no-repeat; background-position: 50% 50%; background-size: contain; background-attachment: fixed; }
+
+#headBox { display: block; width: 100%; height: 100%; background-image: url("../../img/main/plant/model/in.jpg"); background-repeat: no-repeat; background-position: 50% 50%; background-size: contain; background-attachment: fixed; }
+
+.testUnit { width: "960px"; width: "60rem"; }

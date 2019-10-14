@@ -22,7 +22,7 @@ my('.box p').css({"padding":'0.5rem', "backgroundColor":"#fa0"});    //자손 : 
 my('.box').find('p').css({"color":"#fff", "textShadow":"0.2rem 0.2rem 0.2rem rgba(0,0,0,0.7)"});
 
 my('.box > p').css({"borderBottom":"2px solid #333"});  //자식 : children
-my('.box').children('p').css({"transform":"rotate(15deg)"})
+my('.box').children('p').css({"transform":"translateY(-20px) rotate(15deg)"})
 
 
 

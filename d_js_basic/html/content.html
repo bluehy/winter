@@ -2,13 +2,7 @@
 <!-- content.html -->
 <html lang="ko-KR">
     <head>
-      <noscript>
-         <p>현재 접속하고 있는 사이트의 기능의 일부가 원활하게 실행되고 있지 않습니다.<br/>
-         자바스크립트의 기능을 활성화해주세요.</p>
-         <p><a target="_blank" href="http://enable-javascript.com/ko/">자바스크립트 활성화 처리하기</a></p>
-      </noscript>
-
-
+      
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -36,6 +30,12 @@
    </head>
 <!--  --> 
    <body>
+      <!-- noscript : javascript를 지원하지 않는 브라우저 설정 -->
+      <noscript>
+            <p>현재 접속하고 있는 사이트의 기능의 일부가 원활하게 실행되고 있지 않습니다.<br/>
+            자바스크립트의 기능을 활성화해주세요.</p>
+            <p><a target="_blank" href="http://enable-javascript.com/ko/">자바스크립트 활성화 처리하기</a></p>
+      </noscript>
    <!-- layout =============== -->
    <div id="wrap">
       <header id="headBox">
@@ -59,14 +59,16 @@
 
          
          <hr/>
+
          <h2>jQuery 기초 이해하기</h2>
-         <ul><li><a href="./jquery/jq_01.html">jQuery 세팅 및 간단테스트</a></li></ul>
+         <ul>
+            <li><a href="./jquery/jq_01.html">jQuery 세팅 및 간단테스트</a></li>
+            <li><a href="./jquery/jq_02.html">jQuery 선택자</a></li>
+         </ul>
       </main>
 
    </div>
    <!-- script ================ -->
-      <script>
-         console.log("세번째 체크사항");
-      </script>
+      
    </body>
 </html>

@@ -1,0 +1,13 @@
+/* jq_04_event.css */
+
+#wrap {width:900px; height:auto; margin:auto; background-color: #ddd;}
+#headBox{width:100%; height:auto;}
+h1 {padding:1rem; background-color: #0af;}
+
+#conBox{width:100%; height:auto;}
+h2 {padding:0.3rem; border-bottom:1px solid #35f;}
+
+
+#conBox p {width: 100%; height:auto; min-height:50px; margin-top:1rem; background-color: #acc;}
+#conBox ul {width: 100%; height:auto; box-sizing:border-box; padding:0.5rem;}
+#conBox ul > li {width:100%; height:100px; padding:1rem; box-sizing:border-box; margin-bottom:1rem; border:1px solid #333; background-color: #fa0; }

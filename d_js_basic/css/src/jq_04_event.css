@@ -10,4 +10,6 @@ h2 {padding:0.3rem; border-bottom:1px solid #35f;}
 
 #conBox p {width: 100%; height:auto; min-height:50px; margin-top:1rem; background-color: #acc;}
 #conBox ul {width: 100%; height:auto; box-sizing:border-box; padding:0.5rem;}
-#conBox ul > li {width:100%; height:100px; padding:1rem; box-sizing:border-box; margin-bottom:1rem; border:1px solid #333; background-color: #fa0; }
+#conBox ul > li {width:100%; height:100px; padding:1rem; box-sizing:border-box; margin-bottom:1rem; border:1px solid #333; background-color: #fa0;  position:relative;}
+
+.ball{position:absolute; top:0; bottom:0; left:0; right:0; margin:auto; width:20px; height:20px; z-index:100; background-color: #fff; border-radius:100%; }

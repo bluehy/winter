@@ -46,7 +46,7 @@ conLi.eq(1).on('dblclick',function(){
 
 
 conLi.eq(2).on('mousedown',function(x){
-   console.log(x.button);
+   console.log(x.button, x.buttons);
    /*
    switch(x.button){
       case 0:
@@ -80,8 +80,30 @@ conLi.eq(2).on('mouseup',function(){
 });
 
 
-conLi.eq(3).on('mousewheel',function(){
-   
-})
+conLi.eq(3).on('mousewheel DOMMouseScroll',function(x){
+   console.log(x);
+   $(this).css({'backgroundColor':'#04f'})
+});
+
+
+conLi.eq(4).on('mousemove', function(e){
+   console.log(e.clientX, e.clientY);
+   // : 사용자가 보고있는 화면 왼쪽 상단을 0점 기준으로 한 좌표값
+   // console.log(e.offsetX, e.offsetY);
+   // : $(this)의 왼쪽 상단을 0점 기준으로 한 좌표값
+   // console.log(e.pageX, e.pageY);
+   // : 브라우저 문서의 왼쪽 상단을 0점 기준으로 한 좌표값
+   // console.log(e.screenX, e.screenY);
+   // : 브라우저의 왼쪽 상단을 0점 기준으로 한 좌표값
+   let x = e.offsetX;
+   let y = e.offsetY;
+   // $('.ball').css({'transform':'translate('+ -x +'%,'+ -y +'%)'});
+   $('.ball').css({'transform':`translate(-${x}%,-${y}%)`});
+});
+
+conLi.eq(5).children('input').on('keyup',function(x){
+   console.log(x.key, x.keyCode);
+   console.log(x);
+});
 
 })(jQuery);

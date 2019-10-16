@@ -45,12 +45,15 @@ slide.eq(2).on('click',function(){
 
    // addClass, removeClass, toggleClass
 class_control.eq(0).on('click',function(){
+   viewBox.removeAttr('style'); //앞선 다른 클릭으로 display:none;의 속성을 지움.
    viewBox.addClass('act');
 });
 class_control.eq(1).on('click',function(){
+   viewBox.removeAttr('style');
    viewBox.removeClass('act');
 });
 class_control.eq(2).on('click',function(){
+   viewBox.removeAttr('style');
    viewBox.toggleClass('act');
 });
 

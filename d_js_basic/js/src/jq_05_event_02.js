@@ -97,13 +97,22 @@
          // (myscroll > 150) ? conBox.css({'backgroundColor':'#aca'}) : conBox.css({'backgroundColor':'#fca'});
       });
 
-      let beforeWidth = win.width();
+
+      // 크기값이 변경되었을 때 사용하는 기능(가로,세로 일부기능 제한 두고 사용)
+      let beforeWidth = win.width(); //크기값이 변경되기 전 가로값
       win.on('resize',function(){
-         let afterWidth = win.width();
+         let afterWidth = win.width();// 크기값이 변경된 후 가로값
          if (beforeWidth !== afterWidth){
             console.log('크기가 변경되었습니다.')
+            history.go(0);
          }         
       })
+
+      /*  새로고침의 방법
+      * location.reload(true);         // 새로고침(F5)
+      * location.href = location.href; // 상단 주소창에 적힌 주소로 이동 (권장X)
+      * history.go(0);                 // 사용기록 중 가장 최근 기록 위치로 이동(제자리)
+      */
 
                   //선택자.기능('기능이름',function(){});
    // : 모두 동일한 이벤트를 지정하는 방법. (hover는 그렇게 권장X)

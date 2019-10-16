@@ -28,12 +28,15 @@ headWrap.load('./temp/header.html',function(data){
 
 // ====================================== 
 footWrap.load('./temp/footer.html',function(x){
-   console.log(x);   
-})
+   console.log(x);
+});
 
 // : load해온 파일간 컨트롤이 불가능.
 
-
+// $.getJSON('../../data/test.json',function(x){console.log(x)});
+// wrap.load('../../data/test.json',function(data){
+//    console.log(data);
+// })
 
 
 })(jQuery);

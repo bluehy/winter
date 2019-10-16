@@ -13,9 +13,27 @@
 */
 
 const wrap = $('#wrap');
-wrap.prepend('<div class="head_wrap"></div>');
 
-const headWrap = $('.head_wrap');
-headWrap.load('./temp/header.html');
+wrap.prepend('<div class="head_wrap"></div>');
+   const headWrap = $('.head_wrap');
+wrap.append('<div class="foot_wrap"></div>')
+   const footWrap = $('.foot_wrap');
+
+
+headWrap.load('./temp/header.html',function(data){
+   console.log(data);
+   const headBox = $('#headBox');
+   headBox.css({'backgroundColor':'#3ff'});
+});
+
+// ====================================== 
+footWrap.load('./temp/footer.html',function(x){
+   console.log(x);   
+})
+
+// : load해온 파일간 컨트롤이 불가능.
+
+
+
 
 })(jQuery);

@@ -2,14 +2,14 @@
    const menuV = $('.accordion_menu_v');
    const menuDt = menuV.find('dt');
    const menuDd = menuV.find('dd');
-
+   
    // menuDd.hide();
    menuDd.eq(0).show();
 
    // let t = menuDt.eq(0).contents(); //내용에 들어있는 모든 요소 파악.
    // menuDt.wrap('<div>'); // wrap : 부모요소를 생성하거나 파악.
 
-   menuDt.contents().wrap('<a href="#"></a>'); //js사용시엔 반복문으로 처리해야한다.
+   menuDt.contents().wrap('<a href=""></a>'); //js사용시엔 반복문으로 처리해야한다.
    const menuDtLink = menuDt.find('a');
    menuDtLink.css({'display':'block', 'width':'100%','height':'100%','color':'inherit'});
 
@@ -35,7 +35,8 @@
 
    console.log('   # 클릭시 dd 슬라이드 토글 되는 기능 2 ========')
 
-   menuDt.on('click',function(){
+   menuDt.on('click',function(e){
+      e.preventDefault(); //a href="#"이벤트를 삭제해줌.
       let i = $(this).index()/2;
       // console.log(i); // i는 모든 형제 중 순서값.
       menuDd.eq(i).stop().slideToggle(300); //eq는 형제 중 같은 태그간 순서를 지정.

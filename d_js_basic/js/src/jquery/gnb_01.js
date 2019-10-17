@@ -66,45 +66,55 @@
    let timed = 500;
 
    // =======================================================
-   // 1번 기능 수행하기
-   gnb.css({'backgroundColor':'transparent'});
-   gnbArea.css({'height':'auto'/* ,'backgroundColor':'rgba(0,0,0,0.5)' *//* ,'box-shadow':'0.3rem 0.3rem 0.3rem rgba(0,0,0,0.5)' */});
+   console.log('// 1번 기능 수행하기');
+   // gnb.css({'backgroundColor':'transparent'});
+   // gnbArea.css({'height':'auto'/* ,'backgroundColor':'rgba(0,0,0,0.5)' *//* ,'box-shadow':'0.3rem 0.3rem 0.3rem rgba(0,0,0,0.5)' */});
 
-   //focus잡히면 보이게하기
-   titleLink.on('focus',function(e){
-      e.preventDefault(); // 실제 이동해야한다면 사용해서는 안됨.
-      partList.stop().slideDown(timed);
-      gnbArea.css({'backgroundColor':'rgba(0,0,0,0.5)'});
-   });
+   // //focus잡히면 보이게하기
+   // titleLink.on('focus',function(e){
+   //    e.preventDefault(); // 실제 이동해야한다면 사용해서는 안됨.
+   //    partList.stop().slideDown(timed);
+   //    gnbArea.css({'backgroundColor':'rgba(0,0,0,0.5)'});
+   // });
 
-   // 블러처리되면 사라지기
-   subLink.eq(-1).on('blur',function(e){
-      e.preventDefault()
-      partList.stop().slideUp(timed);
-      gnbArea.css({'backgroundColor':'transparent'});
-   });
+   // // 블러처리되면 사라지기
+   // subLink.eq(-1).on('blur',function(e){
+   //    e.preventDefault()
+   //    partList.stop().slideUp(timed);
+   //    gnbArea.css({'backgroundColor':'transparent'});
+   // });
 
-   //gnbArea에 마우스 올렸을 때 나타나게 하기
-   gnbArea.on('mouseenter',function(){
-      partList.stop().slideDown(timed);
-   });
+   // //gnbArea에 마우스 올렸을 때 나타나게 하기
+   // gnbArea.on('mouseenter',function(){
+   //    partList.stop().slideDown(timed);
+   // });
    
-   gnbArea.on('mouseleave',function(){
-      partList.stop().slideUp(timed);
-   });
+   // gnbArea.on('mouseleave',function(){
+   //    partList.stop().slideUp(timed);
+   // });
 
 
-   // ============================================================
-   // 2번 기능 수행하기 (배경이 따라오지X)
-   gnbArea.css({'height':'100%'})
+   // // ============================================================
+   console.log('// 2번 기능 수행하기 (배경이 따라오지X)');
+   // gnbArea.css({'height':'100%'})
    //이외는 1번기능과 동일
 
 
    // =============================================================
-   // 3번기능 수행하기  
+   console.log('// 3번기능 수행하기');
 
-   
+   titleLink.on('mouseenter focus',function(e){
+      e.preventDefault();
+      $(this).next('ul').slideDown();
+      
+      $(this).next('ul').children('li').eq(-1).find('a').on('blur',function(){
+      $(this).closest('ul').slideUp();
+      });
 
+   });
 
+   gnbArea.on('mouseleave',function(){
+      partList.slideUp();
+   });
 
 })(jQuery);

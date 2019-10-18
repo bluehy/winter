@@ -44,16 +44,16 @@ closeGnbBtn.on('click',function(e){
 // #gnb에 마우스 올렸을 경우, dd를 나오게 만들기
 
    const addAction = function(){
-      $(this).find(gnbTitleLink).addClass('action');
+      $(this).parents('li').find(gnbTitleLink).addClass('action');
       // $(this).siblings().find(gnbTitleLink).removeClass('action')
       gnbDd.stop().slideDown();
    }
 
-   gnbDl.on('mouseenter focus', addAction);
+   gnbDl.on('mouseenter', addAction);
 
 
    const removeAction = function(){
-      $(this).find(gnbTitleLink).removeClass('action');
+      $(this).parents('li').find(gnbTitleLink).removeClass('action');
       gnbDd.stop().slideUp();
    }
 
@@ -64,15 +64,21 @@ closeGnbBtn.on('click',function(e){
 // focus는 a, button, form(input, textarea, select)요소가 가능.
 
 
-   gnbTitleLink.on('focus',function(e){
-      e.preventDefault();
-      gnbDd.stop().slideDown();
-   });
+   // gnbTitleLink.on('focus',function(e){
+   //    e.preventDefault();
+   //    gnbDd.stop().slideDown();
+   //    // $(this).on('focus',addAction);
+   // });
 
-   gnbListLink.eq(-1).on('blur',function(e){
-      e.preventDefault();
+   // gnbListLink.eq(-1).on('blur',function(e){
+   //    e.preventDefault();
+   //    gnbDd.stop().slideUp();
+   //    // $(this).on('blur',removeAction);
+   // });
+
+   gnbTitleLink.on('focus',addAction);
+   gnbListLink.eq(-1).on('blur',function(){
       gnbDd.stop().slideUp();
    });
-
 
 })(jQuery);

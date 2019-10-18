@@ -16,7 +16,14 @@
 const sideGnb = $('.side_gnb');
 const openGnbBtn = $('.gnb_btn>button');
 const closeGnbBtn = $('.close_gnb_btn>button');
+const gnbDl = gnb.find('dl');
+const gnbDd = gnb.find('dd');
+const gnbDt = gnb.find('dt');
+const gnbTitleLink = gnbDt.children('a');
+const gnbListLink = gnbDd.children('a');
+
 let time = 600;
+
 
 openGnbBtn.on('click',function(e){
    e.preventDefault();
@@ -35,23 +42,27 @@ closeGnbBtn.on('click',function(e){
 
 
 // #gnb에 마우스 올렸을 경우, dd를 나오게 만들기
-   const gnbDl = gnb.find('dl');
-   const gnbDd = gnb.find('dd');
 
-   gnbDl.on('mouseenter',function(){
+   const addAction = function(){
+      $(this).find(gnbTitleLink).addClass('action');
+      // $(this).siblings().find(gnbTitleLink).removeClass('action')
       gnbDd.stop().slideDown();
-   });
+   }
 
-   gnbDl.on('mouseleave',function(){
+   gnbDl.on('mouseenter focus', addAction);
+
+
+   const removeAction = function(){
+      $(this).find(gnbTitleLink).removeClass('action');
       gnbDd.stop().slideUp();
-   });
+   }
+
+   gnbDl.on('mouseleave',removeAction);
 
 
 // #gnb에 Dt에 focus 처리되면 dd가 나타나게 만들기
 // focus는 a, button, form(input, textarea, select)요소가 가능.
-   const gnbDt = gnb.find('dt');
-   const gnbTitleLink = gnbDt.children('a');
-   const gnbListLink = gnbDd.children('a');
+
 
    gnbTitleLink.on('focus',function(e){
       e.preventDefault();

@@ -43,6 +43,9 @@
         #gnb dt>a::after {content:" "; display:block; 
             position:absolute; z-index:500; left:0; bottom:-1px; width: 0; height:0; border-bottom:4px solid #f30; transition:width 300ms ease;}
 
+        /* #gnb dt>a.hover:after,
+        #gnb dt>a.focus:after {width:100%;} */
+
         #gnb dt>a.action:after,
         #gnb dt>a.action::after {width:100%;}
 

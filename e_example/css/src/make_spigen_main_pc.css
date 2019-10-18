@@ -1,24 +1,49 @@
 @charset "UTF-8";
 /* make_spigen_main_pc.css */
 
-#wrap {width: 100%; min-width:1200px; min-width:75rem; 
+#wrap {width: 100%; min-width:1366px; min-width:75rem; 
       height:100%; min-height:700px; min-height:43.75rem;
       background-color: #ccf;}
 
+@media screen and (max-width:1366px) {
+   #gnb{display:none;}
+}
+
 /* # headBox ============================================= */
 #headBox {position:fixed; top:0; left:0; z-index:1000; 
-   width:100%; height:100px; box-sizing:border-box; border-bottom:1px solid #ccc; background-color: #fff;}
+   width:100%; height:100px; padding:27px 60px; box-sizing:border-box; border-bottom:1px solid #ccc; background-color: #fff;}
+  
+   h1 {float:left; width: 200px; height:44px; 
+      background-image:url("../../img/logo.png"); 
+      background-position:50% 50%;
+      background-size:cover;}
+   /* #gnb +++++++++++++++++++++++++++++++++++++++++++ */
+   #gnb {position:absolute; top:0; left:50%; transform:translate(-50%);
+            width:760px; height:100px; background-color: #adf; }
+   #gnb>ul {position:relative; z-index:100; width:100%; height:auto; background-color: #fff;}            
+      #gnb>ul:after,
+      #gnb>ul::after {content:" "; display:block; 
+         position:absolute; z-index:-1; top:0; left:50%; margin-left:-50vw; width: 100vw; height: 100%; background-color: inherit;}
 
-   h1 {}
-   .hidden {}
-   .gnb_btn {}
+   #gnb>ul>li {float:left; width:25%; height:auto;text-align:center}
+   #gnb dl {width: 100%; height:auto; background-color: #fa0;}
+   #gnb dt {width: 100%; height:100%; }
+   #gnb dt>a {display:block; width: 100%; height: 100%; padding-top:30px; ; box-sizing:border-box;}
+   #gnb dd {width:100%; height: auto; padding-top:3rem;}
+   #gnb dd>a {display:block; width:100%; height: auto; padding:5px 0; margin-bottom:5px; }
+
+
+   .gnb_btn {float:right; width: 44px; height: 44px; background-color: #ccc;}
 
 /* # viewBox ============================================= */
 #viewBox {width:100%; height:100%; padding-top:100px; box-sizing:border-box; background-color: #0af;}
 
 
 /* # conBox ============================================= */
-#conBox {width:100%; height: 100%; min-height: 700px; min-height:43.75rem; background-color: #ddd;}
+#conBox {width:100%; height: 100%; padding-top:100px; box-sizing:border-box; /* min-height: 700px; min-height:43.75rem; */ background-color: #ddd;}
+
+.media_blog {width:100%; height:50%; background-color: inherit;}
+.about_company {width:100%; height:50%; background-color: #aff;}
 
 
 /* # footBox ============================================= */

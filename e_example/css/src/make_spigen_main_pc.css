@@ -11,29 +11,63 @@
 
 /* # headBox ============================================= */
 #headBox {position:fixed; top:0; left:0; z-index:1000; 
-   width:100%; height:100px; padding:27px 60px; box-sizing:border-box; border-bottom:1px solid #ccc; background-color: #fff;}
+   width:100%; height:100px; padding:27px 60px; box-sizing:border-box;  background-color: #fff;}
+   #headBox:after,
+   #headBox::after{position: absolute; content:" "; z-index:0; display:block; bottom:0; left:0; width:100%; height: 0; border-bottom:1px solid #ccc; }
   
-   h1 {float:left; width: 200px; height:44px; 
+   h1 {position:relative; z-index:10; float:left; width: 200px; height:44px; 
       background-image:url("../../img/logo.png"); 
       background-position:50% 50%;
+      background-color: #acc;
       background-size:cover;}
    /* #gnb +++++++++++++++++++++++++++++++++++++++++++ */
-   #gnb {position:absolute; top:0; left:50%; transform:translate(-50%);
+   #gnb {position:absolute;  top:0; left:50%; transform:translate(-50%);
             width:760px; height:100px; background-color: #adf; }
-   #gnb>ul {position:relative; z-index:100; width:100%; height:auto; background-color: #fff;}            
-      #gnb>ul:after,
-      #gnb>ul::after {content:" "; display:block; 
+   .web_navigation>ul {position:relative;width:100%; height:auto; padding-bottom:1rem;background-color: #fff;}
+
+      #gnb>ul:before,
+      #gnb>ul::before {content:" "; display:block; 
          position:absolute; z-index:-1; top:0; left:50%; margin-left:-50vw; width: 100vw; height: 100%; background-color: inherit;}
 
-   #gnb>ul>li {float:left; width:25%; height:auto;text-align:center}
-   #gnb dl {width: 100%; height:auto; background-color: #fa0;}
-   #gnb dt {width: 100%; height:100%; }
-   #gnb dt>a {display:block; width: 100%; height: 100%; padding-top:30px; ; box-sizing:border-box;}
-   #gnb dd {width:100%; height: auto; padding-top:3rem;}
-   #gnb dd>a {display:block; width:100%; height: auto; padding:5px 0; margin-bottom:5px; }
+      .web_navigation>ul:after,
+      .web_navigation>ul::after {content:" "; display:block; width:0; height:0; clear:both;}
 
+   .web_navigation>ul>li {float:left; width:25%; height:auto; padding:0 5px; box-sizing:border-box;text-align:center}
 
-   .gnb_btn {float:right; width: 44px; height: 44px; background-color: #ccc;}
+   
+  .web_navigation dl {position:relative; z-index: 100; width: 100%; height:auto;}
+  .web_navigation dt {width: 100%; height:100px; }
+  .web_navigation dt>a {display:block; position:relative; z-index:100; width: 100%; height: 100%; padding-top:30px; box-sizing:border-box; color: #171717; font-size:1.2rem; text-transform: capitalize;}
+  
+        #gnb dt>a:after,
+        #gnb dt>a::after {content:" "; display:block; 
+            position:absolute; z-index:500; left:0; bottom:-1px; width: 0; height:0; border-bottom:4px solid #f30; transition:width 300ms ease;}
+
+        #gnb dt>a:hover:after,
+        #gnb dt>a:focus:after {width:100%;}
+
+   .web_navigation dd {/* display:none; */ width:100%; height: auto; padding-top:1rem;}
+   .web_navigation dd>a {display:block; width:100%; height: auto; padding:5px 0; margin-bottom:5px; text-transform: capitalize;}
+
+        #gnb dd>a:after,
+        #gnb dd>a::after {content:" "; display:block; width: 0; height:0; margin:auto; border-bottom:2px solid #fa0; transition:width 300ms ease;}
+      
+         #gnb dd>a:hover:after,
+         #gnb dd>a:focus:after{width:50%; color: #fa0;}
+
+   .gnb_btn {position:relative; z-index:200; float:right; width: 44px; height: 44px; background-color: #ccc;}
+
+   /* .side_gnb   ++++++++++++++++++++++++++++++++++++++ */
+   .side_gnb {display:none; width:100%; height:100%; 
+      position:fixed; top:0; left:0; z-index:2000;
+      padding-top:200px; box-sizing:border-box;
+      background-color: rgba(255, 80,0,0.8);}
+   .close_gnb_btn {width: 60px; height:60px; margin:auto; margin-bottom:10px; background-color: #fff; }
+   .side_gnb_area {width:760px; height:auto; min-height:400px; margin:auto; }
+   .side_gnb_area ul {background-color: transparent;}
+   .side_gnb_area dt>a {color: #fff; font-size:1.5rem; font-weight:bold;}
+   .side_gnb_area dd>a {color: #fff;}
+
 
 /* # viewBox ============================================= */
 #viewBox {width:100%; height:100%; padding-top:100px; box-sizing:border-box; background-color: #0af;}

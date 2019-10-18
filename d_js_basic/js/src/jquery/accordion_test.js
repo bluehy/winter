@@ -33,11 +33,11 @@
          gnb.removeClass('gnbmenuStyle');
       });
    });
-   // gnb.on('mouseleave',function(){
-   //    gnb.removeClass('gnbmenuStyle');
-   //    gnbLink.removeClass('gnbLiStyle');
-   //    subUl.stop().slideUp();
-   // });
+   gnbLink.on('mouseleave',function(){
+      // gnb.removeClass('gnbmenuStyle');
+      gnbLink.removeClass('gnbLiStyle');
+      // subUl.stop().slideUp();
+   });
 
 
 })(jQuery);

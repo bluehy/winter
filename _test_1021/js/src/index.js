@@ -48,8 +48,10 @@
 
    gnbDdLink.on('mouseleave blur',function(){
       $(this).removeClass('action');
+      $(this).parent('dd').prev('dt').children('a').removeClass('action');
+      
    });
-   
+
    gnbDdLink.eq(-1).on('blur',function(){
       gnbDd.stop().slideUp();
       gnb.removeClass('action');

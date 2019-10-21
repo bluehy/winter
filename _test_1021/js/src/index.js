@@ -43,6 +43,7 @@
 
    gnbDdLink.on('mouseenter focus',function(){
       $(this).addClass('action');
+      $(this).parent('dd').prev('dt').children('a').addClass('action');
    });
 
    gnbDdLink.on('mouseleave blur',function(){

@@ -30,6 +30,15 @@ openGnbBtn.on('click',function(e){
    // sideGnb.show();
    sideGnb.stop().fadeIn(time/2, function(){
       $(this).on('keyup',function(e){
+         console.log(e.key.toLowerCase());
+         // 영문글자를 강제로 대/소문자로 치환하는 함수
+         // 대문자로 변환 toUpperCase()
+         // 소문자로 변환 toLowerCase()
+         if(e.key == escape){
+            
+         }
+
+
          console.log(e.keyCode);
          //esc = 27
          if (e.keyCode == 27){

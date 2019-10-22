@@ -29,14 +29,107 @@
       e.preventDefault();
       let btn = $(this);
       let btnParent = btn.parent();
+      let parNext = btnParent.next('dd');
 
       btn.addClass('action');
       btnParent.siblings('dt').children('button').removeClass('action');
       // 선택한 버튼의 부모의 형제('dt중')의 자식인 버튼의 클래스를 제거한다.
-      btnParent.next('dd').addClass('action');
-      btnParent.next('dd').siblings('dd').removeClass('action');
+   // step _ 1
+      // parNext.addClass('action');
+      // parNext.siblings('dd').removeClass('action');
 
+   // step _ 2
+      // parNext.siblings('dd').css({'zIndex':10}); // 먼저 있던 요소 앞으로 배치
+      // parNext.addClass('action'); // 사용할 기능에 class요소 주고
+      // parNext.css({'zIndex':5}); // 동시에 zIndex값을 작게 주어 뒤에 배치
+      // parNext.siblings('dd').fadeOut();
+      // parNext.siblings('dd').removeClass('action');
+      // parNext.siblings('dd').removeAttr('style');
+
+      parNext.stop().fadeIn();
+      parNext.siblings('dd').stop().fadeOut();
+      //action 클래스 이름으로 구분만 할 수있도록 처리하고, (의미상 메세지)
+      //css에서 동작하지 않도록 처리.
    });
+
+
+   // ==============================================================
+   const bmText = '\
+   <div class="album">\
+      <a href="#">\
+         <h4></h4>\
+         <p class="con"></p>\
+         <p class="date"></p>\
+      </a>\
+   </div>';
    
+/* 배열 불러오기  
+var arr = ['a','b','c'];
+arr[0];
+
+객체 불러오기
+var obj = {'sam':'gallaxy', 'app':'i-phong'}
+obj.app;
+*/
+
+   const mediaList = [
+      {text:'[youtube] 아마존으로 2600억 매출', date:'2019.10.22' }, 
+      {text:'슈피겐코리아 미국 아마존 독점 유통', date:'2019.10.12' }, 
+      {text:'[youtube] \'취업비자\' 기업 탐방', date:'2019.09.10' }]; 
+      // 목록 3개
+      // mediaList[0].text == [youtube] 아마존으로...
+      // mediaList[1].date == 2019.10.12
+
+   const blogList = [
+      {text:'아무리 급해도 놓칠 수 없는 한 가지', date:'2019.10.22' }, 
+      {text:'업무중 즐기는 문화예술공연, 여가활동어쩌구', date:'2019.10.12' }, 
+      {text:'풀필먼트(fulfillment) 서비스의 새로운 바람, 슈피겐코리아 창고세이버', date:'2019.09.10' }]; 
+
+
+
+
+   const media = conArea.find('.media');
+   const blog = conArea.find('.blog');
+   const imgUrl = "../../../img/spigen_0";
+
+
+   // for(최초의 값; 조건비교; 값의 증감){}
+   for(let i = 0; i < mediaList.length; i++){
+      media.append(bmText);
+
+      media.children('.album').css({'backgroundImage':'url('+imgUrl+')'});
+
+      let myNth = media.children('.album').eq(i);
+      myNth.find('h4').text('media');
+      myNth.find('.con').text(mediaList[i].text);
+      myNth.find('.date').text(mediaList[i].date);
+   }
+
+   for(let i = 0; i < blogList.length; i++){
+      blog.append(bmText);
+      let myNth = blog.children('.album').eq(i);
+      myNth.find('h4').text('blog');
+      myNth.find('.con').text(blogList[i].text);
+      myNth.find('.date').text(blogList[i].date);
+   }
+
+   conDt.children('button').on('keyup',function(e){
+      console.log(e.keyCode);
+      //left: 37 / right: 39
+      if(e.keyCode == 39){
+         $(this).parent('dt').siblings('dt').children('button').focus();
+      }else if(e.keyCode == 37) {
+         $(this).parent('dt').siblings('dt').children('button').focus();
+      }
+   });
+
+   
+   
+
+   
+
+
+   // ==============================================================
+
 })(jQuery);
 

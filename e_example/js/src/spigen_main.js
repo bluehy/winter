@@ -9,6 +9,7 @@ const footer = $('#footBox');
 
 // =========================================
 let tempUrl = "./spigen_temp_pc/";
+let jsUrl = "../js/src/spigen_temp_pc/"
 
 console.time();
 
@@ -20,7 +21,21 @@ header.load(tempUrl+'spigen_header.html',function(){
 console.timeEnd();
 
 adver.load(tempUrl+'spigen_main_adver.html');
-content.load(tempUrl+'spigen_main_content_01.html');
+
+// content ==============================================
+
+content.load(tempUrl+'spigen_main_content_01.html',function(){
+
+   let conJs = jsUrl + 'spigen_content_01.js';
+
+   // body.append('<script src="../js/src/spigen_temp_pc/spigen_content_01.js"></script>');
+   body.append('<script src="'+conJs+'"></script>');
+   // body.append(`<script src="${conJs}"></script>`);
+   // ===================> 세 줄 모두 동일한 코드.
+});
+
+// footer =====================================================
+
 footer.load(tempUrl+'spigen_footer.html');
 
 // body.append('<script src="../js/src/spigen_temp_pc/make_spigen_header_pc.js"></script>'); // 로드 속도 차이로 인해 기능이 안 먹힘

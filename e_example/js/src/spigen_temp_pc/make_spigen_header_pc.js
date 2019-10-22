@@ -34,17 +34,18 @@ openGnbBtn.on('click',function(e){
          // 영문글자를 강제로 대/소문자로 치환하는 함수
          // 대문자로 변환 toUpperCase()
          // 소문자로 변환 toLowerCase()
-         if(e.key == escape){
-            
+         if(e.key === escape){
+            sideGnb.stop().fadeOut(time*1.5);
+            openGnbBtn.focus();
          }
 
 
          console.log(e.keyCode);
          //esc = 27
-         if (e.keyCode == 27){
+        /*  if (e.keyCode == 27){
             sideGnb.stop().fadeOut(time*1.5);
             openGnbBtn.focus();
-         }
+         } */
          
       })
    });
@@ -108,6 +109,7 @@ closeGnbBtn.on('click',function(e){
    
    
 // .side_gnb_area 내부의 마지막 a요소에서 blur처리되면, .close_gnb_btn으로 다시 focus처리되어라.
+// 단, 전체페이지에서 추가로 focus처리되는 항목이 있어야 가능. 마지막이면 브라우저로 빠져나감.
 // =****************************=현재 문제 있는 부분
    const sideLink = sideGnbArea.find('a');
    const sideLastLink = sideLink.eq(-1);
@@ -118,7 +120,7 @@ closeGnbBtn.on('click',function(e){
       
    
    sideLastLink.on('blur',function(e){
-      closeGnbBtn.attr({'tabindex':1});
+      // closeGnbBtn.attr({'tabindex':1});
       e.preventDefault();
       closeGnbBtn.focus(); // 
    }); 

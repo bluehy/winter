@@ -28,8 +28,20 @@ let time = 600;
 openGnbBtn.on('click',function(e){
    e.preventDefault();
    // sideGnb.show();
-   sideGnb.stop().fadeIn(time/2);
+   sideGnb.stop().fadeIn(time/2, function(){
+      $(this).on('keyup',function(e){
+         console.log(e.keyCode);
+         //esc = 27
+         if (e.keyCode == 27){
+            sideGnb.stop().fadeOut(time*1.5);
+            openGnbBtn.focus();
+         }
+         
+      })
+   });
+   closeGnbBtn.focus();
    // sideGnb.css({'display':'block'}); //도 가능
+
 });
 
 closeGnbBtn.on('click',function(e){
@@ -84,5 +96,29 @@ closeGnbBtn.on('click',function(e){
    gnbTitleLink.on('focus',addAction);
    gnbListLink.on('blur',addAction);
    gnbListLink.eq(-1).on('blur',removeAction);
+   
+   
+// .side_gnb_area 내부의 마지막 a요소에서 blur처리되면, .close_gnb_btn으로 다시 focus처리되어라.
+// =****************************=현재 문제 있는 부분
+   const sideLink = sideGnbArea.find('a');
+   const sideLastLink = sideLink.eq(-1);
+   // sideLastLink.css({'fontSize':'2rem'}); //선택 확인용
+
+   // $('h1').find('a').on('focus'); // focus가 잡히면
+   // $('h1').find('a').focus(); // focus를 잡아라.
+      
+   
+   sideLastLink.on('blur',function(e){
+      closeGnbBtn.attr({'tabindex':1});
+      e.preventDefault();
+      closeGnbBtn.focus(); // 
+   }); 
+
+// =****************************=현재 문제 있음
+
+// .side_gnb_area에서 키보드 esc키를 누르면, 빠져나가고 이전의 위치로 돌아가라.
+   // -> .side_gnb_area가 보이는 곳에서 수행.
+
+
 
 })(jQuery);

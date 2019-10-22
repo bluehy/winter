@@ -44,12 +44,14 @@ closeGnbBtn.on('click',function(e){
 // #gnb에 마우스 올렸을 경우, dd를 나오게 만들기
 
    const addAction = function(){
-      $(this).parents('li').find(gnbTitleLink).addClass('action');
+      let li = $(this).parents('li');
+      li.find(gnbTitleLink).addClass('action');
+      li.siblings().find(gnbTitleLink).removeClass('action');
       // $(this).siblings().find(gnbTitleLink).removeClass('action')
       gnbDd.stop().slideDown();
    }
 
-   gnbDl.on('mouseenter', addAction);
+   // gnbDl.on('mouseenter', addAction);
 
 
    const removeAction = function(){
@@ -57,7 +59,10 @@ closeGnbBtn.on('click',function(e){
       gnbDd.stop().slideUp();
    }
 
-   gnbDl.on('mouseleave',removeAction);
+
+   // gnbDl.on('mouseleave',removeAction);
+
+   gnbDl.on({'mouseenter':addAction, 'mouseleave':removeAction});
 
 
 // #gnb에 Dt에 focus 처리되면 dd가 나타나게 만들기
@@ -77,8 +82,7 @@ closeGnbBtn.on('click',function(e){
    // });
 
    gnbTitleLink.on('focus',addAction);
-   gnbListLink.eq(-1).on('blur',function(){
-      gnbDd.stop().slideUp();
-   });
+   gnbListLink.on('blur',addAction);
+   gnbListLink.eq(-1).on('blur',removeAction);
 
 })(jQuery);

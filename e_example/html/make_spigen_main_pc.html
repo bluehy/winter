@@ -38,87 +38,22 @@
 
    <!-- layout =============== -->
    <div id="wrap">
-      <header id="headBox">
-         <h1 class="hidden_wrap"><a href="./content.html"><span>슈피겐코리아</span></a></h1>
-         <nav id="gnb" class="web_navigation">
-            <h2 class="hidden">spigen global navigation</h2>
-            <!-- ul>li*4>dl>(dt>a[href="#"]{link})+dd>a[href="#"]{sub_link}*3 -->
-            <!-- ul>li*4>dl>(dt>a[href="#"]{link})+dd>ul>li*3>a[href="#"]{sub_link} -->
-            <ul>
-               <li>
-                  <dl>
-                     <dt><a href="#">link</a></dt>
-                     <dd>
-                        <a href="#">sub_link</a>
-                        <a href="#">sub_link</a>
-                        <a href="#">sub_link</a>
-                     </dd>
-                  </dl>
-               </li>
-               <li>
-                  <dl>
-                     <dt><a href="#">link</a></dt>
-                     <dd>
-                        <a href="#">sub_link</a>
-                        <a href="#">sub_link</a>
-                        <a href="#">sub_link</a>
-                     </dd>
-                  </dl>
-               </li>
-               <li>
-                  <dl>
-                     <dt><a href="#">link</a></dt>
-                     <dd>
-                        <a href="#">sub_link</a>
-                     </dd>
-                  </dl>
-               </li>
-               <li>
-                  <dl>
-                     <dt><a href="#">link</a></dt>
-                     <dd>
-                        <a href="#">sub_link</a>
-                        <a href="#">sub_link</a>
-                        <a href="#">sub_link</a>
-                     </dd>
-                  </dl>
-               </li>
-            </ul>
-         </nav>
-         <div class="gnb_btn">
-            <button type="button">
-               <i class="fas fa-bars" aria-hidden="true"></i>
-               <span class="hidden">전체 메뉴 보기</span>
-            </button>
-            <div class="side_gnb">
+      <!-- #headBox =============================== -->
+      <header id="headBox"></header>
+      
+      <!-- #viewBox =============================== -->
+      <section id="viewBox"></section>
+      
+      <!-- #conBox ================================= -->
+      <main id="conBox"></main>
 
-               <div class="close_gnb_btn">
-                  <button type="button">
-                     <i class="fas fa-times" aria-hidden="true"></i>
-                     <span class="hidden">전체 메뉴 닫기 버튼</span>
-                  </button>
-               </div>
-               <div class="side_gnb_area web_navigation">
-
-               </div>
-            </div>
-         </div>
-      </header>
-      <section id="viewBox">
-         <h2 class="hidden">광고영역</h2>
-      </section>
-      <main id="conBox">
-         <h2 class="hidden">본문영역</h2>
-         <div class="media_blog"></div>
-         <div class="about_company"></div>
-      </main>
-      <footer id="footBox">
-         <h2 class="hidden">사이트정보</h2>
-      </footer>
+      <!-- #footBox ================================ -->
+      <footer id="footBox"></footer>
    </div>
    <!-- script ================ -->
       <script src="../js/base/jquery-3.4.1.min.js"></script>
       <script src="../js/base/jquery-ui.min.js"></script>
+      <script src="../js/src/spigen_main.js"></script>
       <script src="../js/src/spigen_temp_pc/make_spigen_header_pc.js"></script>
    </body>
 </html>

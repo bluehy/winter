@@ -22,7 +22,7 @@
 
    const conArea = $('.content_area');
    const conDt = conArea.find('dt');
-   // const conDtBtn = conDt.children('button');
+   const conDtBtn = conDt.children('button');
    const conDd = conArea.find('dd');
 
    conDt.children('button').on('click focus',function(e){
@@ -90,16 +90,21 @@ obj.app;
 
    const media = conArea.find('.media');
    const blog = conArea.find('.blog');
-   const imgUrl = "../../../img/spigen_0";
+   // const imgUrl = "../../../img/spigen_0";
 
 
    // for(최초의 값; 조건비교; 값의 증감){}
    for(let i = 0; i < mediaList.length; i++){
       media.append(bmText);
 
-      media.children('.album').css({'backgroundImage':'url('+imgUrl+')'});
-
       let myNth = media.children('.album').eq(i);
+      // myNth.css({'backgroundImage':`url("../img/spigen/media_0${i+1}.jpg")`});
+      let j = i+1;
+      if (i < 10){
+         j = '0' + (i+1);
+      }
+
+      myNth.css({'backgroundImage':'url("../img/spigen/media_'+ j +'.jpg")'});
       myNth.find('h4').text('media');
       myNth.find('.con').text(mediaList[i].text);
       myNth.find('.date').text(mediaList[i].date);
@@ -108,24 +113,56 @@ obj.app;
    for(let i = 0; i < blogList.length; i++){
       blog.append(bmText);
       let myNth = blog.children('.album').eq(i);
+      let j = i+1;
+      if (i < 10) {
+         j = '0' + (i+1);
+      }
+      myNth.css({'backgroundImage':'url("../img/spigen/blog_'+ j +'.jpg")'});
+
       myNth.find('h4').text('blog');
       myNth.find('.con').text(blogList[i].text);
       myNth.find('.date').text(blogList[i].date);
    }
 
-   conDt.children('button').on('keyup',function(e){
-      console.log(e.keyCode);
-      //left: 37 / right: 39
-      if(e.keyCode == 39){
-         $(this).parent('dt').siblings('dt').children('button').focus();
-      }else if(e.keyCode == 37) {
-         $(this).parent('dt').siblings('dt').children('button').focus();
-      }
-   });
-
+   // conDt.children('button').on('keyup',function(e){
+   //    console.log(e.keyCode);
+   //    //left: 37 / right: 39
+   //    if(e.keyCode === 39){
+   //       $(this).parent('dt').siblings('dt').children('button').focus();
+   //    }else if(e.keyCode === 37) {
+   //       $(this).parent('dt').siblings('dt').children('button').focus();
+   //    }
+   // });
+   // ===내 풀이
    
    
+conDtBtn.on('keyup',function(e){
+   e.preventDefault();
+   console.log(e.keyCode);
+   // 왼 : 37 , 위 :38,  오 : 39, 아래 : 40
+   let myThis = $(this).parent('dt');
+   // let myThis = $(this).parent('dt').siblings('dt').find('button');
+   switch(e.keyCode){
+      case 37 :
+      case 38 :
+         // myThis.focus();
+         myThis.prevAll('dt').find('button').focus();
+      break;
 
+      case 39 :
+      case 40 :
+         // myThis.focus();
+         myThis.nextAll('dt').find('button').focus();
+      break; 
+   }
+
+   // if(e.keyCode === 37 || e.keyCode === 38){
+
+   // }else if(e.keyCode === 39 || e.keyCode === 40){
+
+   // }
+
+});
    
 
 

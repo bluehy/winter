@@ -5,10 +5,54 @@
    // .clone() 메서드를 사용
 
    const gnb = $('#gnb');
-   const sideGnbArea = $('.side_gnb_area');
-   let gnbContents = gnb.contents().clone();
+   
+   
+
+
+// ==============================================
+// gnb 메뉴 js 기능으로 처리
+
+const bmTextUl = '<ul></ul>'
+const bmText = '<li><dl><dt><a href="#">Text</a></dt><dd></dd></dl></li>'
+
+const bmTextA = '<a href="#">Sub_Text</a>'
+
+const gnbList = [
+   {title:'about',data:['who we are','what we do','our locations']},
+   {title:'careers',data:['careers','hr blog','apply']},
+   {title:'media',data:['media']},
+   {title:'ir',data:['investors','IR Archive',' IR Meeting']}];
+   
+
+   gnb.append(bmTextUl);
+
+const HeadList = function(myList){
+
+   for (let i = 0; i < myList.length; i++){
+   gnb.find('ul').append(bmText);
+   gnb.find('li').eq(i).find('dt').children('a').text(myList[i].title);
+   
+      for (let j = 0; j < myList[i].data.length; j++){
+         gnb.find('li').eq(i).find('dd').append(bmTextA);
+         gnb.find('li').eq(i).find('dd').children('a').eq(j).text(myList[i].data[j]);         
+      };
+   };
+};
+
+console.log(gnbList[1].data.length);
+HeadList(gnbList);
+
+
+// 메뉴 리스트....js로...넣기....========================================
+
+
+const sideGnbArea = $('.side_gnb_area');
+let gnbContents = gnb.contents().clone();
    // console.log(gnbContents);
    sideGnbArea.append(gnbContents);
+
+
+
 
 // =============================================================
 // 버튼 클릭시 side_gnb 나타나고 사라지게 만들기

@@ -1,0 +1,24 @@
+/* spigen_main_content_02.css */
+
+.investor {width: 100%; height:100%; background-color: #fa0; box-sizing:border-box; padding: 1rem 3rem;}
+
+.investor >h3 {width: 100%; height: 40px; margin-bottom: 2rem; text-align:center; text-transform: uppercase; font-size:2.5rem;}
+.investor >p {width: 100%; height: 20px; margin-bottom:3rem; text-align:center; }
+
+.investor > ul {width: 90vw; height: 30vw; max-height:440px; margin:auto;}
+.investor > ul >li {float:left; position:relative; width: 32%; height: 100%; background-color: #fff; margin-right: 2%;}
+.investor > ul >li:last-child{margin-right:0;}
+.investor > ul >li > a {display:block; width: 100%; height: 100%;}
+
+.investor dl {position:absolute; bottom:0; left:0; width: 100%; height: 80px;  box-sizing:border-box; background-color: rgba(0,0,0,0.7); transition:all 300ms ease;}
+.investor dl >dt {width: 100%; height: 100%; font-size:1.5rem; text-align:center; text-transform:capitalize; line-height:80px; color: #fff;}
+/* .investor dl >dt > span {text-transform:uppercase;} */
+.investor dl >dd {display:none; text-align:center; word-break:keep-all; color: #fff;}
+
+.investor dl.action {height: 100%; padding:4rem 2rem;}
+.investor dl.action >dt {height: auto; color: #f50; margin-bottom: 3rem;}
+/* .investor dl.action >dd {display:block;} */
+
+
+/* .investor dl>dd */
+

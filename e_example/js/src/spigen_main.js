@@ -25,14 +25,30 @@ adver.load(tempUrl+'spigen_main_adver.html');
 // content ==============================================
 
 content.load(tempUrl+'spigen_main_content_01.html',function(){
+   
 
    let conJs = jsUrl + 'spigen_content_01.js';
+  
+   
 
    // body.append('<script src="../js/src/spigen_temp_pc/spigen_content_01.js"></script>');
    body.append('<script src="'+conJs+'"></script>');
+   
+   
    // body.append(`<script src="${conJs}"></script>`);
    // ===================> 세 줄 모두 동일한 코드.
 });
+
+
+const content2 = $('#conBox').after();
+
+content2.load(tempUrl+'spigen_main_content_02.html',function(){
+   // content.append(tempUrl+'spigen_main_content_02.html');
+   let conJs02 = jsUrl + 'spigen_content_02.js';
+   body.append('<script src="'+conJs02+'"></script>');
+});
+
+
 
 // footer =====================================================
 

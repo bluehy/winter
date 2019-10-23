@@ -36,7 +36,7 @@
    
    irLiLink.on('mouseleave',function(){
       $(this).children('dl').removeClass('action');
-      $(this).children('dl').children('dd').hide();
+      $(this).children('dl').children('dd').stop().hide();
    });
 
 })(jQuery);

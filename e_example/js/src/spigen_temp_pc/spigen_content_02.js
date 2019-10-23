@@ -12,11 +12,15 @@
    const irDd = irDl.children('dd');
 
 
-   const irList = [
-      {text: 'ir 행사'}
-   ];
+  /*  const irList = [
+      {title: 'ir 행사', data:'당사의 기업설명회 및 주요공고사항을 확인하실 수 있습니다.'},
+      {title: '공시정보', data:'당사의 기업설명회 및 주요공고사항을 확인하실 수 있습니다.'},
+      {title: '공시정보', data:'당사의 기업설명회 및 주요공고사항을 확인하실 수 있습니다.'}
+   ]; */
 
-
+   /* for(i==0; i < irList.length ; i++){
+      
+   }; */
 
 
 

@@ -6,7 +6,6 @@ const header = $('#headBox');
 const adver = $('#viewBox');
 const content = $('#conBox');
 const content2 = $('#conBox2');
-// const irBox = $('.investor');
 const footer = $('#footBox');
 
 // =========================================
@@ -32,30 +31,24 @@ content.load(tempUrl+'spigen_main_content_01.html',function(){
    let conJs = jsUrl + 'spigen_content_01.js';
    let conJsCopy = jsUrl + 'spigen_content_01_copy.js';
   
-   
 
    // body.append('<script src="../js/src/spigen_temp_pc/spigen_content_01.js"></script>');
    body.append('<script src="'+conJsCopy+'"></script>');
-   
 
    
    // body.append(`<script src="${conJs}"></script>`);
    // ===================> 세 줄 모두 동일한 코드.
 });
 
+// content2 =================================================
+
 content2.load(tempUrl+'spigen_main_content_02.html',function(){
 
    let conJs02 = jsUrl + 'spigen_content_02.js';
-      body.append('<script src="'+conJs02+'"></script>');
+
+   body.append('<script src="'+conJs02+'"></script>');
+
 });
-
-console.log('    # 컨텐츠 잇기 어떻게하냐;');
-
-// const content2 = content.children().after();
-// content2.load(tempUrl+'spigen_main_content_02.html',function(){
-//    // content.append(tempUrl+'spigen_main_content_02.html');
-//   
-// });
 
 
 

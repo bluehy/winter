@@ -2,7 +2,7 @@
 
 (function($){
    console.log('휙');
-   const irArea = $('.investor');
+   const irArea = $('.irArea');
    const irUl = irArea.children('ul');
    const irLi = irUl.children('li');
    const irLiLink = irLi.children('a');
@@ -24,17 +24,17 @@
 
 
 
-   irLiLink.on('mouseenter',function(e){
+   irLiLink.on('mouseenter focus',function(e){
       e.preventDefault();
       console.log('휙');
       $(this).children('dl').addClass('action');
       $(this).children('dl').children('dt').fadeIn();
-      $(this).children('dl').children('dd').fadeIn();
+      $(this).children('dl').children('dd').fadeIn(500);
       // $(this).parent('li').siblings('li').children('a').removeClass('action');
 
    });
    
-   irLiLink.on('mouseleave',function(){
+   irLiLink.on('mouseleave blur',function(){
       $(this).children('dl').removeClass('action');
       $(this).children('dl').children('dd').stop().hide();
    });

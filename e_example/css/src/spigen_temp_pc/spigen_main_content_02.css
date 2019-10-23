@@ -11,23 +11,60 @@
 .irArea {width: 100%; height:100%;  box-sizing:border-box; padding: 1rem 3rem;}
 
 
-.irArea >h3 {width: 100%; height: 40px; padding: 20px 0; margin-bottom: 2rem; text-align:center; text-transform: uppercase; font-size:2.5rem;}
-.irArea >p {width: 100%; height: 20px; margin-bottom:3rem; text-align:center; }
+.irArea >h3 {width: 100%; height: 40px; padding: 20px 0; margin-bottom: 2rem; text-align:center; text-transform: uppercase; font-size:2.5rem; color: #fff;}
+.irArea >p {width: 100%; height: 20px; margin-bottom:3rem; text-align:center; color: #fff;}
 
-.irArea > ul {width: 90vw; height: 30vw; max-height:440px; margin:auto;}
-.irArea > ul >li {float:left; position:relative; width: 32%; height: 100%; background-color: #fff; margin-right: 2%;}
+.irArea > ul {width: 90vw; min-width: 1300px; height: 30vw; /* 450/1920*100 */ min-height: 400px; max-height:500px; margin:auto;}
+
+.irArea > ul >li {float:left; position:relative; width: 32%; height: 100%; background-color: #fff; margin-right: 2%; overflow:hidden;}
 .irArea > ul >li:last-child{margin-right:0;}
-.irArea > ul >li > a {display:block; width: 100%; height: 100%;}
-
-.irArea dl {position:absolute; bottom:0; left:0; width: 100%; height: 80px;  box-sizing:border-box; background-color: rgba(0,0,0,0.7); transition:all 300ms ease;}
-.irArea dl >dt {width: 100%; height: 100%; font-size:1.5rem; text-align:center; text-transform:capitalize; line-height:80px; color: #fff;}
-/* .irArea dl >dt > span {text-transform:uppercase;} */
-.irArea dl >dd {display:none; text-align:center; word-break:keep-all; color: #fff;}
-
-.irArea dl.action {height: 100%; padding:4rem 2rem;}
-.irArea dl.action >dt {height: auto; color: #f50; margin-bottom: 3rem;}
-/* .irArea dl.action >dd {display:block;} */
+.irArea > ul >li > a {display:block; width: 100%; height: 100%;
+            background-repeat:no-repeat; background-position:50% 50%; background-size:cover;}
 
 
-/* .irArea dl>dd */
+.irArea > ul >li:nth-child(1)>a {background-image:url('../../../img/spigen/ir_01.jpg')}
+.irArea > ul >li:nth-child(2)>a {background-image:url('../../../img/spigen/ir_02.jpg')}
+.irArea > ul >li:nth-child(3)>a {background-image:url('../../../img/spigen/ir_03.jpg')}
 
+
+
+/* # ========================================= 내 풀이 */
+
+/* .irArea dl {position:absolute; bottom:0; left:0; width: 100%; height: 80px;  box-sizing:border-box; background-color: rgba(0,0,0,0.7); transition:all 300ms ease;}
+.irArea dl >dt {width: 100%; height: 100%; font-size:1.5rem; text-align:center; text-transform:capitalize; font-weight: bold; line-height:80px; color: #fff;}
+.irArea dl >dd {display:none; width:100%; height:auto; padding: 0 2rem; box-sizing:border-box; text-align:center; font-size:1.1rem; word-break:keep-all; color: #fff;}
+
+.irArea dl.action {height: 100%;}
+.irArea dl.action >dt {height: auto; padding-top:8rem; color: #f50; margin-bottom: 1rem;} */
+
+/* # ========================================= 내 풀이 */
+
+/* # 선생님 풀이 ===================================== */
+.irArea dl {width: 100%; height:100%; background-color: rgba(0,0,0,0.7); padding: 0 10%; box-sizing:border-box; transform:translateY(85%); transition:all 300ms ease;}
+.irArea dl> dt {width: 100%; height:50px; text-align:center; font-size:1.4rem; color:#fff; text-transform:capitalize; font-weight:900; padding-top:2vh; transition:all 300ms ease;}
+.irArea dl> dd {width:100%; height:auto; text-align: center; font-size:1.1rem; color:#fff; word-break:keep-all; opacity:0; transition:all 300ms ease;}
+
+
+/* css ======== */
+/* .irArea > ul >li > a:hover dl,.irArea > ul >li > a:focus dl {transform:translateY(0);}
+.irArea > ul >li > a:hover dt,.irArea > ul >li > a:focus dt {padding-top:15vh; color:#f50;}
+.irArea > ul >li > a:hover dd,.irArea > ul >li > a:focus dd {opacity:1;} */
+
+
+/* js ========= */
+.irArea > ul >li > a.action dl {transform:translateY(0);}
+.irArea > ul >li > a.action dt {padding-top:15vh; color:#f50;}
+.irArea > ul >li > a.action dd {opacity:1;}
+
+/* # 선생님 풀이 ===================================== */
+
+
+
+/* top_move_btn */
+.top_move_btn {display:none; position:fixed; right: 50%; bottom: 30px; z-index:1000; transform:translateX(40vw);
+   width:80px; height:80px; background-color:transparent;}
+.top_move_btn>button {width:100%; height:100%; font-size:4rem; text-align:center; color:#f70;
+                     background-color:inherit;  text-shadow:0.2rem 0.2rem 0.2rem rgba(0,0,0,0.5)}
+
+.top_move_btn>button:hover,
+.top_move_btn>button:focus {color: #fff;}

@@ -15,9 +15,13 @@ let jsUrl = "../js/src/spigen_temp_pc/"
 console.time();
 
 header.load(tempUrl+'spigen_header.html',function(){
-   body.append('<script src="../js/src/spigen_temp_pc/make_spigen_header_pc.js"></script>');
+   // body.append('<script src="../js/src/spigen_temp_pc/make_spigen_header_pc.js"></script>');
    //or 
    // $(this).after('<script src="../js/src/spigen_temp_pc/make_spigen_header_pc.js"></script>');
+   
+   body.append('<script src="../js/src/spigen_temp_pc/make_spigen_header_pc copy.js"></script>');
+   // : 선생님이 풀어주신 js 배열, 객체 집어넣기
+   
 });
 console.timeEnd();
 

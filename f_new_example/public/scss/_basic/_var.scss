@@ -1,2 +1,20 @@
 // _var.scss
-/* _var.scss */
+
+//color
+$primary :  #f06; 
+$black : #333;
+$sub1 : $black;
+$white : #fff;
+$sub2 : $white;
+$yellow : #fe0;
+$sub3 : $yellow;
+
+$sample : #ccc;
+
+//line
+
+$Line : (1px, 3px, 10px, 30px); //불러오는 법 : nth($Line, 1); = 1px
+$border1 : nth($Line,1) solid $sub2;
+
+
+//font

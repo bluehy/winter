@@ -1,4 +1,6 @@
 /* main.css */
 #wrap { width: 100%; height: 100%; background-color: #0de; }
 
-.slide_temp { width: 100%; }
+/* slide_01.css */
+/* _mixin.scss */
+.slide_temp { width: 90%; min-width: 500px; min-width: 500px; height: 700px; margin: auto; border: 1px solid #fff; background-color: #ccc; }

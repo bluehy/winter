@@ -1,3 +1,10 @@
-@charset "UTF-8";
 // slide_01.scss
 /* slide_01.css */
+
+@import "../_basic/var";
+@import "../_basic/mixin";
+@import "../_basic/etc";
+
+// -------------------------------------------------------
+.slide_temp{width:90%; @include px(min-width,500); height:700px;
+margin:auto; border:$border1; background-color: $sample;}

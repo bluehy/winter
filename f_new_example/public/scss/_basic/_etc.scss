@@ -1,2 +1,17 @@
 // _etc.scss
-/* _etc.css */
+
+// @mixin myname(){}    // @include myname();
+// @function myFn(){}   // myFn();
+
+// px to rem
+// @function Pxrem($w, $r){
+//    @return #{$w} : ( $r / 16 ) + rem;
+// }
+
+@mixin px ($w, $r){
+   #{$w}:$r+px;
+   #{$w}:$r+px;
+}
+
+// width: 30px;      //pxrem(width, 30);
+// height: 40px;      //pxrem(height, 40);

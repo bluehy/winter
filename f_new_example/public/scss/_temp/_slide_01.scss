@@ -24,8 +24,9 @@ margin:auto; border:$border1; background-color: $sample;
 } //.slide_temp
 
 // 인디케이터 indicator ======================================================
-@include indicator_type_01('.view_indicator', 30px, 135px);
+@include indicator_type_01('.view_indicator', 30px);
 
+@include indicator_type_01('.view_indicator2',20px);
 // .view_indicator {$w:30px; $f:100%; // .view_indicator내부에서만 작용하는 지역변수 선언  
 
 //    position:absolute; left:50%; transform:translateX(-50%); bottom:$w;

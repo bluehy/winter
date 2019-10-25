@@ -35,14 +35,20 @@
 
 .slide_form { width: 100%; height: 100%; overflow: hidden; }
 
-.slide_form .guide { width: 400%; height: 100%; background-color: #ccc; }
+.slide_form .guide { width: 700%; height: 100%; background-color: #ccc; }
 
-.slide_form .guide > div { float: left; width: 25%; height: 100%; }
+.slide_form .guide > div { float: left; width: 14.28571%; height: 100%; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; }
 
-.slide_form .guide > div:nth-of-type(1) { background-color: #fff133; }
+.slide_form .guide > div:nth-of-type(1) { background-image: url("../../img/slide_01/mySlideImage_01.jpg"); }
 
-.slide_form .guide > div:nth-of-type(2) { background-color: #fff566; }
+.slide_form .guide > div:nth-of-type(2) { background-image: url("../../img/slide_01/mySlideImage_02.jpg"); }
 
-.slide_form .guide > div:nth-of-type(3) { background-color: #fff899; }
+.slide_form .guide > div:nth-of-type(3) { background-image: url("../../img/slide_01/mySlideImage_03.jpg"); }
 
-.slide_form .guide > div:nth-of-type(4) { background-color: #fffccc; }
+.slide_form .guide > div:nth-of-type(4) { background-image: url("../../img/slide_01/mySlideImage_04.jpg"); }
+
+.slide_form .guide > div:nth-of-type(5) { background-image: url("../../img/slide_01/mySlideImage_05.jpg"); }
+
+.slide_form .guide > div:nth-of-type(6) { background-image: url("../../img/slide_01/mySlideImage_06.jpg"); }
+
+.slide_form .guide > div:nth-of-type(7) { background-image: url("../../img/slide_01/mySlideImage_07.jpg"); }

@@ -1,5 +1,4 @@
 /* main.css */
-/* _mixin.scss */
 @import url("../_basic/var");
 @import url("../_basic/mixin");
 @import url("../_basic/etc");
@@ -10,6 +9,7 @@
 
 /* slide_01.css */
 .slide_temp {
+  position: relative;
   width: 90%;
   min-width: 500px;
   min-width: 31.25rem;
@@ -17,3 +17,52 @@
   margin: auto;
   border: 1px solid #fff;
   background-color: #ccc; }
+  .slide_temp .view_btn {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 0; }
+    .slide_temp .view_btn > button {
+      width: 100px;
+      height: 100px;
+      background-color: #ccc;
+      float: left;
+      transform: translateY(-50%); }
+      .slide_temp .view_btn > button.next {
+        float: right; }
+      .slide_temp .view_btn > button:hover, .slide_temp .view_btn > button:focus {
+        background-color: #f06; }
+
+.view_indicator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  width: auto;
+  min-width: 135px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 30px;
+  background-color: #eafecd; }
+  .view_indicator > ul {
+    width: 100%;
+    height: 100%; }
+    .view_indicator > ul > li {
+      float: left;
+      width: auto;
+      height: 30px;
+      margin-left: 5px; }
+      .view_indicator > ul > li:first-child {
+        margin-left: 0; }
+    .view_indicator > ul a {
+      display: block;
+      width: 30px;
+      height: 100%;
+      border-radius: 30px;
+      background-color: #ccc;
+      transition: all 300ms ease; }
+      .view_indicator > ul a:hover {
+        background-color: #ff99c2; }
+      .view_indicator > ul a:focus {
+        background-color: #f06;
+        width: 90px; }

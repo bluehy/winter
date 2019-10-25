@@ -4,9 +4,47 @@
 @import url("../_basic/var");
 @import url("../_basic/mixin");
 @import url("../_basic/etc");
-// url()을 입력하면 해당 데이터 파일을 별도의 파일로 첨부하는 의미.
+// url()을 입력하면 해당 데이터 파일을 별도의 파일로 첨부하는 의미. (scss에서는 의미 없으므로 나중엔 지워두 대..는..거지?)
 // url없이 ""로 사용하면 (scss파일), 해당 파일을 하나의 파일로 합치는 현상.
 
+// 좌우버튼 ============================================================
 // -------------------------------------------------------
-.slide_temp{width:90%; @include px(min-width,500); height:700px;
-margin:auto; border:$border1; background-color: $sample;}
+.slide_temp{position:relative; width:90%; @include px(min-width,500); height:700px;
+margin:auto; border:$border1; background-color: $sample;
+
+   .view_btn{position:absolute; top:50%; width:100%; height:0; // 슬라이드 내용을 클릭하는데 중간에 포인터가 풀리지 않게끔 0 으로 설정.
+   
+      >button {width:100px; height:100px; background-color: $sample; float:left;
+               transform:translateY(-50%);
+      &.next {float:right;}
+      &:hover,
+      &:focus {background-color: $primary;}
+      }// button
+   } // .view_btn
+} //.slide_temp
+
+// 인디케이터 indicator ======================================================
+@include indicator_type_01('.view_indicator', 30px, 135px);
+
+// .view_indicator {$w:30px; $f:100%; // .view_indicator내부에서만 작용하는 지역변수 선언  
+
+//    position:absolute; left:50%; transform:translateX(-50%); bottom:$w;
+//    width: auto; min-width:135px; height: $w; padding: 5px; border-radius:$w; background-color: $sub4; 
+
+//    > ul {width:$f; height:$f;
+//       >li {float:left; width:auto; height:$w; margin-left:5px; 
+//       &:first-child {margin-left:0;}
+//       }// li
+//       & a {display:block; width:$w; height:$f; border-radius:$w; background-color: $grey; transition:all 300ms ease;
+//          &:hover {background-color: lighten($primary, 30%);}
+//          &:focus {background-color: $primary; width: $w * 3;}
+//          // >span {@extend .hidden;}
+//       } // a // li 안에 너무 많아지니까 ul의 자손으로 작성 (?)      
+//    }// ul
+// }// .view_indicator
+
+
+// .slide_form{width:100%; height:100%;
+//    * {display:block; widows: 100%; height: 100%; }
+//    h3 {display:none;}
+// }

@@ -30,7 +30,7 @@ position:absolute; z-index:-1; overflow:hidden;
    // 인디케이터 indicator !
 #{$select} {$w:$myW; $f:100%; // .view_indicator내부에서만 작용하는 지역변수 선언  
 
-   position:absolute; left:50%; transform:translateX(-50%); bottom:$w;
+   position:absolute; z-index:500; left:50%; transform:translateX(-50%); bottom:$w;
    width: auto; min-width:135px; height: $w; padding: 5px; border-radius:$w; background-color: $sub4; 
 
    > ul {width:$f; height:$f;
@@ -78,7 +78,7 @@ position:absolute; z-index:-1; overflow:hidden;
          overflow:hidden;
       } // overflow 처리용 if 구문
 
-      .guide {width:(100% * $count); height:100%; background-color: $sample; 
+      .guide {position:relative; top:0; left:0; width:(100% * $count); height:100%; background-color: $sample; 
          >div {float:left; width: (100% / $count); height: 100%; padding:4rem; box-sizing:border-box;
             background-repeat:no-repeat; background-position:50% 50%; background-size:cover;
             @content;

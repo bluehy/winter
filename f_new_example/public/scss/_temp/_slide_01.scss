@@ -1,9 +1,11 @@
 // slide_01.scss
 /* slide_01.css */
 
-@import "../_basic/var";
-@import "../_basic/mixin";
-@import "../_basic/etc";
+@import url("../_basic/var");
+@import url("../_basic/mixin");
+@import url("../_basic/etc");
+// url()을 입력하면 해당 데이터 파일을 별도의 파일로 첨부하는 의미.
+// url없이 ""로 사용하면 (scss파일), 해당 파일을 하나의 파일로 합치는 현상.
 
 // -------------------------------------------------------
 .slide_temp{width:90%; @include px(min-width,500); height:700px;

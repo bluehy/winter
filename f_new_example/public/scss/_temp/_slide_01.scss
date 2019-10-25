@@ -1,9 +1,11 @@
 // slide_01.scss
 /* slide_01.css */
 
-@import url("../_basic/var");
-@import url("../_basic/mixin");
-@import url("../_basic/etc");
+// @import url("../_basic/var");
+// @import url("../_basic/mixin");
+// @import url("../_basic/etc");
+
+
 // url()을 입력하면 해당 데이터 파일을 별도의 파일로 첨부하는 의미. (scss에서는 의미 없으므로 나중엔 지워두 대..는..거지?)
 // url없이 ""로 사용하면 (scss파일), 해당 파일을 하나의 파일로 합치는 현상.
 
@@ -24,7 +26,7 @@ margin:auto; border:$border1; background-color: $sample;
 } //.slide_temp
 
 // 인디케이터 indicator ======================================================
-@include indicator_type_01('.view_indicator', 30px);
+@include Indicator_type_01('.view_indicator', 30px);
 // .view_indicator {$w:30px; $f:100%; // .view_indicator내부에서만 작용하는 지역변수 선언  
 
 //    position:absolute; left:50%; transform:translateX(-50%); bottom:$w;
@@ -44,7 +46,7 @@ margin:auto; border:$border1; background-color: $sample;
 
 
 
-$url : '../../img/slide_01/';
+
 $myImg : ('mySlideImage_01.jpg',
          'mySlideImage_02.jpg',
          'mySlideImage_03.jpg',
@@ -54,47 +56,58 @@ $myImg : ('mySlideImage_01.jpg',
          'mySlideImage_07.jpg');
 
 // 가로형 슬라이드 배너 ========================================================
-.slide_form { $count:7;
-   width: 100%; height:100%; /* overflow:hidden; */
-   .guide {width:(100% * $count); height:100%; background-color: $sample; 
-      >div {float:left; width: (100% / $count); height: 100%; padding:4rem; box-sizing:border-box;
-         background-repeat:no-repeat; background-position:50% 50%; background-size:cover;
-         // &:nth-of-type(1) {background-color: $sub1;}
-         // &:nth-of-type(2) {background-color: darken($sub2,40%);}
-         // &:nth-of-type(3) {background-color: lighten($sub3,30%);}
-         // &:nth-of-type(4) {background-color: $sub4;}
+@include Horizontal_slide_banner('.slide_form', 7){
+   $url : '../../img/slide_01/';
+   $imgName : 'mySlideImage_';
+   $count : 7;
+   @include Horizontal_banner_img($count, $url, $imgName, $file:'jpg');
+}; //기타 div 및 하위 내용을 삽입.
 
-         // # @for 반복문 ******************************************************
-         // js : for(let i =0; i < 4 ; i++){} // 자바스크립트의 반복문 형태
-         // js : for(최초의 임의 변수; 반복 횟수 ; 수행하기 위한 연산){} // 자바스크립트의 반복문 형태
+// .slide_form { $count:7;
+//    width: 100%; height:100%; /* overflow:hidden; */
+//    .guide {width:(100% * $count); height:100%; background-color: $sample; 
+//       >div {float:left; width: (100% / $count); height: 100%; padding:4rem; box-sizing:border-box;
+//          background-repeat:no-repeat; background-position:50% 50%; background-size:cover;
+//          // &:nth-of-type(1) {background-color: $sub1;}
+//          // &:nth-of-type(2) {background-color: darken($sub2,40%);}
+//          // &:nth-of-type(3) {background-color: lighten($sub3,30%);}
+//          // &:nth-of-type(4) {background-color: $sub4;}
 
-         // scss : @for [$변수] from [시작값] through [끝값] { 반복 수행할 내용 } // through : 이하
-         // scss : @for [$변수] from [시작값] to [끝값] { 반복 수행할 내용 }      // to : 미만
-         @for $i from 1 through $count {
-            &:nth-of-type(#{$i}) {
-               $n : null;
-            // background-color: lighten($sub3, $i * 10%);
-            // background-image:url($url + 'mySlideImage_0#{$i}.jpg');
-            // background-image:url($url + 'mySlideImage_0' + $i + '.jpg');} // 위와 동일
-            // background-image:url($url + nth($myImg,$i));
+//          // # @for 반복문 ******************************************************
+//          // js : for(let i =0; i < 4 ; i++){} // 자바스크립트의 반복문 형태
+//          // js : for(최초의 임의 변수; 반복 횟수 ; 수행하기 위한 연산){} // 자바스크립트의 반복문 형태
 
-               // # @if 문 ***************************************************
-               @if ($i < 10){
-                  $n : '0' + $i;  // 01, 02, 03, ..... 09
-               }@else{
-                  $n : $i;
-               }//@if 조건 { 수행 } @else { 수행 }
+//          // scss : @for [$변수] from [시작값] through [끝값] { 반복 수행할 내용 } // through : 이하
+//          // scss : @for [$변수] from [시작값] to [끝값] { 반복 수행할 내용 }      // to : 미만
+//          @for $i from 1 through $count {
+//             &:nth-of-type(#{$i}) {
+//                $n : null;
+//             // background-color: lighten($sub3, $i * 10%);
+//             // background-image:url($url + 'mySlideImage_0#{$i}.jpg');
+//             // background-image:url($url + 'mySlideImage_0' + $i + '.jpg');} // 위와 동일
+//             // background-image:url($url + nth($myImg,$i));
 
-               background-image:url($url + 'mySlideImage_#{$n}.jpg');
-            } //&:nth-of-type(#{$i})
-         } // @for
-      }// div.ad_0$
+//                // # @if 문 ***************************************************
+//                @if ($i < 10){
+//                   $n : '0' + $i;  // 01, 02, 03, ..... 09
+//                }@else{
+//                   $n : $i;
+//                }//@if 조건 { 수행 } @else { 수행 }
+
+//                background-image:url($url + 'mySlideImage_#{$n}.jpg');
+//             } //&:nth-of-type(#{$i})
+//          } // @for
+//       }// div.ad_0$
+   .guide{
       >div>h3{font-size:4rem; color:$sub2; font-weight:bold;}
-      >div>p {font-size:1.2rem; color:$sub2; font-weight:bold; margin-bottom:10px;}
+      >div>p {font-size:1.2rem; color:$sub2; font-weight:bold; margin-bottom:1rem;}
       >div .link_btn{width:260px; height:40px;
-         padding: 0.5rem; background-color: $primary; border:2px solid $sub2; 
-         border-radius:40px; line-height:40px; text-align:center;
-         >a{color:$sub2; font-weight:900; font-size:1.3rem;}
-      }
-   }//.guide
-}//.slide_form
+         padding: 0.5rem 0; line-height:40px; text-align:center;
+         >a{@include link; color:$sub2; background-color: $primary; border:2px solid $sub2; 
+            border-radius:40px; font-weight:900; font-size:1.3rem;}
+         >a:hover,
+         >a:focus {background-color: $sub2; color: $primary; border:2px solid $primary;}
+      }//.link_btn
+   }
+//    }//.guide
+// }//.slide_form

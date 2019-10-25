@@ -17,8 +17,8 @@ position:absolute; z-index:-1; overflow:hidden;
 } //@mixin link()                      // @include link($h:300px) = 너비는 100%, 높이는 300px로 지정
 
 
-//indicator_type_01 --------------------------------
-@mixin indicator_type_01($select, $myW){
+//Indicator_type_01 --------------------------------
+@mixin Indicator_type_01($select, $myW){
    // 하단에 위치, focus시 버튼이 가로로 길게 늘어나며, 전체 list 사이즈가 조절되는 인디케이터
    // OPTION : 인디케이터 버튼하나의 크기 $myW로 설정,
    //        : $f는 100%
@@ -48,7 +48,66 @@ position:absolute; z-index:-1; overflow:hidden;
    }// ul
 }// .view_indicator
 
-} // @mixin indicator_type_01 _사실 프레임워크에 가까운,.,.,.,,, 
+} // @mixin Indicator_type_01 _사실 프레임워크에 가까운,.,.,.,,, 
 
 
 // ===========================================================================================
+// ========================================================================
+// * 가로형 슬라이드 배너 스타일 1
+
+@mixin Horizontal_slide_banner($bannerName, $c, $w:100%, $h:100%, $view:false){
+   //     # 가이드라인(Horizontal_slide_banner)-----------------------------------
+// .guide : (중요) $bannerName의 자식으로 사용하는 가로슬라이드 배너의 내용물들이 담기는 큰 박스의 클래스를 .guide로 설정할 것.
+// .guide의 자식요소는 div로 설정되어 있음.
+
+// $bannerName : (필수) 광고 슬라이드 배너를 처리하고 있는 영역의 이름(기본틀)
+// $c : (필수) 가로형 슬라이드 배너의 갯수(기본)
+// $w : 기본틀의 가로값
+// $h : 기본틀의 세로값
+// $view : true일 때에는 기본틀에서 넘치는 내용을 보여주고(overflow:visible처리)
+//         false일 때에는 기본틀에서 넘치는 내용을 숨긴다.(overflow:hidden처리)
+   // ---------------------------------------------------------------------------
+
+   #{$bannerName} { $count:$c;
+      width: $w; height:$h;
+
+      // overflow 처리용 if
+      @if($view == true){
+         overflow:visible;
+      }@else{
+         overflow:hidden;
+      } // overflow 처리용 if 구문
+
+      .guide {width:(100% * $count); height:100%; background-color: $sample; 
+         >div {float:left; width: (100% / $count); height: 100%; padding:4rem; box-sizing:border-box;
+            background-repeat:no-repeat; background-position:50% 50%; background-size:cover;
+            @content;
+         }// div(개별요소).ad_0$
+         // @content;
+      }//.guide
+   }//.slide_form
+}//@mixin Horizontal_slide_banner()
+// ========================================================================
+//(중요) 해당 @mixin 사용 전 경로를 설정해주어야함.
+@mixin Horizontal_banner_img($count, $url:$url, $name:'slideImage_', $file:'jpg'){
+                                       // A:a, B, C:c 처럼 옵션을 준 변수 사이에는 옵션이 없는 변수를 넣을 수 없다.(오류)
+   @for $i from 1 through $count {
+      &:nth-of-type(#{$i}) {
+         $n : null;
+         // # @if 문 ***************************************************
+         @if ($i < 10){
+            $n : '0' + $i;  // 01, 02, 03, ..... 09
+         }@else{
+            $n : $i;
+         }//@if 조건 { 수행 } @else { 수행 }
+
+         background-image:url($url + $name + $n + '.' + $file);
+      } //&:nth-of-type(#{$i})
+   } // @for
+
+}// @mixin Horizontal_banner_img
+
+
+
+
+// ========================================================================

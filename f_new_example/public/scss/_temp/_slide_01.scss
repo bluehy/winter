@@ -55,9 +55,9 @@ $myImg : ('mySlideImage_01.jpg',
 
 // 가로형 슬라이드 배너 ========================================================
 .slide_form { $count:7;
-   width: 100%; height:100%; overflow:hidden;
+   width: 100%; height:100%; /* overflow:hidden; */
    .guide {width:(100% * $count); height:100%; background-color: $sample; 
-      >div {float:left; width: (100% / $count); height: 100%; 
+      >div {float:left; width: (100% / $count); height: 100%; padding:4rem; box-sizing:border-box;
          background-repeat:no-repeat; background-position:50% 50%; background-size:cover;
          // &:nth-of-type(1) {background-color: $sub1;}
          // &:nth-of-type(2) {background-color: darken($sub2,40%);}
@@ -77,15 +77,24 @@ $myImg : ('mySlideImage_01.jpg',
             // background-image:url($url + 'mySlideImage_0#{$i}.jpg');
             // background-image:url($url + 'mySlideImage_0' + $i + '.jpg');} // 위와 동일
             // background-image:url($url + nth($myImg,$i));
-               // # @if ***************************************************
+
+               // # @if 문 ***************************************************
                @if ($i < 10){
                   $n : '0' + $i;  // 01, 02, 03, ..... 09
                }@else{
                   $n : $i;
                }//@if 조건 { 수행 } @else { 수행 }
-            background-image:url($url + 'mySlideImage_#{$n}.jpg');
+
+               background-image:url($url + 'mySlideImage_#{$n}.jpg');
             } //&:nth-of-type(#{$i})
          } // @for
       }// div.ad_0$
+      >div>h3{font-size:4rem; color:$sub2; font-weight:bold;}
+      >div>p {font-size:1.2rem; color:$sub2; font-weight:bold; margin-bottom:10px;}
+      >div .link_btn{width:260px; height:40px;
+         padding: 0.5rem; background-color: $primary; border:2px solid $sub2; 
+         border-radius:40px; line-height:40px; text-align:center;
+         >a{color:$sub2; font-weight:900; font-size:1.3rem;}
+      }
    }//.guide
 }//.slide_form

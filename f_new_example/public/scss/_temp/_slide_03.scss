@@ -1,0 +1,12 @@
+// slide_03.scss
+/* slide_03.css */
+
+#viewBox_02{position:relative; width:90%; min-width:1200px; height:100%; max-height:800px; min-height: 600px;  margin:auto; margin-top:5rem; margin-bottom: 4rem; background-color: $sample;
+   .slide_temp {width: 100%; height:100%; background-color: #ffa;}
+   .btn_area {position:absolute; bottom:2rem; left:50%; margin-left:2rem; width:300px; height:20px; background-color: $sub2;}
+   .slide_02_form {width:100%; height:100%; 
+      > .guide {$count : 3; 
+         width:100% * $count; height:100%; background-image:linear-gradient(45deg, $sample, $sub4);
+      }//.guide
+   } //slide_02_form
+} // #viewBox_02

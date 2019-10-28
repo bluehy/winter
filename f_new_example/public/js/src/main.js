@@ -14,12 +14,15 @@
       // return은 공식적으론 써야하지만 안 써도 되긴 함.
    };
 
+
+   // 광고영역 1 생성
    viewBox.load('./temp/slide_01.html',() => {
                                  // function(){}와 동일한 형태
       JsLink('slide_01');
    });
 
-   // 광고영역 2 생성
+
+   // 광고영역 2 생성 (선생님 풀이)
    wrap.append('<section id="viewBox_02"></section>');
    const vB2 = $('#viewBox_02');
 

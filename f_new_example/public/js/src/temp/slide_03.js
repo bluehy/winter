@@ -1,6 +1,6 @@
 // slide_03.js
 
 (function($){
-   console.log($.fn);
-   
+   // console.log($.fn);
+
 })(jQuery);

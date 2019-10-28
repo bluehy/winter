@@ -1,12 +1,47 @@
 // slide_03.scss
 /* slide_03.css */
 
+$count : 3; //광고배너 갯수
+$indiH : 20px; // 인디케이터 높이
+
+
+
 #viewBox_02{position:relative; width:90%; min-width:1200px; height:100%; max-height:800px; min-height: 600px;  margin:auto; margin-top:5rem; margin-bottom: 4rem; background-color: $sample;
-   .slide_temp {width: 100%; height:100%; background-color: #ffa;}
-   .btn_area {position:absolute; bottom:2rem; left:50%; margin-left:2rem; width:300px; height:20px; background-color: $sub2;}
-   .slide_02_form {width:100%; height:100%; 
-      > .guide {$count : 3; 
-         width:100% * $count; height:100%; background-image:linear-gradient(45deg, $sample, $sub4);
+   & .slide_temp {width: 100%; height:100%; background-color: #ffa;}
+   & .btn_area {position:absolute; z-index: 5; bottom:2rem; left:50%; margin-left:2rem; width:300px; height:$indiH; background-color: $sub2;}
+   & .slide_02_form {width:100%; height:100%; overflow:hidden;
+      > .guide {width:100% * $count; height:100%; background-image:linear-gradient(45deg, lighten($primary,30%), $sub4);
       }//.guide
    } //slide_02_form
 } // #viewBox_02
+
+
+// 가로형 슬라이드 배너 =================================================
+.banner_area {float:left; position:relative; z-index: 0; width: 100% / $count; height: 100%; overflow:hidden;
+   &:before, &::before {content:" "; display:block; 
+      position:absolute; z-index: -10; width:60%; height:100%; top:0; left:40%; background-image: linear-gradient(90deg,rgba($blueGreen,1),rgba($blueGreen,0)); transform-origin:90% 0; transform:rotate(0deg); transition:all 500ms ease;
+   }//before
+   &.action:before,
+   &.action::before {transform:rotate(-7deg); /* background-image: linear-gradient(90deg,rgba($blueGreen,1),rgba($blueGreen,0)) */}
+}//.banner_area
+
+.slide2{
+   &#{_01} {background-color: #acc;}
+   &#{_02} {background-color: #acf;}
+   &#{_03} {background-color: #fcf;}
+}//slide2_0$
+
+
+// 버튼 탭 영역 ==============================================================
+#viewBox_02 {
+   & .indicator {float:left; width:auto; height:100%; margin-right: 2rem;
+      >li {float:left; width: auto; height: $indiH; margin-right:1rem;
+         >a {display:block; width:$indiH; height: $indiH; border-radius: $indiH; background-color: $sample; transition:all 300ms ease;
+         &:hover {background-color: $blueGreen;}
+         &.action {width: $indiH * 2 ; background-color: $primary;}
+         &>span { @include hidden; }
+         }// a
+      }//li
+   }// .indicator
+   & .view_btn {float:right; width:auto; height:100%; display:none;}
+}//#viewBox_02

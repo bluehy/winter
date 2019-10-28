@@ -67,8 +67,34 @@
 
 #viewBox_02 .slide_temp { width: 100%; height: 100%; background-color: #ffa; }
 
-#viewBox_02 .btn_area { position: absolute; bottom: 2rem; left: 50%; margin-left: 2rem; width: 300px; height: 20px; background-color: #fff; }
+#viewBox_02 .btn_area { position: absolute; z-index: 5; bottom: 2rem; left: 50%; margin-left: 2rem; width: 300px; height: 20px; background-color: #fff; }
 
-#viewBox_02 .slide_02_form { width: 100%; height: 100%; }
+#viewBox_02 .slide_02_form { width: 100%; height: 100%; overflow: hidden; }
 
-#viewBox_02 .slide_02_form > .guide { width: 300%; height: 100%; background-image: linear-gradient(45deg, #ccc, #eafecd); }
+#viewBox_02 .slide_02_form > .guide { width: 300%; height: 100%; background-image: linear-gradient(45deg, #ff99c2, #eafecd); }
+
+.banner_area { float: left; position: relative; z-index: 0; width: 33.33333%; height: 100%; overflow: hidden; }
+
+.banner_area:before, .banner_area::before { content: " "; display: block; position: absolute; z-index: -10; width: 60%; height: 100%; top: 0; left: 40%; background-image: linear-gradient(90deg, #00cc99, rgba(0, 204, 153, 0)); transform-origin: 90% 0; transform: rotate(0deg); transition: all 500ms ease; }
+
+.banner_area.action:before, .banner_area.action::before { transform: rotate(-7deg); /* background-image: linear-gradient(90deg,rgba($blueGreen,1),rgba($blueGreen,0)) */ }
+
+.slide2_01 { background-color: #acc; }
+
+.slide2_02 { background-color: #acf; }
+
+.slide2_03 { background-color: #fcf; }
+
+#viewBox_02 .indicator { float: left; width: auto; height: 100%; margin-right: 2rem; }
+
+#viewBox_02 .indicator > li { float: left; width: auto; height: 20px; margin-right: 1rem; }
+
+#viewBox_02 .indicator > li > a { display: block; width: 20px; height: 20px; border-radius: 20px; background-color: #ccc; transition: all 300ms ease; }
+
+#viewBox_02 .indicator > li > a:hover { background-color: #0c9; }
+
+#viewBox_02 .indicator > li > a.action { width: 40px; background-color: #f06; }
+
+#viewBox_02 .indicator > li > a > span { display: block; position: absolute; z-index: -10; width: 0; height: 0; overflow: hidden; }
+
+#viewBox_02 .view_btn { float: right; width: auto; height: 100%; display: none; }

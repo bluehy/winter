@@ -50,7 +50,7 @@
    };
    const StopSlide = clearInterval(go);
    viewBox2.on('mouseenter',StopSlide);
-   viewBox2.on('mouseleave',GoSlide);
+   viewBox2.on('mouseleave',GoSlide());
 
 
 })(jQuery);

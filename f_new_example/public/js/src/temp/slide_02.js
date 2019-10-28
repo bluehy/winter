@@ -36,11 +36,12 @@
       e.preventDefault();
       let i = $(this).parent('li').index();
 
-      $(this).parent('li').siblings('li').children('a').removeClass('action');
-      // indiLink.removeClass();
+      // $(this).parent('li').siblings('li').children('a').removeClass('action');
+      indiLink.removeClass('action');
       $(this).addClass('action');
 
       guideArea.stop().animate({'left': -100 * +i + '%'});
+      
       slideArea.addClass('active');
    });
 

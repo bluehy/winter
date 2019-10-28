@@ -1,0 +1,55 @@
+// slide_02.scss
+/* slide_02.css */
+
+
+//공통
+.slide_temp {position:relative; width:100%; @include px(min-width,900); height:660px; background-color: $sample;}
+
+// 좌우버튼
+   .view_button {position:absolute; z-index: 500; bottom: 90px; right:50%; width: 80px; height:0; transform:translate(300px); text-align:center;}
+      .next{float:right; width:auto; height:auto; @include px(font-size,14); background-color: transparent;}
+      .prev{float:left; width:auto; height:auto; @include px(font-size,14); background-color: transparent;}
+      .play_btn {float:left; width:auto; height:auto; @include px(font-size,14); background-color: transparent;
+         >.fas {display:none; text-align:center; margin:0 3px;
+            >span {display:block; width:0; height:0; overflow:hidden;}
+         }//i.fas
+         .fa-play{display:block;}
+         &.play {
+            >.fa-play{display:none;}
+            >.fa-pause{display:block;}
+         }
+      }//button : play or pause
+
+
+// 인디케이터
+   .view_indicator {$w:14px;
+      position: absolute; z-index:500; bottom:90px; right:50%; width: auto; min-width:30px; height:0; background-color: #999; transform:translate(200px);
+      > ul {width:100%; height:100%;
+         >li {float:left; width: auto; height: auto; margin-right:5px;
+            >a {display:block; width: $w; height:$w; border-radius:10px; background-color: #fff; transition:all 300ms ease;
+            &:hover {background-color: $primary;}
+            &.action {background-color: $primary; width:$w * 2;}
+               > span {display:block; width:0; height: 0; overflow:hidden;}
+            } //a
+         } //li
+      } //ul
+   }//.view_indicator 
+   
+
+// 가로형 슬라이드 배너
+.slide_form {position:relative; width:100%; height:100%; overflow:hidden;
+   >.guide {position:absolute; top:0; left:0; width: 300%; height: 100%;
+      >div {float:left; width: (100% / 3); height: 100%; padding: 5% 0; padding-left:18%; box-sizing:border-box; background-color: $sub1; color: $sub2;
+      &:nth-of-type(2) {background-color: lighten($sub1,20%);}
+      &:nth-of-type(3) {background-color: lighten($sub1,10%);}
+         >h3 {position:relative; z-index:500; font-size:1rem; margin-bottom:1rem;}
+         >p {position:relative; width: 400px; word-break:keep-all; z-index:500; font-size: 2rem;}
+      }//ad_0$
+   }//.guide
+} //.slide_form
+
+   .slide_form:before, 
+   .slide_form::before {content:" "; display:block; z-index:400; position:absolute; top:0; right:0; width:50%; height:120%; transform-origin:100% 0; transform:rotate(-7deg); background: rgb(238,174,202);
+      background: linear-gradient(45deg, rgba(238,174,202,0.7) 0%, rgba(148,187,233,0.7) 100%); transition:all 300ms ease;}
+
+   // .slide_form.active:before {background: linear-gradient(45deg, rgba(238,174,202,0) 0%, rgba(148,187,233,0) 100%);}

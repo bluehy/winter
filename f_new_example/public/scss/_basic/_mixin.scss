@@ -46,6 +46,7 @@ position:absolute; z-index:-1; overflow:hidden;
          // >span {@extend .hidden;}
       } // a // li 안에 너무 많아지니까 ul의 자손으로 작성 (?)      
    }// ul
+   @content;
 }// .view_indicator
 
 } // @mixin Indicator_type_01 _사실 프레임워크에 가까운,.,.,.,,, 

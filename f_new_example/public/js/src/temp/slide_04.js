@@ -5,8 +5,9 @@
 
    const slideForm = $('.slide_03_form');
    const slideGuide = slideForm.children('ul');
-   const slideLi = slideGuide.find('li');
+   let slideLi = slideGuide.find('li');
 
+   // ============================================
    // li에 이름(class) 붙이기 (slide_03_con_0$)
    for (let i = 0; i <= slideLi.length; i++){
       let classname = 'slide_03_con_' + (i + 1);
@@ -31,5 +32,33 @@
 
    // 4. 또한, 그 부모인 영역의 넓이는 기존 갯수 + 1 만큼의 크기값으로 재설정해야한다.
    
+// ------------------------------------------------------------
+   const slide03Btn = $('.slide_03_btn');
+   const nextBtn = slide03Btn.children('.next');
+   const prevBtn = slide03Btn.children('.prev');
+
+   let myn = 0;
+       slideLi = slideGuide.find('li'); 
+       // 처음 선언했던 slideLi와는 다른 상태(clone해서 붙여넣었기 때문에 갱신해줘야 함!) _ 6개.
+   const bannerLen = slideLi.length;
+   console.log(bannerLen);
+
+   nextBtn.on('click',function(e){
+      e.preventDefault();
+      myn++;
+      if(myn >= bannerLen -1 ){
+         myn = 0;
+      }
+      slideGuide.stop().animate({'left':-100 * myn + '%' });
+   });
+
+   prevBtn.on('click',function(e){
+      e.preventDefault();
+      myn--;
+      if(myn <= -1){
+         myn = bannerLen -2 ;
+      }
+      slideGuide.stop().animate({'left':-100 * myn + '%' });
+   });
 
 })(jQuery);

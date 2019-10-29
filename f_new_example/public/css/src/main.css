@@ -110,3 +110,28 @@
 #viewBox_02 .view_btn > .play_btn > button > i { text-align: center; }
 
 #viewBox_02 .view_btn > .play_btn > button > span { display: block; position: absolute; z-index: -10; width: 0; height: 0; overflow: hidden; }
+
+/* slide_04.css */
+#viewBox_03 { position: relative; width: 100%; height: 700px; background-color: #ccc; margin: 15rem auto; }
+
+.slide_03_btn { position: absolute; top: 50%; left: 0; width: 100%; height: 0; }
+
+.slide_03_btn > button { float: left; width: 100px; height: 100px; background-color: #333; transform: translateY(-50%); }
+
+.slide_03_btn > button.next { float: right; }
+
+.slide_03_form { width: 100%; height: 100%; }
+
+.slide_03_form > ul { width: 600%; height: 100%; background-color: #eafecd; }
+
+.slide_03_form > ul > li { float: left; width: 16.66667%; height: 100%; background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; }
+
+.slide_03_form > ul > li.slide_03_con_1 { background-image: url("../../img/slide_02/mySlideImage_01.jpg"); }
+
+.slide_03_form > ul > li.slide_03_con_2 { background-image: url("../../img/slide_02/mySlideImage_02.jpg"); }
+
+.slide_03_form > ul > li.slide_03_con_3 { background-image: url("../../img/slide_02/mySlideImage_03.jpg"); }
+
+.slide_03_form > ul > li.slide_03_con_4 { background-image: url("../../img/slide_02/mySlideImage_04.jpg"); }
+
+.slide_03_form > ul > li.slide_03_con_5 { background-image: url("../../img/slide_02/mySlideImage_05.jpg"); }

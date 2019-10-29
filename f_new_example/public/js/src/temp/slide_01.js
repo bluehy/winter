@@ -14,32 +14,51 @@
    const indiLink = indiLi.children('a');
 
    const guideBox = viewBox.find('.guide');
-   const slidePage = guideBox.children('div')
+   const slidePage = guideBox.children('div');
 
 
-   indiLink.on('click focus',function(e){
-      e.preventDefault();
-      let i = $(this).parent('li').index();
-      // console.log(i);
+   let time = 300;
+   let j = 0;
+   let maxj = slidePage.length;
+
+// 슬라이드 이동 함수화 ==========================================
+   const MovingSlide = function(n){
       indiLink.removeClass('action');
-      $(this).addClass('action');
+      indiLink.parent('li').eq(n).children('a').addClass('action');
+      guideBox.stop().animate({'left': -100 * n + '%'});
+   }
+   MovingSlide(0);
+// =========================================================
 
-      guideBox.stop().animate({'left': -100 * + i + '%'});
-
-   });
-
-   let j = 0, maxj = slidePage.length, slide;
+// 슬라이드 자동 이동===================================================
+   let slide;
    const Sliding = function(){
       slide = setInterval(function(){
          j++;
          if(j >= maxj){
             j = 0;
          }
-         indiLink.removeClass('action');
-         indiLink.parent('li').eq(j).children('a').addClass('action');
-         guideBox.stop().animate({'left': -100 * + j + '%'});
-      }, 3000);
+         MovingSlide(j);
+      }, time * 10);
    }; //Sliding function()
+const StopSliding = function(){
+   clearInterval(slide);
+}
 Sliding();
+
+viewBox.on({'mouseenter':StopSliding,'mouseleave':Sliding});
+
+// 슬라이드 클릭시 이동 =============================================================
+
+   indiLink.on('click focus',function(e){
+      e.preventDefault();
+      StopSliding();
+      let i = $(this).parent('li').index();
+      j = i;
+      // console.log(i);
+      MovingSlide(j);
+   });
+
+   
 
 })(jQuery);

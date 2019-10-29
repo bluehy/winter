@@ -8,7 +8,7 @@ $indiH : 20px; // 인디케이터 높이
 
 #viewBox_02{position:relative; width:90%; min-width:1200px; height:100%; max-height:800px; min-height: 600px;  margin:auto; margin-top:5rem; margin-bottom: 4rem; background-color: $sample;
    & .slide_temp {width: 100%; height:100%; background-color: #ffa;}
-   & .btn_area {position:absolute; z-index: 5; bottom:2rem; left:50%; margin-left:2rem; width:300px; height:$indiH;}
+   & .btn_area {position: absolute; z-index: 5; bottom:2rem; left:50%; margin-left:2rem; width:200px; height:$indiH; padding: 0.2rem; background-color: $sub4; border-radius: $indiH;}
    & .slide_02_form {width:100%; height:100%; overflow:hidden;
       > .guide {width:100% * $count; height:100%; background-image:linear-gradient(45deg, lighten($primary,30%), $sub4);
       }//.guide
@@ -34,7 +34,7 @@ $indiH : 20px; // 인디케이터 높이
 
 // 버튼 탭 영역 ==============================================================
 #viewBox_02 {
-   & .indicator {float:left; width:auto; height:100%; padding: 0.2rem; margin-right: 2rem; background-color: $sub4; border-radius: $indiH;
+   & .indicator {float:left; width:auto; height:100%; margin-right: 2rem; 
       >li {float:left; width: auto; height: $indiH; margin-right:1rem;
          >a {display:block; width:$indiH; height: $indiH; border-radius: $indiH; background-color: $sample; transition:all 300ms ease;
          &:hover {background-color: $blueGreen;}
@@ -44,5 +44,12 @@ $indiH : 20px; // 인디케이터 높이
       &:last-child {margin-right:0;}
       }//li
    }// .indicator
-   & .view_btn {float:right; width:auto; height:100%; display:none;}
+   & .view_btn {float:right; position:static; width:auto; height:100%;
+      > button {display:none;}
+      > .play_btn {width: auto; height: $indiH;}
+      > .play_btn > button {float:left; width:$indiH; height: $indiH; background-color: $primary; border-radius:$indiH;
+         & >i { text-align:center; }
+         & > span{@include hidden;}
+      }
+   }
 }//#viewBox_02

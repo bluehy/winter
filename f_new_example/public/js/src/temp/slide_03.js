@@ -9,6 +9,8 @@
    const indiLink = indiLi.children('a');
 
    const viewBtn = viewBox2.find('.view_btn');
+   const playBtn = viewBtn.find('.play');
+   const pauseBtn = viewBtn.find('.pause');
 
    const slideForm = viewBox2.find('.slide_02_form');
    const slideGuide = slideForm.children('.guide');
@@ -18,7 +20,7 @@
    let myn = 0;
    let maxn = slideEach.length;
 
-   // # 슬라이드 이동에 따른 변화 함수화 ==================================================
+   // # 슬라이드 이동에 따른 변화 함수화 (공통) ==================================================
    // ==================================================================================
    // indiLi.eq(0).children('a').addClass('action');
    // slideEach.eq(0).addClass('action');
@@ -37,6 +39,7 @@
    };// MoveSlide function
    MoveSlide(0);
    // =======================================================================================
+   
 // ------------------------------------------------
 // 일정시간마다 광고배너 움직이게 하기
 
@@ -51,13 +54,38 @@ const GoSlide = function(){
       MoveSlide(myn);
    },timed * 10);
 }; // # GoSlide function
-const StopSlide = function(){ clearInterval(go);};
+const StopSlide = function(){ 
+   clearInterval(go);
+};
 GoSlide();
 
+// --------------------------------------------------------------
+// 마우스 오버했을 때, 슬라이드 자동재생 멈춤. 벗어났을 때, 슬라이드 자동재생 재시작.
 // viewBox2.on('mouseenter', StopSlide ); // stopSlide
 // viewBox2.on('mouseleave',GoSlide ); // replay Slide
-viewBox2.on({'mouseenter':StopSlide, 'mouseleave':GoSlide});
+// 또는
+// viewBox2.on({'mouseenter':StopSlide, 'mouseleave':GoSlide});
 //--------------------------------------------------------------
+
+// -------------------------------------------------------------------
+// 자동재생멈춤 / 자동재생시작 버튼
+playBtn.hide();
+// pauseBtn.on('click',StopSlide);
+pauseBtn.on('click',function(){
+   StopSlide();
+   $(this).hide();
+   $(this).siblings().show();
+});
+
+// playBtn.on('click',GoSlide);
+playBtn.on('click',function(){
+   GoSlide();
+   $(this).hide();
+   $(this).siblings().show();
+});
+// ---------------------------------------------------------------------
+
+
 // ---------------------------------------------------------------
 // 클릭할 때, 배너 움직이게 하기 (+ 포커스일 때, 움직이지 않음.)
    indiLink.on('click focus',function(e){
@@ -73,6 +101,11 @@ viewBox2.on({'mouseenter':StopSlide, 'mouseleave':GoSlide});
    }); // indiLink('click')
 // -----------------------------------------------------------------
 
+})(jQuery);
+
+
+
+
    // ============================================
    // let i = 0;
    // setInterval(function(){
@@ -87,7 +120,11 @@ viewBox2.on({'mouseenter':StopSlide, 'mouseleave':GoSlide});
    // setInterval(), clearInterval()
 
 
-})(jQuery);
+
+
+
+
+
 // setTimeout()   : 일정시간 뒤에 수행
 // setInterval()  : 일정시간마다 수행
 // clearInterval(): setInterval의 기능을 취소, 정지하는 기능.

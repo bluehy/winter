@@ -14,6 +14,7 @@
    const indiLink = indiLi.children('a');
 
    const guideBox = viewBox.find('.guide');
+   const slidePage = guideBox.children('div')
 
 
    indiLink.on('click focus',function(e){
@@ -26,5 +27,19 @@
       guideBox.stop().animate({'left': -100 * + i + '%'});
 
    });
+
+   let j = 0, maxj = slidePage.length, slide;
+   const Sliding = function(){
+      slide = setInterval(function(){
+         j++;
+         if(j >= maxj){
+            j = 0;
+         }
+         indiLink.removeClass('action');
+         indiLink.parent('li').eq(j).children('a').addClass('action');
+         guideBox.stop().animate({'left': -100 * + j + '%'});
+      }, 3000);
+   }; //Sliding function()
+Sliding();
 
 })(jQuery);

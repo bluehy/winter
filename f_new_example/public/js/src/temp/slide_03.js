@@ -25,63 +25,93 @@
    // indiLi.eq(0).children('a').addClass('action');
    // slideEach.eq(0).addClass('action');
 
-   const MoveSlide = function(n){
+   const MoveSlide = function(n, bool){
       indiLink.removeClass('action');
       indiLi.eq(n).children('a').addClass('action');
 
       slideGuide.stop().animate({'marginLeft': (-100 * n) + '%'}, function(){ //콜백 가능
          slideEach.removeClass('action');
-
          setTimeout(function(){
             slideEach.eq(n).addClass('action');
          }, timed); //setTimeout(function(){ } , delay시간);
       });
+      // play, stop 버튼 동작유무 판단하기
+      if(!bool){
+         playBtn.show();
+         pauseBtn.hide();
+      }else{
+         pauseBtn.show();
+         playBtn.hide();
+      }
    };// MoveSlide function
-   MoveSlide(0);
+
+   // MoveSlide(0);
+   MoveSlide(0, true);
    // =======================================================================================
    
 // ------------------------------------------------
 // 일정시간마다 광고배너 움직이게 하기
+// GoSlide / StopSlide / == > PlayBanner
 
 let go;
+
 const GoSlide = function(){
    go = setInterval(function(){
-      console.log(myn);
+      // console.log(myn);
       myn++;
       if (myn >= maxn){
          myn = 0;
       }
-      MoveSlide(myn);
+      MoveSlide(myn, true);
    },timed * 10);
 }; // # GoSlide function
+
 const StopSlide = function(){ 
    clearInterval(go);
-};
-GoSlide();
+};// #StopSlide function
+// GoSlide();
+
+const PlayBanner = function(bool){
+   if(bool){
+      GoSlide();
+   }else{
+      StopSlide();
+   }
+}; // PlayBanner() function
+PlayBanner(true);
 
 // --------------------------------------------------------------
 // 마우스 오버했을 때, 슬라이드 자동재생 멈춤. 벗어났을 때, 슬라이드 자동재생 재시작.
 // viewBox2.on('mouseenter', StopSlide ); // stopSlide
 // viewBox2.on('mouseleave',GoSlide ); // replay Slide
 // 또는
+viewBox2.on('mouseenter', function(){
+   PlayBanner(false);
+});
+
+viewBox2.on('mouseleave', function(){
+   PlayBanner(true);
+});
 // viewBox2.on({'mouseenter':StopSlide, 'mouseleave':GoSlide});
 //--------------------------------------------------------------
 
 // -------------------------------------------------------------------
 // 자동재생멈춤 / 자동재생시작 버튼
-playBtn.hide();
+// playBtn.hide(); // bool 추가하면서 의미없음.
 // pauseBtn.on('click',StopSlide);
 pauseBtn.on('click',function(){
-   StopSlide();
-   $(this).hide();
-   $(this).siblings().show();
+   // StopSlide();
+   // $(this).hide();
+   // $(this).siblings().show();
+   PlayBanner(false);
 });
 
 // playBtn.on('click',GoSlide);
 playBtn.on('click',function(){
-   GoSlide();
-   $(this).hide();
-   $(this).siblings().show();
+   // GoSlide();
+   // $(this).hide();
+   // $(this).siblings().show();
+   PlayBanner(true);
 });
 // ---------------------------------------------------------------------
 
@@ -90,13 +120,16 @@ playBtn.on('click',function(){
 // 클릭할 때, 배너 움직이게 하기 (+ 포커스일 때, 움직이지 않음.)
    indiLink.on('click focus',function(e){
       e.preventDefault();
-      StopSlide();
+      e.stopPropagation();
+      // StopSlide();
+      console.log(e.bubbles);
       let myThis    = $(this);
       let myThisPar = myThis.parent('li')
       let i         = myThisPar.index();
       myn = i;
 
-      MoveSlide(myn);
+      MoveSlide(myn, true);
+      PlayBanner(false);
 
    }); // indiLink('click')
 // -----------------------------------------------------------------

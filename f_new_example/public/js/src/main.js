@@ -29,5 +29,16 @@
    vB2.load('./temp/slide_03.html',() => {
       JsLink('slide_03');
    });
+   //- 자동슬라이드 내용에서 중첩기능 수정요망.
+
+
+   // 광고영역 3 생성 (맨뒤에서 처음으로 돌아가기, 좌우버튼)
+   wrap.append('<section id="viewBox_03"></section>');
+   const VB3 = $('#viewBox_03');
+
+   VB3.load('./temp/slide_04.html',() => {
+      JsLink('slide_04');
+   });
+   
 
 })(jQuery);

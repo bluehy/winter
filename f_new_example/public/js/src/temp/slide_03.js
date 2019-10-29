@@ -20,6 +20,8 @@
    let myn = 0;
    let maxn = slideEach.length;
 
+   let mybool = true;
+
    // # 슬라이드 이동에 따른 변화 함수화 (공통) ==================================================
    // ==================================================================================
    // indiLi.eq(0).children('a').addClass('action');
@@ -78,7 +80,7 @@ const PlayBanner = function(bool){
       StopSlide();
    }
 }; // PlayBanner() function
-PlayBanner(true);
+PlayBanner(mybool);
 
 // --------------------------------------------------------------
 // 마우스 오버했을 때, 슬라이드 자동재생 멈춤. 벗어났을 때, 슬라이드 자동재생 재시작.
@@ -151,10 +153,6 @@ playBtn.on('click',function(){
    // 변수 i = 외부에서 공용으로 사용할 수 있도록, 전역변수로 처리해야한다.
    // 인디케이터, 광고배너 이동 후에 처리하는 부분 등의 내용은 별도의 함수 처리.
    // setInterval(), clearInterval()
-
-
-
-
 
 
 

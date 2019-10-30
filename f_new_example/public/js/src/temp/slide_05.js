@@ -186,7 +186,7 @@
          if($(this).index() == 0){                 // next버튼을 클릭 한 경우,
             myn++;
                // +++++++++++++++++++++++++++++++
-               if(myn >= imgLen-1){ 
+               if(myn >= imgLen-1){                // 
                   slideGuide.css({'left':'100%'});
                   myn = 0;
                };// if구문\ if(myn >= imgLen-1){}
@@ -197,7 +197,7 @@
             let per = -100 * myn + '%';
             slideGuide.stop(true,false).animate({'left':per}, function(){
                // ++++++++++++++++++++++++++++++++
-               if(myn <= -1 ){
+               if(myn <= -1 ){                     // 맨처음에서 더 앞으로 이동할 때, 맨뒤로 가는 기능.
                   myn = imgLen - 2;
                   slideGuide.css({'left':-100 * myn + '%'});
                }; // if구문\ if(myn <= -1 ){}

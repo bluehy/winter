@@ -98,13 +98,8 @@
    const nextBtn = slideBtn.children('.next');
    const prevBtn = slideBtn.children('.prev');
 
-      /* 선생님 풀이
-      let btnMake = '<div>
-                        <button type="button" class="next"><span>다음 내용 보기</span></button>
-                        <button type="button" class="next"><span>이전 내용 보기</span></button>
-                     </div>
 
-      */
+
 
 
 

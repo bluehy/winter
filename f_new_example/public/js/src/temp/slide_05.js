@@ -4,38 +4,42 @@
    console.log('slide_05.js불러왓슴니다.');
    // 이미지 경로와 이미지 파일명
    const url = "../img/slide_01/";           // main.html기준으로 경로 지정
-   let sample = [
+   let imgList = [
                   {title : 'slide title _01',
-                   content : 'slide content ....',
-                   linkText : '바로가기',
+                   content : '뛰어오는 머머',
+                   linkText : '1번째 바로가기',
                    link : 'http://naver.com',
                    bgimg : 'mySlideImage_01.jpg' },
-                   {title : 'slide title _01',
-                   content : 'slide content ....',
-                   linkText : '바로가기',
-                   link : 'http://naver.com',
-                   bgimg : 'mySlideImage_01.jpg' },
-                   {title : 'slide title _01',
-                   content : 'slide content ....',
-                   linkText : '바로가기',
-                   link : 'http://naver.com',
-                   bgimg : 'mySlideImage_01.jpg' },
-                   {title : 'slide title _01',
-                   content : 'slide content ....',
-                   linkText : '바로가기',
-                   link : 'http://naver.com',
-                   bgimg : 'mySlideImage_01.jpg' },
-                   {title : 'slide title _01',
-                   content : 'slide content ....',
-                   linkText : '바로가기',
-                   link : 'http://naver.com',
-                   bgimg : 'mySlideImage_01.jpg' }
+
+                   {title : 'slide title _02',
+                   content : '바라보는 멈머',
+                   linkText : '2번째 바로가기',
+                   link : 'http://daum.net',
+                   bgimg : 'mySlideImage_02.jpg' },
+
+                   {title : 'slide title _03',
+                   content : '소리치는 애옹이',
+                   linkText : '3번째 바로가기',
+                   link : 'http://google.com',
+                   bgimg : 'mySlideImage_03.jpg' },
+
+                   {title : 'slide title _04',
+                   content : '우리 아가랑',
+                   linkText : '4번째 바로가기',
+                   link : 'http://xidoweb.com',
+                   bgimg : 'mySlideImage_04.jpg' },
+
+                   {title : 'slide title _05',
+                   content : '커어어',
+                   linkText : '5번째 바로가기',
+                   link : 'http://fontawesome.io',
+                   bgimg : 'mySlideImage_05.jpg' }
                   ];
-   const imgList = ['mySlideImage_01.jpg',
-                    'mySlideImage_02.jpg',
-                    'mySlideImage_03.jpg',
-                    'mySlideImage_04.jpg',
-                    'mySlideImage_05.jpg' ];
+   // const imgList = ['mySlideImage_01.jpg',
+   //                  'mySlideImage_02.jpg',
+   //                  'mySlideImage_03.jpg',
+   //                  'mySlideImage_04.jpg',
+   //                  'mySlideImage_05.jpg' ];
 
 // --------------------------------------------------------------------------
 // 기본선택자 및 내용(기본틀) 생성
@@ -46,6 +50,9 @@
    const slideGuide = slideForm.children('ul');
 
    let imgLen = imgList.length;
+   console.log('이미지 객체의 갯수는' + imgLen + ' 개입니다.');
+   let slideCon = '<dl><dt></dt><dd class="con"></dd><dd class="link"><a href=""></a></dd></dl>';
+
    for(let i = 0 ; i < imgLen; i++){
       if (i < 10){
          // slideGuide.append('<li></li>');
@@ -56,9 +63,19 @@
       // slideGuide.append('<li class="slide5th_0' + (i +1) + '"></li>');
       // slideGuide.append(`<li class="slide5th_0${i+1}"></li>`);
       let li_nth = slideGuide.children('li').eq(i);
-      li_nth.text(imgList[i]);
-      // li_nth.css({'backgroundImage':`url(${url + imgList[i]})`});
-      li_nth.css({'backgroundImage':'url("' + url + imgList[i] + '")'});
+         
+         // li_nth.append('<h3></h3><p></p><button></button>');
+         li_nth.append(slideCon);    //html(); -> 지정된 요소 안의 내용을 지워내고 채우기.
+         li_nth.find('dt').text(imgList[i].title);
+         li_nth.find('.con').append(imgList[i].content);
+
+      let link = li_nth.find('.link').children('a');
+         link.append(imgList[i].linkText);
+         link.attr({'href':imgList[i].link, 'target':'_blank'});   // attr('속성','값'); = attr({'속성':'값'});
+                                             // target 속성 : 새창에서 열기(blank), 현재 창에서 열기 등...
+         // li_nth.css({'backgroundImage':`url(${url + imgList[i]})`});
+         // li_nth.css({'backgroundImage':'url("' + url + imgList[i] + '")'});     // 기본 이미지 이름 리스트
+         li_nth.css({'backgroundImage':'url("' + url + imgList[i].bgimg + '")'});
    }
 
    let cloneLi = slideGuide.children('li').eq(-1).clone(true);

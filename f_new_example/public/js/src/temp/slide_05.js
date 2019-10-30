@@ -81,7 +81,7 @@
    let cloneLi = slideGuide.children('li').eq(-1).clone(true);
    cloneLi.prependTo(slideGuide);
 
-   // imglen++; // li 마지막 요소 추가하여 갯수 파악(imgLen을 길이로 사용할 때...)
+   imgLen++; // li 마지막 요소 추가하여 갯수 파악(imgLen을 길이로 사용할 때...)
 
    let slidePage = slideGuide.children('li') ;
    let bannerLen = slidePage.length;
@@ -99,7 +99,21 @@
    const prevBtn = slideBtn.children('.prev');
 
 
+   // # (선생님 풀이)  좌우버튼 만들기 -----------------------------------------
+      let btnMake = '<div class="slide_04_btn_area">\
+                        <button type="button" class="next"><span>다음 내용 보기</span></button>\
+                        <button type="button" class="next"><span>이전 내용 보기</span></button>\
+                     </div>';
+      slide_04.prepend(btnMake);
+      const btnArea = slide_04.find('.slide_04_btn_area');
+      const btn = btnArea.children('button');
 
+      slide_04.css({'position':'relative'});
+      btnArea.css({'position':'absolute','top':'-50px','left':0,'backgroundColor':'#ccc'});
+      btn.css({'width':'100px','height':'30px'});
+      btn.eq(0).css({'float':'right'});
+      btn.eq(1).css({'float':'left','marginRight':'10px'});
+   // --------------------------------------------------------------------------
 
 
 
@@ -128,6 +142,48 @@
          };
       });
    });
+
+   //  # (선생님 풀이) 생성된 좌우버튼을 이용하여, 좌우 슬라이드 기능 수행 -----------------------------------------
+      // btn.on('click',function(e){
+      //    e.preventDefault();
+      //    $(this).index() == 0;
+      // }); // 하나의 선택자로 버튼 위치에 따라 다른 기능이먹히도록 하는 방법 역시 가능.
+
+          myn = 0;
+      console.log(imgLen);
+      // next 버튼 클릭
+      btn.eq(0).on('click',function(e){ 
+         e.preventDefault();
+         myn++;
+         console.log(myn);
+         // +++++++++++++++++++++++++++++++
+         if(myn >= imgLen-1){ 
+            slideGuide.css({'left':'100%'});
+            myn = 0;
+         };
+         // +++++++++++++++++++++++++++++++
+         let per = -100 * myn + '%';
+         slideGuide.stop(true,false).animate({'left': per});
+      });
+
+      // prev 버튼 클릭
+      btn.eq(1).on('click',function(e){ 
+         e.preventDefault();
+         myn--;
+         console.log(myn);
+         let per = -100 * myn + '%';
+         slideGuide.stop(true,false).animate({'left':per}, function(){
+            // ++++++++++++++++++++++++++++++++
+            if(myn <= -1 ){
+               myn = imgLen - 2;
+               slideGuide.css({'left':-100 * myn + '%'});
+            }; // if구문 (맨처음에서보다 앞으로 가면, 맨 뒤로 보내는 기능을 수행하는 if)
+            // ++++++++++++++++++++++++++++++++
+         }); //animate 후 function(){  ...  }
+      });
+   // --------------------------------------------------------------------------
+   
+
 
 // 슬라이드에 마우스 올라가면 버튼 생기기
 

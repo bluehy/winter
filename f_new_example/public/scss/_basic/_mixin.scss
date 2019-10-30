@@ -82,7 +82,7 @@ position:absolute; z-index:-1; overflow:hidden;
 //         false일 때에는 기본틀에서 넘치는 내용을 숨긴다.(overflow:hidden처리)
    // ---------------------------------------------------------------------------
 
-   #{$bannerName} { $count:$c;
+   #{$bannerName} { $count:($c + 1);
       width: $w; height:$h;
 
       // overflow 처리용 if
@@ -92,12 +92,12 @@ position:absolute; z-index:-1; overflow:hidden;
          overflow:hidden;
       } // overflow 처리용 if 구문
 
-      .guide {position:relative; top:0; left:0; width:(100% * $count); height:100%; background-color: $sample; 
+      .guide {position:relative; top:0; left:0; margin-left:-100%; width:(100% * $count); height:100%; background-color: $sample; 
          >div {float:left; width: (100% / $count); height: 100%; padding:4rem; box-sizing:border-box;
             background-repeat:no-repeat; background-position:50% 50%; background-size:cover;
-            @content;
+            // @content;
          }// div(개별요소).ad_0$
-         // @content;
+         @content;
       }//.guide
    }//.slide_form
 }//@mixin Horizontal_slide_banner()
@@ -106,7 +106,7 @@ position:absolute; z-index:-1; overflow:hidden;
 @mixin Horizontal_banner_img($count, $url:$url, $name:'slideImage_', $file:'jpg'){
                                        // A:a, B, C:c 처럼 옵션을 준 변수 사이에는 옵션이 없는 변수를 넣을 수 없다.(오류)
    @for $i from 1 through $count {
-      &:nth-of-type(#{$i}) {
+      .ad_0#{$i} {
          $n : null;
          // # @if 문 ***************************************************
          @if ($i < 10){

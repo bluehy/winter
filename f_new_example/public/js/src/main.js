@@ -41,4 +41,10 @@
    });
    
 
+   // 광고영역 4 생성 (슬라이드)
+   wrap.append('<section id ="viewBox_04"></section>');
+   VB3_1.load('./temp/slide_04.html',function(){
+      return JsLink('slide_04');
+   });
+
 })(jQuery);

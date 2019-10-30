@@ -45,20 +45,30 @@
 
    nextBtn.on('click',function(e){
       e.preventDefault();
-      myn++;
-      if(myn >= bannerLen -1 ){
-         myn = 0;
+      myn++;                                // +1; 다음 이미지로 가기 위한 연산
+      if(myn >= bannerLen -1 ){             // '0' 1 2 3 4... 마지막에서 처음으로 넘어갈 때의 myn값은 전체 길이보다 1 작을 수 밖에 없음.
+         slideGuide.css({'left': '100%' }); // 마지막 이미지에서 클론해왔던 앞의 이미지(100%) 로 이동하게 만들고, 
+                                            // (+100%로 순식간에 바뀜. css는 transition을 넣기 전엔 애니메이션 효과X)
+         myn = 0;                           // 그 다음 첫번째 이미지(리스트 내용상 실제 첫번째 이미지)로 이동하기
       }
-      slideGuide.stop().animate({'left':-100 * myn + '%' });
+      let per = -100 * myn + '%' ;
+      slideGuide.stop().animate({'left': per }); // 다음 이미지로 이동하는 기능 수행
    });
 
    prevBtn.on('click',function(e){
       e.preventDefault();
-      myn--;
-      if(myn <= -1){
-         myn = bannerLen -2 ;
-      }
-      slideGuide.stop().animate({'left':-100 * myn + '%' });
+      myn--;                                                // 이전 이미지로 가기 위한 연산
+      let per = -100 * myn + '%' ;                          // per 변수 설정
+      slideGuide.stop().animate({'left': per },function(){  // 바로 앞의 이미지로 이동하기 기능 수행
+         if(myn <= -1){                                     // 맨 앞에서는 마지막 이미지로 이동하기 
+            myn = bannerLen -2 ;                            // (전체 갯수에서 -2인 이유 : 첫 이미지로부터 -400%만큼 가야해서(?))
+            per = -100 * myn + '%' ;
+            slideGuide.css({'left': per });                 // 위치 css로 재지정해주기
+         }
+         // per = -100 * myn + '%' ;
+         // slideGuide.css({'left': per });                 // (위치 css로 재지정해주기. (맨앞에서->맨뒤로 가는 기능에서만 유효한 정도..,.?))
+      });
+
    });
 
 })(jQuery);

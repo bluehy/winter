@@ -13,8 +13,12 @@
    const indiLi = indicator.find('li');
    const indiLink = indiLi.children('a');
 
+   const viewBtn = viewBox.find('.view_btn');
+   const nextBtn = viewBtn.find('.next');
+   const prevBtn = viewBtn.find('.prev');
+
    const guideBox = viewBox.find('.guide');
-   const slidePage = guideBox.children('div');
+   let slidePage = guideBox.children('div');
 
 
    let time = 300;
@@ -59,6 +63,34 @@ viewBox.on({'mouseenter':StopSliding,'mouseleave':Sliding});
       MovingSlide(j);
    });
 
-   
+// ==============================================================================
+// 
+slidePage.eq(-1).clone(true).prependTo(guideBox);
+
+   slidePage = guideBox.children('div');    // 범위가 달라졌으므로 새로 정의
+   maxj = slidePage.length;                 // 길이도 마찬가지
+   console.log(maxj + '!');
+
+// 좌우 버튼 이동 ================================================================
+nextBtn.on('click',function(e){
+   e.preventDefault();
+   j++;
+   if(j >= maxj-1){
+      guideBox.css({'left':'100%'});
+      j = 0;
+   }
+   MovingSlide(j);
+});
+
+prevBtn.on('click',function(){
+   j--;
+   guideBox.stop().animate({'left': -100 * j + '%'},function(){
+      if(j <= -1){
+         j = maxj - 2;
+         guideBox.css({'left':-100 * j + '%'});
+      }
+   });
+});
+// ==============================================================================
 
 })(jQuery);

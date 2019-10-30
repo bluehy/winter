@@ -1,21 +1,26 @@
 // slide_05.scss
 /* slide_05.css */
 
-// --------------------------------------------------
-@mixin slide_04_dl(){
-
-  
-   
-}
+// 사용할 mixin 을 담은 파일 끌어오기--------------------------------------------------
+@import './slide_04_insert_01';
 // ---------------------------------------------------------------------------------------------------------
 
 #viewBox_05 {width:500px; height:250px; margin:10rem auto; background-color: $sub4;
-   > .slide_form {position:relative; width:100%; height:100%; z-index:0; overflow: visible;
+   > .slide_form {position:relative; width:100%; height:100%; z-index:0; overflow: hidden;
       >ul {height:100%; margin-left:-100%; position:relative; z-index: 0;
          >li {float:left; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%;
             @include slide_04_dl;
+            //@import './slide_04_insert_01'; 를 바로 넣어도 괜찮다.
          }
       }// ul
+      // -------------------좌우 버튼 ------------------------------
+      > .slide_btn {position:relative; top:50%; left:0; width:100%; height:0;
+         > button {position:absolute; z-index:500; right:0; width: 4rem; height:250px; transform:translateY(-50%); background-color: rgba($sub1, 0); transition: background-color 300ms ease;
+         &.action {background-color: rgba($sub1,0.4);}
+         &:hover {background-color: rgba($primary,0.9)}
+         &.prev {left:0;}
+         }// button
+      }// .slide_btn
    }// .slide_form
 } // #viewBox_05
 

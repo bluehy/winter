@@ -89,4 +89,59 @@
    slideGuide.css({'width':bannerLen * 100 +'%'});
    slidePage.css({'width':100 / bannerLen + '%', 'boxSizing':'border-box','border':'1px solid #5ff'});
 
+// 좌우버튼 만들기
+   
+   slideForm.prepend('<div class="slide_btn"></div>');
+   const slideBtn = slideForm.children('.slide_btn');
+   slideBtn.append('<button type="button" class="next"><span class="hidden">다음 내용 보기</span></button><button type="button" class="prev"><span class="hidden">다음 내용 보기</span></button>');
+
+   const nextBtn = slideBtn.children('.next');
+   const prevBtn = slideBtn.children('.prev');
+
+      /* 선생님 풀이
+      let btnMake = '<div>
+                        <button type="button" class="next"><span>다음 내용 보기</span></button>
+                        <button type="button" class="next"><span>이전 내용 보기</span></button>
+                     </div>
+
+      */
+
+
+
+// 좌우버튼으로 슬라이드 이동하기
+
+   let myn = 0;
+   console.log(bannerLen);
+
+   nextBtn.on('click',function(e){
+      e.preventDefault();
+      myn++;
+      if(myn >= bannerLen - 1 ){
+         slideGuide.css({'left':'100%'});
+         myn = 0;
+      }
+      slideGuide.stop().animate({'left':-100 * myn + '%' });
+   });
+
+   prevBtn.on('click',function(e){
+      e.preventDefault();
+      myn--;
+      slideGuide.stop().animate({'left':-100 * myn + '%'},function(){
+         if(myn <= -1){
+            myn = bannerLen - 2;
+            slideGuide.css({'left':-100 * myn + '%'});
+         };
+      });
+   });
+
+// 슬라이드에 마우스 올라가면 버튼 생기기
+
+slideForm.on('mouseenter',function(){
+   slideBtn.children('button').addClass('action');
+});
+
+slideForm.on('mouseleave',function(){
+   slideBtn.children('button').removeClass('action');
+});
+
 })(jQuery);

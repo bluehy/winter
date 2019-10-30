@@ -144,45 +144,71 @@
    });
 
    //  # (선생님 풀이) 생성된 좌우버튼을 이용하여, 좌우 슬라이드 기능 수행 -----------------------------------------
-      // btn.on('click',function(e){
+
+      //     myn = 0;
+      // console.log(imgLen);
+
+
+      // // next 버튼 클릭
+      // btn.eq(0).on('click',function(e){ 
       //    e.preventDefault();
-      //    $(this).index() == 0;
-      // }); // 하나의 선택자로 버튼 위치에 따라 다른 기능이먹히도록 하는 방법 역시 가능.
+      //    myn++;
+      //    console.log(myn);
+      //    // +++++++++++++++++++++++++++++++
+      //    if(myn >= imgLen-1){ 
+      //       slideGuide.css({'left':'100%'});
+      //       myn = 0;
+      //    };
+      //    // +++++++++++++++++++++++++++++++
+      //    let per = -100 * myn + '%';
+      //    slideGuide.stop(true,false).animate({'left': per});
+      // });
 
-          myn = 0;
-      console.log(imgLen);
-      // next 버튼 클릭
-      btn.eq(0).on('click',function(e){ 
-         e.preventDefault();
-         myn++;
-         console.log(myn);
-         // +++++++++++++++++++++++++++++++
-         if(myn >= imgLen-1){ 
-            slideGuide.css({'left':'100%'});
-            myn = 0;
-         };
-         // +++++++++++++++++++++++++++++++
-         let per = -100 * myn + '%';
-         slideGuide.stop(true,false).animate({'left': per});
-      });
-
-      // prev 버튼 클릭
-      btn.eq(1).on('click',function(e){ 
-         e.preventDefault();
-         myn--;
-         console.log(myn);
-         let per = -100 * myn + '%';
-         slideGuide.stop(true,false).animate({'left':per}, function(){
-            // ++++++++++++++++++++++++++++++++
-            if(myn <= -1 ){
-               myn = imgLen - 2;
-               slideGuide.css({'left':-100 * myn + '%'});
-            }; // if구문 (맨처음에서보다 앞으로 가면, 맨 뒤로 보내는 기능을 수행하는 if)
-            // ++++++++++++++++++++++++++++++++
-         }); //animate 후 function(){  ...  }
-      });
+      // // prev 버튼 클릭
+      // btn.eq(1).on('click',function(e){ 
+      //    e.preventDefault();
+      //    myn--;
+      //    console.log(myn);
+      //    let per = -100 * myn + '%';
+      //    slideGuide.stop(true,false).animate({'left':per}, function(){
+      //       // ++++++++++++++++++++++++++++++++
+      //       if(myn <= -1 ){
+      //          myn = imgLen - 2;
+      //          slideGuide.css({'left':-100 * myn + '%'});
+      //       }; // if구문 (맨처음에서보다 앞으로 가면, 맨 뒤로 보내는 기능을 수행하는 if)
+      //       // ++++++++++++++++++++++++++++++++
+      //    }); //animate 후 function(){  ...  }
+      // });
    // --------------------------------------------------------------------------
+      // next, prev버튼을 하나로 구현
+      btn.on('click',function(e){
+         e.preventDefault();
+         if($(this).index() == 0){                 // next버튼을 클릭 한 경우,
+            myn++;
+               // +++++++++++++++++++++++++++++++
+               if(myn >= imgLen-1){ 
+                  slideGuide.css({'left':'100%'});
+                  myn = 0;
+               };// if구문\ if(myn >= imgLen-1){}
+               // +++++++++++++++++++++++++++++++            
+         }else{                                    // prev버튼을 클릭 한 경우,
+            myn--;
+         }//  if($(this).index() == 0){}else{}
+            let per = -100 * myn + '%';
+            slideGuide.stop(true,false).animate({'left':per}, function(){
+               // ++++++++++++++++++++++++++++++++
+               if(myn <= -1 ){
+                  myn = imgLen - 2;
+                  slideGuide.css({'left':-100 * myn + '%'});
+               }; // if구문\ if(myn <= -1 ){}
+               // ++++++++++++++++++++++++++++++++
+         }); //animate 후 function(){  ...  }
+      }); 
+
    
+
+   // ---------------------------------------------------------------------------
+
 
 
 // 슬라이드에 마우스 올라가면 버튼 생기기

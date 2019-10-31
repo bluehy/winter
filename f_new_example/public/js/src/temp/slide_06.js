@@ -50,7 +50,7 @@ for(let i = 0; i < conLen; i++){
    slideDli.find('dt').append(slideList[i].title);
    slideDli.find('dt').next('dd').append(slideList[i].content);
    slideDli.find('dd').eq(1).append('<a href="">'+slideList[i].button+'</a>');
-   slideDli.find('a').attr('href',slideList[i].btnlink);   
+   slideDli.find('a').attr({'href':slideList[i].btnlink,'target':'_blank'});   
 };
 // -----------------------------------------------------------------------------------
 
@@ -87,16 +87,22 @@ const myPageNum = function(n){
 myPageNum(i);
 // --------------------------------------------------------------------------------------
 
-// 슬라이드 자동 이동 ----------------------------------------------------------------------
+// // 슬라이드 자동 이동 ----------------------------------------------------------------------
 
 let go;
-const GoSlide = function(){
-   go = setInterval(){
-      
-      slideGuide.animate({'left':-100 * i + '%'});
-   }
-};
-
+let timed = 3000;
+const SlideMove = function(){
+   go = setInterval(function(){
+     i++;
+     if(i >= slideLen-1){
+        slideGuide.css({'left':'100%'});
+        i = 0;
+     }
+     slideGuide.animate({'left':-100 * i + '%'});
+     myPageNum(i);
+   },timed); //setInterval
+}; // SlideMove
+SlideMove();
 
 // ----------------------------------------------------------------------------------
 

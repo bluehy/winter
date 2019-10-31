@@ -1,0 +1,31 @@
+[
+   {"title" : "slide title _01",
+    "content" : "뛰어오는 머머",
+    "linkText" : "1번째 바로가기",
+    "link" : "http://naver.com",
+    "bgimg" : "mySlideImage_01.jpg" },
+
+    {"title" : "slide title _02",
+    "content" : "바라보는 멈머",
+    "linkText" : "2번째 바로가기",
+    "link" : "http://daum.net",
+    "bgimg" : "mySlideImage_02.jpg" },
+
+    {"title" : "slide title _03",
+    "content" : "소리치는 애옹이",
+    "linkText" : "3번째 바로가기",
+    "link" : "http://google.com",
+    "bgimg" : "mySlideImage_03.jpg" },
+
+    {"title" : "slide title _04",
+    "content" : "우리 아가랑",
+    "linkText" : "4번째 바로가기",
+    "link" : "http://xidoweb.com",
+    "bgimg" : "mySlideImage_04.jpg" },
+
+    {"title" : "slide title _05",
+    "content" : "커어어",
+    "linkText" : "5번째 바로가기",
+    "link" : "http://fontawesome.io",
+    "bgimg" : "mySlideImage_05.jpg" }
+   ]

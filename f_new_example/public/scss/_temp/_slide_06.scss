@@ -1,2 +1,54 @@
 // slide_06.scss
 /* slide_06.css */
+
+
+
+
+#viewBox_06 {position: relative; width:100%; height:100%;
+
+// 슬라이드 버튼 영역
+   & .slide_btn {position:absolute; z-index: 500; width:100%; height: 0; top:50%;
+      > button {float:right; width: 2rem; height: 2rem; margin-right: 1rem;
+      & > span {display:block; width:0; height:0; overflow:hidden; }
+      } //button
+   }// .slide_btn
+
+
+
+// 슬라이드 페이지 넘버
+   & .slide_index {position:absolute; z-index:500; width: 100%; height: 0; top: 50%; transform:translateY(-4rem);
+      & > .page_num {float:right; width:auto; height:auto;
+         & > span {float:left; margin-right:1rem; color: #fff; line-height: 3rem;
+         &.page {font-size: 3rem; font-weight:bold;
+            &:before,&::before {content:"/"; display:block; width:0; height:0; font-size:1.5rem; transform:translate(3.5rem)}
+         } //.page
+         &.pages {font-size: 0.8rem;}
+         } // span
+      }// .page_num
+   }// .slide_index
+
+
+
+
+// 슬라이드 회전 영역
+   & > .slide_temp {width:100%; height:100%; overflow: visible;
+      > .slide_guide {height: 100%; margin-left:-100%; position:relative; 
+         > dl {float:left; height:100%; padding: 15rem 10rem; box-sizing:border-box; background-repeat:no-repeat; background-position:50% 50%; background-size:cover;
+            > dt {font-size:5rem; color: $sub2; width: 650px; line-height: 5.5rem; margin-bottom:2rem; word-break:keep-all; text-transform:capitalize;}//dt
+            > dd {font-size:1rem; color: $sub2; margin-bottom:2rem;
+            &:last-of-type {width: 90px; font-weight: bold; margin-bottom:0; border-bottom:2px solid $sub2;} //dd:last-of-type
+            } // dd
+         &.pb_slide03 > dt {text-transform:uppercase;}
+         } // dl
+         // slide_02 텍스트 색상 변경
+         > .pb_slide02 > dt {color: $sub1;}
+         > .pb_slide02 > dd {color: $sub1; 
+         &:last-of-type {border-bottom:2px solid $sub1;}
+         } //.pb_slide02
+      }//.slide_guide
+   } //.slide_temp
+   
+
+
+
+}//#viewBox_06

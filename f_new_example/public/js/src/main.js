@@ -55,7 +55,7 @@
    const VB6 = $('#viewBox_06');
    
    VB6.load('./temp/slide_06.html',function(){
-      return JsLink('slide_05');
+      return JsLink('slide_06');
    });
 
 })(jQuery);

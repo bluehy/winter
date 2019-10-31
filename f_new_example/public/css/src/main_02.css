@@ -2,7 +2,7 @@
 #wrap { width: 100%; height: 100%; background-color: white; }
 
 /* slide_02.css */
-.slide_temp { position: relative; width: 100%; min-width: 900px; min-width: 56.25rem; height: 660px; background-color: #ccc; }
+.slide_temp { position: relative; width: 100%; min-width: 900px; min-width: 56.25rem; height: 660px; background-color: #0c9; }
 
 .view_button { position: absolute; z-index: 500; bottom: 90px; right: 50%; width: 80px; height: 0; transform: translate(300px); text-align: center; }
 

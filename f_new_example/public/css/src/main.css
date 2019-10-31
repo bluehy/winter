@@ -1,504 +1,210 @@
 /* main.css */
-#wrap {
-  width: 100%;
-  height: 100%;
-  background-color: #0de; }
+#wrap { width: 100%; height: 100%; background-color: #0de; }
 
 /* slide_01.css */
-.slide_temp {
-  position: relative;
-  width: 90%;
-  min-width: 500px;
-  min-width: 31.25rem;
-  height: 700px;
-  margin: auto;
-  border: 1px solid #fff;
-  background-color: #ccc; }
-  .slide_temp .view_btn {
-    position: absolute;
-    z-index: 600;
-    top: 50%;
-    width: 100%;
-    height: 0; }
-    .slide_temp .view_btn > button {
-      width: 100px;
-      height: 100px;
-      background-color: #ccc;
-      float: left;
-      transform: translateY(-50%); }
-      .slide_temp .view_btn > button.next {
-        float: right; }
-      .slide_temp .view_btn > button:hover, .slide_temp .view_btn > button:focus {
-        background-color: #f06; }
+.slide_temp { position: relative; width: 90%; min-width: 500px; min-width: 31.25rem; height: 700px; margin: auto; border: 1px solid #fff; background-color: #0c9; }
 
-.view_indicator {
-  position: absolute;
-  z-index: 500;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 30px;
-  width: auto;
-  min-width: 135px;
-  height: 30px;
-  padding: 5px;
-  border-radius: 30px;
-  background-color: #eafecd; }
-  .view_indicator > ul {
-    width: 100%;
-    height: 100%; }
-    .view_indicator > ul > li {
-      float: left;
-      width: auto;
-      height: 30px;
-      margin-left: 5px; }
-      .view_indicator > ul > li:first-child {
-        margin-left: 0; }
-    .view_indicator > ul a {
-      display: block;
-      width: 30px;
-      height: 100%;
-      border-radius: 30px;
-      background-color: #ccc;
-      transition: all 300ms ease; }
-      .view_indicator > ul a > span {
-        display: block;
-        width: 0;
-        height: 0;
-        position: absolute;
-        z-index: -1;
-        overflow: hidden; }
-      .view_indicator > ul a:hover {
-        background-color: #ff99c2; }
-      .view_indicator > ul a.action, .view_indicator > ul a:focus {
-        background-color: #f06;
-        width: 90px; }
-      .view_indicator > ul a > span {
-        display: block;
-        width: 0;
-        height: 0;
-        position: absolute;
-        z-index: -1;
-        overflow: hidden; }
+.slide_temp .view_btn { position: absolute; z-index: 600; top: 50%; width: 100%; height: 0; }
 
-.slide_form {
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-  .slide_form .guide {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-left: -100%;
-    width: 800%;
-    height: 100%;
-    background-color: #ccc; }
-    .slide_form .guide > div {
-      float: left;
-      width: 12.5%;
-      height: 100%;
-      padding: 4rem;
-      box-sizing: border-box;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: cover; }
-    .slide_form .guide .ad_01 {
-      background-image: url("../../img/slide_01/mySlideImage_01.jpg"); }
-    .slide_form .guide .ad_02 {
-      background-image: url("../../img/slide_01/mySlideImage_02.jpg"); }
-    .slide_form .guide .ad_03 {
-      background-image: url("../../img/slide_01/mySlideImage_03.jpg"); }
-    .slide_form .guide .ad_04 {
-      background-image: url("../../img/slide_01/mySlideImage_04.jpg"); }
-    .slide_form .guide .ad_05 {
-      background-image: url("../../img/slide_01/mySlideImage_05.jpg"); }
-    .slide_form .guide .ad_06 {
-      background-image: url("../../img/slide_01/mySlideImage_06.jpg"); }
-    .slide_form .guide .ad_07 {
-      background-image: url("../../img/slide_01/mySlideImage_07.jpg"); }
+.slide_temp .view_btn > button { width: 100px; height: 100px; background-color: #0c9; float: left; transform: translateY(-50%); }
 
-.guide > div > h3 {
-  font-size: 4rem;
-  color: #fff;
-  font-weight: bold; }
+.slide_temp .view_btn > button.next { float: right; }
 
-.guide > div > p {
-  font-size: 1.2rem;
-  color: #fff;
-  font-weight: bold;
-  margin-bottom: 1rem; }
+.slide_temp .view_btn > button:hover, .slide_temp .view_btn > button:focus { background-color: #f06; }
 
-.guide > div .link_btn {
-  width: 260px;
-  height: 40px;
-  padding: 0.5rem 0;
-  line-height: 40px;
-  text-align: center; }
-  .guide > div .link_btn > a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    background-color: #f06;
-    border: 2px solid #fff;
-    border-radius: 40px;
-    font-weight: 900;
-    font-size: 1.3rem; }
-    .guide > div .link_btn > a > span {
-      display: block;
-      width: 0;
-      height: 0;
-      position: absolute;
-      z-index: -1;
-      overflow: hidden; }
-  .guide > div .link_btn > a:hover,
-  .guide > div .link_btn > a:focus {
-    background-color: #fff;
-    color: #f06;
-    border: 2px solid #f06; }
+.view_indicator { position: absolute; z-index: 500; left: 50%; transform: translateX(-50%); bottom: 30px; width: auto; min-width: 135px; height: 30px; padding: 5px; border-radius: 30px; background-color: #eafecd; }
+
+.view_indicator > ul { width: 100%; height: 100%; }
+
+.view_indicator > ul > li { float: left; width: auto; height: 30px; margin-left: 5px; }
+
+.view_indicator > ul > li:first-child { margin-left: 0; }
+
+.view_indicator > ul a { display: block; width: 30px; height: 100%; border-radius: 30px; background-color: #ccc; transition: all 300ms ease; }
+
+.view_indicator > ul a > span { display: block; width: 0; height: 0; position: absolute; z-index: -1; overflow: hidden; }
+
+.view_indicator > ul a:hover { background-color: #ff99c2; }
+
+.view_indicator > ul a.action, .view_indicator > ul a:focus { background-color: #f06; width: 90px; }
+
+.view_indicator > ul a > span { display: block; width: 0; height: 0; position: absolute; z-index: -1; overflow: hidden; }
+
+.slide_form { width: 100%; height: 100%; overflow: hidden; }
+
+.slide_form .guide { position: relative; top: 0; left: 0; margin-left: -100%; width: 800%; height: 100%; background-color: #0c9; }
+
+.slide_form .guide > div { float: left; width: 12.5%; height: 100%; padding: 4rem; box-sizing: border-box; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; }
+
+.slide_form .guide .ad_01 { background-image: url("../../img/slide_01/mySlideImage_01.jpg"); }
+
+.slide_form .guide .ad_02 { background-image: url("../../img/slide_01/mySlideImage_02.jpg"); }
+
+.slide_form .guide .ad_03 { background-image: url("../../img/slide_01/mySlideImage_03.jpg"); }
+
+.slide_form .guide .ad_04 { background-image: url("../../img/slide_01/mySlideImage_04.jpg"); }
+
+.slide_form .guide .ad_05 { background-image: url("../../img/slide_01/mySlideImage_05.jpg"); }
+
+.slide_form .guide .ad_06 { background-image: url("../../img/slide_01/mySlideImage_06.jpg"); }
+
+.slide_form .guide .ad_07 { background-image: url("../../img/slide_01/mySlideImage_07.jpg"); }
+
+.guide > div > h3 { font-size: 4rem; color: #fff; font-weight: bold; }
+
+.guide > div > p { font-size: 1.2rem; color: #fff; font-weight: bold; margin-bottom: 1rem; }
+
+.guide > div .link_btn { width: 260px; height: 40px; padding: 0.5rem 0; line-height: 40px; text-align: center; }
+
+.guide > div .link_btn > a { display: block; width: 100%; height: 100%; color: #fff; background-color: #f06; border: 2px solid #fff; border-radius: 40px; font-weight: 900; font-size: 1.3rem; }
+
+.guide > div .link_btn > a > span { display: block; width: 0; height: 0; position: absolute; z-index: -1; overflow: hidden; }
+
+.guide > div .link_btn > a:hover, .guide > div .link_btn > a:focus { background-color: #fff; color: #f06; border: 2px solid #f06; }
 
 /* slide_03.css */
-#viewBox_02 {
-  position: relative;
-  width: 90%;
-  min-width: 1200px;
-  height: 100%;
-  max-height: 800px;
-  min-height: 600px;
-  margin: auto;
-  margin-top: 5rem;
-  margin-bottom: 4rem;
-  background-color: #ccc; }
-  #viewBox_02 .slide_temp {
-    width: 100%;
-    height: 100%;
-    background-color: #ffa; }
-  #viewBox_02 .btn_area {
-    position: absolute;
-    z-index: 5;
-    bottom: 2rem;
-    left: 50%;
-    margin-left: 2rem;
-    width: 200px;
-    height: 20px;
-    padding: 0.2rem;
-    background-color: #eafecd;
-    border-radius: 20px; }
-  #viewBox_02 .slide_02_form {
-    width: 100%;
-    height: 100%;
-    overflow: hidden; }
-    #viewBox_02 .slide_02_form > .guide {
-      width: 300%;
-      height: 100%;
-      background-image: linear-gradient(45deg, #ff99c2, #eafecd); }
+#viewBox_02 { position: relative; width: 90%; min-width: 1200px; height: 100%; max-height: 800px; min-height: 600px; margin: auto; margin-top: 5rem; margin-bottom: 4rem; background-color: #0c9; }
 
-.banner_area {
-  float: left;
-  position: relative;
-  z-index: 0;
-  width: 33.33333%;
-  height: 100%;
-  overflow: hidden; }
-  .banner_area:before, .banner_area::before {
-    content: " ";
-    display: block;
-    position: absolute;
-    z-index: -10;
-    width: 60%;
-    height: 100%;
-    top: 0;
-    left: 40%;
-    background-image: linear-gradient(90deg, #00cc99, rgba(0, 204, 153, 0));
-    transform-origin: 90% 0;
-    transform: rotate(0deg);
-    transition: all 500ms ease; }
-  .banner_area.action:before, .banner_area.action::before {
-    transform: rotate(-7deg);
-    /* background-image: linear-gradient(90deg,rgba($blueGreen,1),rgba($blueGreen,0)) */ }
+#viewBox_02 .slide_temp { width: 100%; height: 100%; background-color: #ffa; }
 
-.slide2_01 {
-  background-color: #acc; }
+#viewBox_02 .btn_area { position: absolute; z-index: 5; bottom: 2rem; left: 50%; margin-left: 2rem; width: 200px; height: 20px; padding: 0.2rem; background-color: #eafecd; border-radius: 20px; }
 
-.slide2_02 {
-  background-color: #acf; }
+#viewBox_02 .slide_02_form { width: 100%; height: 100%; overflow: hidden; }
 
-.slide2_03 {
-  background-color: #fcf; }
+#viewBox_02 .slide_02_form > .guide { width: 300%; height: 100%; background-image: linear-gradient(45deg, #ff99c2, #eafecd); }
 
-#viewBox_02 .indicator {
-  float: left;
-  width: auto;
-  height: 100%;
-  margin-right: 2rem; }
-  #viewBox_02 .indicator > li {
-    float: left;
-    width: auto;
-    height: 20px;
-    margin-right: 1rem; }
-    #viewBox_02 .indicator > li > a {
-      display: block;
-      width: 20px;
-      height: 20px;
-      border-radius: 20px;
-      background-color: #ccc;
-      transition: all 300ms ease; }
-      #viewBox_02 .indicator > li > a:hover {
-        background-color: #0c9; }
-      #viewBox_02 .indicator > li > a.action {
-        width: 40px;
-        background-color: #f06; }
-      #viewBox_02 .indicator > li > a > span {
-        display: block;
-        position: absolute;
-        z-index: -10;
-        width: 0;
-        height: 0;
-        overflow: hidden; }
-    #viewBox_02 .indicator > li:last-child {
-      margin-right: 0; }
+.banner_area { float: left; position: relative; z-index: 0; width: 33.33333%; height: 100%; overflow: hidden; }
 
-#viewBox_02 .view_btn {
-  float: right;
-  position: static;
-  width: auto;
-  height: 100%; }
-  #viewBox_02 .view_btn > button {
-    display: none; }
-  #viewBox_02 .view_btn > .play_btn {
-    width: auto;
-    height: 20px; }
-  #viewBox_02 .view_btn > .play_btn > button {
-    float: left;
-    width: 20px;
-    height: 20px;
-    background-color: #f06;
-    border-radius: 20px; }
-    #viewBox_02 .view_btn > .play_btn > button > i {
-      text-align: center; }
-    #viewBox_02 .view_btn > .play_btn > button > span {
-      display: block;
-      position: absolute;
-      z-index: -10;
-      width: 0;
-      height: 0;
-      overflow: hidden; }
+.banner_area:before, .banner_area::before { content: " "; display: block; position: absolute; z-index: -10; width: 60%; height: 100%; top: 0; left: 40%; background-image: linear-gradient(90deg, #00cc99, rgba(0, 204, 153, 0)); transform-origin: 90% 0; transform: rotate(0deg); transition: all 500ms ease; }
+
+.banner_area.action:before, .banner_area.action::before { transform: rotate(-7deg); /* background-image: linear-gradient(90deg,rgba($blueGreen,1),rgba($blueGreen,0)) */ }
+
+.slide2_01 { background-color: #acc; }
+
+.slide2_02 { background-color: #acf; }
+
+.slide2_03 { background-color: #fcf; }
+
+#viewBox_02 .indicator { float: left; width: auto; height: 100%; margin-right: 2rem; }
+
+#viewBox_02 .indicator > li { float: left; width: auto; height: 20px; margin-right: 1rem; }
+
+#viewBox_02 .indicator > li > a { display: block; width: 20px; height: 20px; border-radius: 20px; background-color: #0c9; transition: all 300ms ease; }
+
+#viewBox_02 .indicator > li > a:hover { background-color: #0c9; }
+
+#viewBox_02 .indicator > li > a.action { width: 40px; background-color: #f06; }
+
+#viewBox_02 .indicator > li > a > span { display: block; position: absolute; z-index: -10; width: 0; height: 0; overflow: hidden; }
+
+#viewBox_02 .indicator > li:last-child { margin-right: 0; }
+
+#viewBox_02 .view_btn { float: right; position: static; width: auto; height: 100%; }
+
+#viewBox_02 .view_btn > button { display: none; }
+
+#viewBox_02 .view_btn > .play_btn { width: auto; height: 20px; }
+
+#viewBox_02 .view_btn > .play_btn > button { float: left; width: 20px; height: 20px; background-color: #f06; border-radius: 20px; }
+
+#viewBox_02 .view_btn > .play_btn > button > i { text-align: center; }
+
+#viewBox_02 .view_btn > .play_btn > button > span { display: block; position: absolute; z-index: -10; width: 0; height: 0; overflow: hidden; }
 
 /* slide_04.css */
-#viewBox_03 {
-  position: relative;
-  width: 100%;
-  height: 700px;
-  background-color: #ccc;
-  margin: 15rem auto; }
+#viewBox_03 { position: relative; width: 100%; height: 700px; background-color: #ccc; margin: 15rem auto; }
 
-.slide_03_btn {
-  position: absolute;
-  z-index: 500;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 0; }
-  .slide_03_btn > button {
-    float: left;
-    width: 100px;
-    height: 100px;
-    background-color: #333;
-    transform: translateY(-50%); }
-    .slide_03_btn > button.next {
-      float: right; }
+.slide_03_btn { position: absolute; z-index: 500; top: 50%; left: 0; width: 100%; height: 0; }
 
-.slide_03_form {
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-  .slide_03_form > ul {
-    position: relative;
-    width: 600%;
-    height: 100%;
-    margin-left: -100%; }
-    .slide_03_form > ul > li {
-      float: left;
-      width: 16.66667%;
-      height: 100%;
-      background-position: 50% 50%;
-      background-size: cover;
-      background-repeat: no-repeat; }
-    .slide_03_form > ul > li.slide_03_con_1 {
-      background-image: url("../../img/slide_02/mySlideImage_01.jpg"); }
-    .slide_03_form > ul > li.slide_03_con_2 {
-      background-image: url("../../img/slide_02/mySlideImage_02.jpg"); }
-    .slide_03_form > ul > li.slide_03_con_3 {
-      background-image: url("../../img/slide_02/mySlideImage_03.jpg"); }
-    .slide_03_form > ul > li.slide_03_con_4 {
-      background-image: url("../../img/slide_02/mySlideImage_04.jpg"); }
-    .slide_03_form > ul > li.slide_03_con_5 {
-      background-image: url("../../img/slide_02/mySlideImage_05.jpg"); }
+.slide_03_btn > button { float: left; width: 100px; height: 100px; background-color: #333; transform: translateY(-50%); }
+
+.slide_03_btn > button.next { float: right; }
+
+.slide_03_form { width: 100%; height: 100%; overflow: hidden; }
+
+.slide_03_form > ul { position: relative; width: 600%; height: 100%; margin-left: -100%; }
+
+.slide_03_form > ul > li { float: left; width: 16.66667%; height: 100%; background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; }
+
+.slide_03_form > ul > li.slide_03_con_1 { background-image: url("../../img/slide_02/mySlideImage_01.jpg"); }
+
+.slide_03_form > ul > li.slide_03_con_2 { background-image: url("../../img/slide_02/mySlideImage_02.jpg"); }
+
+.slide_03_form > ul > li.slide_03_con_3 { background-image: url("../../img/slide_02/mySlideImage_03.jpg"); }
+
+.slide_03_form > ul > li.slide_03_con_4 { background-image: url("../../img/slide_02/mySlideImage_04.jpg"); }
+
+.slide_03_form > ul > li.slide_03_con_5 { background-image: url("../../img/slide_02/mySlideImage_05.jpg"); }
 
 /* slide_05.css */
 /* slide_04_insert_01.css */
-#viewBox_05 {
-  width: 500px;
-  height: 250px;
-  margin: 10rem auto;
-  background-color: #eafecd; }
-  #viewBox_05 > .slide_form {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    overflow: hidden; }
-    #viewBox_05 > .slide_form > ul {
-      height: 100%;
-      margin-left: -100%;
-      position: relative;
-      z-index: 0; }
-      #viewBox_05 > .slide_form > ul > li {
-        float: left;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50% 50%; }
-        #viewBox_05 > .slide_form > ul > li dl {
-          width: 100%;
-          height: 100%;
-          padding: 2rem 4rem;
-          box-sizing: border-box;
-          background-color: rgba(51, 51, 51, 0.5); }
-        #viewBox_05 > .slide_form > ul > li dt {
-          width: 100%;
-          height: auto;
-          font-size: 3rem;
-          font-weight: bold;
-          color: #fff;
-          text-shadow: 0.2rem 0.2rem 0.2rem rgba(51, 51, 51, 0.5); }
-        #viewBox_05 > .slide_form > ul > li dd.con {
-          width: 100%;
-          height: auto;
-          margin: 1rem 0;
-          padding-bottom: 0.5rem;
-          color: #fff;
-          border-top: 1px solid #fff;
-          font-size: 1.2rem; }
-        #viewBox_05 > .slide_form > ul > li dd.link {
-          float: right;
-          padding: 0.3rem;
-          background-color: #f06; }
-        #viewBox_05 > .slide_form > ul > li dd.link > a {
-          font-size: 1.3rem;
-          color: #fff;
-          font-weight: 900; }
-        #viewBox_05 > .slide_form > ul > li dd.link > a:hover {
-          background-color: #fff;
-          color: #f06; }
-    #viewBox_05 > .slide_form > .slide_btn {
-      position: relative;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 0; }
-      #viewBox_05 > .slide_form > .slide_btn > button {
-        position: absolute;
-        z-index: 500;
-        right: 0;
-        width: 4rem;
-        height: 250px;
-        transform: translateY(-50%);
-        background-color: rgba(51, 51, 51, 0);
-        transition: background-color 300ms ease; }
-        #viewBox_05 > .slide_form > .slide_btn > button.action {
-          background-color: rgba(51, 51, 51, 0.4); }
-        #viewBox_05 > .slide_form > .slide_btn > button:hover {
-          background-color: rgba(255, 0, 102, 0.9); }
-        #viewBox_05 > .slide_form > .slide_btn > button.prev {
-          left: 0; }
+#viewBox_05 { width: 500px; height: 250px; margin: 10rem auto; background-color: #eafecd; }
+
+#viewBox_05 > .slide_form { position: relative; width: 100%; height: 100%; z-index: 0; overflow: hidden; }
+
+#viewBox_05 > .slide_form > ul { height: 100%; margin-left: -100%; position: relative; z-index: 0; }
+
+#viewBox_05 > .slide_form > ul > li { float: left; height: 100%; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+
+#viewBox_05 > .slide_form > ul > li dl { width: 100%; height: 100%; padding: 2rem 4rem; box-sizing: border-box; background-color: rgba(51, 51, 51, 0.5); }
+
+#viewBox_05 > .slide_form > ul > li dt { width: 100%; height: auto; font-size: 3rem; font-weight: bold; color: #fff; text-shadow: 0.2rem 0.2rem 0.2rem rgba(51, 51, 51, 0.5); }
+
+#viewBox_05 > .slide_form > ul > li dd.con { width: 100%; height: auto; margin: 1rem 0; padding-bottom: 0.5rem; color: #fff; border-top: 1px solid #fff; font-size: 1.2rem; }
+
+#viewBox_05 > .slide_form > ul > li dd.link { float: right; padding: 0.3rem; background-color: #f06; }
+
+#viewBox_05 > .slide_form > ul > li dd.link > a { font-size: 1.3rem; color: #fff; font-weight: 900; }
+
+#viewBox_05 > .slide_form > ul > li dd.link > a:hover { background-color: #fff; color: #f06; }
+
+#viewBox_05 > .slide_form > .slide_btn { position: relative; top: 50%; left: 0; width: 100%; height: 0; }
+
+#viewBox_05 > .slide_form > .slide_btn > button { position: absolute; z-index: 500; right: 0; width: 4rem; height: 250px; transform: translateY(-50%); background-color: rgba(51, 51, 51, 0); transition: background-color 300ms ease; }
+
+#viewBox_05 > .slide_form > .slide_btn > button.action { background-color: rgba(51, 51, 51, 0.4); }
+
+#viewBox_05 > .slide_form > .slide_btn > button:hover { background-color: rgba(255, 0, 102, 0.9); }
+
+#viewBox_05 > .slide_form > .slide_btn > button.prev { left: 0; }
 
 /* slide_06.css */
-#viewBox_06 {
-  position: relative;
-  width: 100%;
-  height: 100%; }
-  #viewBox_06 .slide_btn {
-    position: absolute;
-    z-index: 500;
-    width: 100%;
-    height: 0;
-    top: 50%; }
-    #viewBox_06 .slide_btn > button {
-      float: right;
-      width: 2rem;
-      height: 2rem;
-      margin-right: 1rem; }
-      #viewBox_06 .slide_btn > button > span {
-        display: block;
-        width: 0;
-        height: 0;
-        overflow: hidden; }
-  #viewBox_06 .slide_index {
-    position: absolute;
-    z-index: 500;
-    width: 100%;
-    height: 0;
-    top: 50%;
-    transform: translateY(-4rem); }
-    #viewBox_06 .slide_index > .page_num {
-      float: right;
-      width: auto;
-      height: auto; }
-      #viewBox_06 .slide_index > .page_num > span {
-        float: left;
-        margin-right: 1rem;
-        color: #fff;
-        line-height: 3rem; }
-        #viewBox_06 .slide_index > .page_num > span.page {
-          font-size: 3rem;
-          font-weight: bold; }
-          #viewBox_06 .slide_index > .page_num > span.page:before, #viewBox_06 .slide_index > .page_num > span.page::before {
-            content: "/";
-            display: block;
-            width: 0;
-            height: 0;
-            font-size: 1.5rem;
-            transform: translate(3.5rem); }
-        #viewBox_06 .slide_index > .page_num > span.pages {
-          font-size: 0.8rem; }
-  #viewBox_06 > .slide_temp {
-    width: 100%;
-    height: 100%;
-    overflow: visible; }
-    #viewBox_06 > .slide_temp > .slide_guide {
-      height: 100%;
-      margin-left: -100%;
-      position: relative; }
-      #viewBox_06 > .slide_temp > .slide_guide > dl {
-        float: left;
-        height: 100%;
-        padding: 15rem 10rem;
-        box-sizing: border-box;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: cover; }
-        #viewBox_06 > .slide_temp > .slide_guide > dl > dt {
-          font-size: 5rem;
-          color: #fff;
-          width: 650px;
-          line-height: 5.5rem;
-          margin-bottom: 2rem;
-          word-break: keep-all;
-          text-transform: capitalize; }
-        #viewBox_06 > .slide_temp > .slide_guide > dl > dd {
-          font-size: 1rem;
-          color: #fff;
-          margin-bottom: 2rem; }
-          #viewBox_06 > .slide_temp > .slide_guide > dl > dd:last-of-type {
-            width: 90px;
-            font-weight: bold;
-            margin-bottom: 0;
-            border-bottom: 2px solid #fff; }
-        #viewBox_06 > .slide_temp > .slide_guide > dl.pb_slide03 > dt {
-          text-transform: uppercase; }
-      #viewBox_06 > .slide_temp > .slide_guide > .pb_slide02 > dt {
-        color: #333; }
-      #viewBox_06 > .slide_temp > .slide_guide > .pb_slide02 > dd {
-        color: #333; }
-        #viewBox_06 > .slide_temp > .slide_guide > .pb_slide02 > dd:last-of-type {
-          border-bottom: 2px solid #333; }
+#viewBox_06 { position: relative; width: 100%; height: 100%; }
+
+#viewBox_06 .slide_btn { position: absolute; z-index: 500; width: 100%; height: 0; top: 50%; }
+
+#viewBox_06 .slide_btn > button { float: right; width: 2rem; height: 2rem; margin-right: 1rem; }
+
+#viewBox_06 .slide_btn > button > span { display: block; width: 0; height: 0; overflow: hidden; }
+
+#viewBox_06 .slide_index { position: absolute; z-index: 500; width: 100%; height: 0; top: 50%; transform: translateY(-4rem); }
+
+#viewBox_06 .slide_index > .page_num { float: right; width: auto; height: auto; }
+
+#viewBox_06 .slide_index > .page_num > span { float: left; margin-right: 1rem; color: #fff; line-height: 3rem; }
+
+#viewBox_06 .slide_index > .page_num > span.page { font-size: 3rem; font-weight: bold; }
+
+#viewBox_06 .slide_index > .page_num > span.page:before, #viewBox_06 .slide_index > .page_num > span.page::before { content: "/"; display: block; width: 0; height: 0; font-size: 1.5rem; transform: translate(3.5rem); }
+
+#viewBox_06 .slide_index > .page_num > span.pages { font-size: 0.8rem; }
+
+#viewBox_06 > .slide_temp { width: 100%; height: 100%; overflow: visible; }
+
+#viewBox_06 > .slide_temp > .slide_guide { height: 100%; margin-left: -100%; position: relative; }
+
+#viewBox_06 > .slide_temp > .slide_guide > dl { float: left; height: 100%; padding: 15rem 10rem; box-sizing: border-box; background-repeat: no-repeat; background-position: 50% 50%; background-size: cover; }
+
+#viewBox_06 > .slide_temp > .slide_guide > dl > dt { font-size: 5rem; color: #fff; width: 650px; line-height: 5.5rem; margin-bottom: 2rem; word-break: keep-all; text-transform: capitalize; }
+
+#viewBox_06 > .slide_temp > .slide_guide > dl > dd { font-size: 1rem; color: #fff; margin-bottom: 2rem; }
+
+#viewBox_06 > .slide_temp > .slide_guide > dl > dd:last-of-type { width: 90px; font-weight: bold; margin-bottom: 0; border-bottom: 2px solid #fff; }
+
+#viewBox_06 > .slide_temp > .slide_guide > dl.pb_slide03 > dt { text-transform: uppercase; }
+
+#viewBox_06 > .slide_temp > .slide_guide > .pb_slide02 > dt { color: #333; }
+
+#viewBox_06 > .slide_temp > .slide_guide > .pb_slide02 > dd { color: #333; }
+
+#viewBox_06 > .slide_temp > .slide_guide > .pb_slide02 > dd:last-of-type { border-bottom: 2px solid #333; }

@@ -14,7 +14,7 @@
       error:function(){console.log('data error');},
       success:function(data){
          imgList = data;                        // data를 대입
-         return imgList;                        // imgList를 
+         return imgList;                        // imgList를 slide_05.js에 되돌림.
       }
    });
 

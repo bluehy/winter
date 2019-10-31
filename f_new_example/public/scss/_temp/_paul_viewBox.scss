@@ -1,4 +1,39 @@
 // paul_viewBox.scss
 /* paul_viewBox.css */
 
-#viewBox{width:100%; height:100%; background-color: lighten($sample,20%);}
+#viewBox{position:relative; width:100%; height:100%; background-color: lighten($sample,30%);
+   h2 {@include hidden;}//    h2
+
+   .indicator {position:absolute; z-index: 500; right: 1.5rem; top:0; bottom:0; margin:auto; width:150px; height: 130px; background-color: rgba($sub2,0.4);
+
+      // # 페이지 넘버
+      > p {width: 100%; height: 70px; font-size:3rem; padding-bottom:10px; color:$sub2; text-align:center;
+         >em {font-style:normal; font-weight: 900;
+           &:after,&::after {content:" /"; font-size: 2rem;}
+         }//   em
+         >span{font-size:1.5rem; color: darken($sub2,20%);}
+      }//   p
+
+      // # 버튼
+      > .view_btn{width:100%; height:auto;
+         > button {width:40%; height:40px; float:right; background-color: transparent; font-size:2rem; text-shadow: 0.2rem 0.2rem 0.2rem rgba($sub1,0.2);
+            &:last-of-type{float:left;}
+            &>span{@include hidden;}
+            &:hover,&:focus {color:$primary;}
+         }//   button
+      }//   .view_btn
+   }//    .indicator
+
+   // # 슬라이드영역
+   .slide_form {position:absolute; top:0; left:0; width: 100%; height: 100%; background-color: rgba(lighten($sub3,40%),0.8);
+      > ul {width:100%; height: 100%;
+         > li {position:absolute; width:100%; height:100%;
+            &:nth-child(1){background-color: lighten($blueGreen,20%); /* top: 0%; */}
+            &:nth-child(2){background-color: lighten($blueGreen,30%); /* top: 20%; */}
+            &:nth-child(3){background-color: lighten($blueGreen,40%); /* top: 40%; */}
+         }//   li
+      }//    ul
+   }//   .slide_form
+
+}//   #viewBox
+

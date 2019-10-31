@@ -49,4 +49,13 @@
       return JsLink('slide_05');
    });
 
+
+   // 광고영역 6 생성 (슬라이드)
+   wrap.append('<section id = "viewBox_06"></section>');
+   const VB6 = $('#viewBox_06');
+   
+   VB6.load('./temp/slide_06.html',function(){
+      return JsLink('slide_05');
+   });
+
 })(jQuery);

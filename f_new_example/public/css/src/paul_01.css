@@ -29,13 +29,31 @@ h1 { color: #fff; }
 
 #viewBox .indicator > .view_btn > button > span { display: block; position: absolute; z-index: -10; width: 0; height: 0; overflow: hidden; }
 
-#viewBox .indicator > .view_btn > button:hover, #viewBox .indicator > .view_btn > button:focus { color: #f06; }
+#viewBox .indicator > .view_btn > button.action { color: #f06; }
+
+#viewBox .indicator .fake_btn { position: absolute; width: 100%; height: 50%; bottom: 0; cursor: pointer; }
 
 #viewBox .slide_form { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 252, 204, 0.8); }
 
 #viewBox .slide_form > ul { width: 100%; height: 100%; }
 
-#viewBox .slide_form > ul > li { position: absolute; top: 0; left: 0; width: 100%; height: 100%; font-size: 5rem; font-weight: 900; color: #fff; text-shadow: 0.2rem 0.2rem 0.2rem rgba(51, 51, 51, 0.2); text-transform: capitalize; }
+#viewBox .slide_form > ul > li { position: absolute; top: 0; left: 0; width: 100%; height: 100%; font-size: 5rem; font-weight: 900; color: #fff; word-break: break-all; white-space: nowrap; text-shadow: 0.2rem 0.2rem 0.2rem rgba(51, 51, 51, 0.2); box-sizing: border-box; padding: 5vw; background-repeat: no-repeat; background-position: 100% 50%; background-size: 150%; transition: all 500ms ease; }
+
+#viewBox .slide_form > ul > li > dl { width: 100%; height: 50%; padding-top: 5vw; }
+
+#viewBox .slide_form > ul > li > dl dt { opacity: 0; font-size: 5rem; text-transform: capitalize; }
+
+#viewBox .slide_form > ul > li > dl dd { opacity: 0; font-size: 1.3rem; text-shadow: none; margin: 5rem 0; }
+
+#viewBox .slide_form > ul > li > dl dd.link { text-transform: uppercase; text-decoration: underline; }
+
+#viewBox .slide_form > ul > li > dl.action dt, #viewBox .slide_form > ul > li > dl.action dd.con, #viewBox .slide_form > ul > li > dl.action dd.link { display: block; opacity: 1; transform: translateY(-30px); }
+
+#viewBox .slide_form > ul > li > dl.action dt { transition: all 500ms ease 100ms; }
+
+#viewBox .slide_form > ul > li > dl.action dd.con { transition: all 500ms ease 300ms; }
+
+#viewBox .slide_form > ul > li > dl.action dd.link { transition: all 500ms ease 500ms; }
 
 #viewBox .slide_form > ul > li:nth-child(1) { background-color: #33ffcc; /* top: 40%; */ }
 
@@ -48,6 +66,6 @@ h1 { color: #fff; }
 
 #conBox > button { width: 100px; height: 40px; background-color: #0c9; }
 
-#conBox > .bar { width: 100%; height: 30px; background-color: #fe0; background-image: linear-gradient(45deg, #fe0, #eafecd); }
+#conBox > .bar { width: 100%; height: 100px; background-color: #fe0; background-image: linear-gradient(45deg, #fe0, #eafecd); }
 
 /* paul_footBox.css */

@@ -35,13 +35,19 @@ h1 { color: #fff; }
 
 #viewBox .slide_form > ul { width: 100%; height: 100%; }
 
-#viewBox .slide_form > ul > li { position: absolute; width: 100%; height: 100%; font-size: 5rem; font-weight: 900; color: #fff; text-shadow: 0.2rem 0.2rem 0.2rem rgba(51, 51, 51, 0.2); text-transform: capitalize; }
+#viewBox .slide_form > ul > li { position: absolute; top: 0; left: 0; width: 100%; height: 100%; font-size: 5rem; font-weight: 900; color: #fff; text-shadow: 0.2rem 0.2rem 0.2rem rgba(51, 51, 51, 0.2); text-transform: capitalize; }
 
-#viewBox .slide_form > ul > li:nth-child(1) { background-color: #33ffcc; top: 40%; }
+#viewBox .slide_form > ul > li:nth-child(1) { background-color: #33ffcc; /* top: 40%; */ }
 
-#viewBox .slide_form > ul > li:nth-child(2) { background-color: #66ffd9; top: 20%; }
+#viewBox .slide_form > ul > li:nth-child(2) { background-color: #66ffd9; /* top: 20%; */ }
 
-#viewBox .slide_form > ul > li:nth-child(3) { background-color: #99ffe6; top: 0%; }
+#viewBox .slide_form > ul > li:nth-child(3) { background-color: #99ffe6; /* top: 0%; */ }
 
 /* paul_conBox.css */
+#conBox { width: 100%; height: 100%; background-color: rgba(204, 204, 204, 0.8); }
+
+#conBox > button { width: 100px; height: 40px; background-color: #0c9; }
+
+#conBox > .bar { width: 100%; height: 30px; background-color: #fe0; background-image: linear-gradient(45deg, #fe0, #eafecd); }
+
 /* paul_footBox.css */

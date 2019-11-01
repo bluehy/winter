@@ -107,8 +107,8 @@ indiBtn.on('click',function(e){
 
    slideThis.css({'zIndex':liLen + 2, 'width':0, /* 'overflow':'hidden', */'padding':0});             // 선택된 슬라이드를 강제적으로 위쪽, 크기를 0으로,
       slideThis.css({'display':'block', 'padding':'5vw 0'});                        // 일단 나타나게 한 후에,(패딩값 조절)
-         slideThis.stop().animate({'width':100 + '%','paddingLeft':'5vw'},500, 'easeOutCubic' ,function(){     // 크기를 늘리면서 등장, 
-                                                                                    // + (안에 내용물도 등장한 후에 나타나게 하는 것도 방법)
+         slideThis.stop().animate({'width':100 + '%','paddingLeft':'5vw'},1000, 'easeOutCubic' ,function() {     // 크기를 늘리면서 등장, 
+                                                                                    // + (안에 내용물도 등장한 후에 나타나게 하는 것도 방법)   
             slideThis.siblings().hide();                                            // 다른 내용들을 지우고,
             slideZindexSet();                                                       // zIndex를 다시 초기화
             

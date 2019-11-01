@@ -9,6 +9,12 @@
 
 #wrap {width: 100%; height: 100%; background-color: $sample;}
 
+#conBox2 {width: 100%; height:100%; background-color: lighten($sub3, 30%);}
+#conBox3 {width: 100%; height:100%; background-color: lighten($sub3, 20%);}
+#footBox {width: 100%; height:100%; background-color: lighten($sub3, 10%);}
+
+
+
 @import "../_temp/paul_headBox";
 @import "../_temp/paul_viewBox";
 @import "../_temp/paul_conBox";

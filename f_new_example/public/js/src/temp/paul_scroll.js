@@ -34,7 +34,7 @@
       (delta) ? scrollResult = delta : scrollResult = e.detail * -40;      // if 와 같은 의미, 연산자이기 때문에 속도가 좀더 빠름.
       (scrollResult >= 0) ? n++ : n--;                         // scrollResult숫자가 절대값이 어떻게 튀든, 음수 양수만 구분해서 횟수측정하는 느낌의 개념.
 
-      // if(e.originalEvent.wheelDelta){ //크롬
+      // if(e.originalEvent.wheelDelta){ //크롬0
       //    scrollResult = e.originalEvent.wheelDelta;
       // }else{
       //    scrollResult = e.detail * -40;      // 크롬에서는 스크롤을 내릴 때 -120이고, 파이어폭스에서는 스크롤일 내릴 때, 3이 뜨기 때문에.

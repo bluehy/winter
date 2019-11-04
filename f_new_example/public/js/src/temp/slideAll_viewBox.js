@@ -47,7 +47,7 @@
       indiLi.find('span').text(slideEach.eq(i+1).text());
       indiLi.find('span').css({display:'block', width:0, height: 0, overflow: 'hidden'});
       
-   }//   for () //  li 슬라이드 갯수만큼 생성, 내부 요소 채우기
+   };//   for () //  li 슬라이드 갯수만큼 생성, 내부 요소 채우기
 
    // 인디케이터 첫번째에 클래스 넣어두기
    const indiLi = indi.children('li');

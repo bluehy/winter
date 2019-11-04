@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* accor.css */
+
+dl {width:600px; height: auto; }
+
+dt {width:100%; height: 50px; border-bottom:1px solid #fff;background-color: #067; color: #fff; line-height: 50px; text-transform:uppercase; font-size:1.1rem; transition:all 300ms ease;}
+dt.action {background-color: #047;}
+dt i {transition:all 300ms ease;}
+dt.action i {transform:rotate(180deg);}
+
+dt > a {display: block; width:100%; height:100%; padding: 0 2rem; box-sizing: border-box;}
+dt span {float:right; position: relative; box-sizing:border-box; font-size:2.2rem; color: #fff;}
+dt span:before,dt span::before {content:" "; display:block; position:absolute; left:-2rem; top:50%; transform:translateY(-50%); width: 0; height: 1.2rem; border-left:1px solid #fff; }
+
+
+dd {width:100%; height: auto; padding:0.7rem; box-sizing:border-box;background-color: #ace;}
+

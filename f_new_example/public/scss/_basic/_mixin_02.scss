@@ -3,3 +3,18 @@
 @mixin fullBox($w:100%, $h:100%, $bg:$sub3){
    width:$w; height:$h; margin:auto; background-color: $bg;
 }// @mixin fullBox(너비,높이,배경색)  //너비 100% 높이 100%
+
+
+//  --------------------------------------------------------
+//  unit px, rem 처리
+$rootUnit : 16;
+
+@function unit($u){
+   @return $u / $rootUnit;
+}// @function(){ ... }
+
+
+@mixin conUnit($pro, $u){
+   #{$pro}:$u + px;
+   #{$pro}:unit($u) + rem;
+}

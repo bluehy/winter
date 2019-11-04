@@ -1,0 +1,5 @@
+// mixin_02.scss
+
+@mixin fullBox($w:100%, $h:100%, $bg:$sub3){
+   width:$w; height:$h; margin:auto; background-color: $bg;
+}// @mixin fullBox(너비,높이,배경색)  //너비 100% 높이 100%

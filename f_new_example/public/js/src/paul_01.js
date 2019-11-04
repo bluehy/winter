@@ -18,7 +18,7 @@
    let scriptSam = function(file){
       return body.append(`<script src="${jsUrl+ file }.js"></script>`);
       // '<script src="'+ jsUrl + file +'.js"></script>';
-   };
+   };//     let scriptSam
 
    for(let i = 0; i < file.length; i++){
       

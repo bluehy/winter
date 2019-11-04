@@ -27,7 +27,9 @@
    position: absolute; z-index: 500; left:50%; transform:translate(-50%); @include conUnit(bottom,16); width:auto; @include conUnit(height,$myRel); @include conUnit(padding,4.8); background-color: #fff; @include conUnit(border-radius,$myRel);
       >li {float:left; @include conUnit(width,$myRel); @include conUnit(height,$myRel); @include conUnit(margin-left,16); transition:all 300ms ease;
          &:first-child{@include conUnit(margin-left,0);}
-         &.action {@include conUnit(width,$myRel * 2); } //    li.action
+         &.action {@include conUnit(width,$myRel * 2);
+            > a {background-color: #fa0;}
+         } //    li.action
          >a {display:block; @include fullBox($bg:$sub5); @include conUnit(border-radius,$myRel);}// a
       }// li
 }// .indicator

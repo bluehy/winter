@@ -20,6 +20,8 @@
 
 .indicator > li.action { width: 60px; width: 3.75rem; }
 
+.indicator > li.action > a { background-color: #fa0; }
+
 .indicator > li > a { display: block; width: 100%; height: 100%; margin: auto; background-color: #0c9; border-radius: 30px; border-radius: 1.875rem; }
 
 /* 슬라이드 폼 ========================================== */

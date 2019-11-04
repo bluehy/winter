@@ -25,5 +25,13 @@
       }
    })
 
+
+   const nList = $('.new_list');
+   nList.before('<div id="news"></div>'); //   .wrap()을 사용하는 것도 방법.
+   const news = $('#news');
+   nList.appendTo(news);
+   for(let i = 0; i < 5; i++){
+      nList.append('<li>list value 0' + (i + 1) + ' 생성하기</li>');
+   }
    
 })(jQuery);

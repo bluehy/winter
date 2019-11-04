@@ -9,8 +9,20 @@
 
 // ==================================================================
 
-#wrap {@include fullBox(#acf);} //fullBox(순서만 맞는다면, $bg없이 그냥 값만 지정해줘야 함.)
+#wrap {@include fullBox($bg: transparent);} //fullBox(순서만 맞는다면, $bg없이 그냥 값만 지정해줘도 됨. ex: fullBox(90%, 90%, #acf))
 
-#viewBox {width:100%; height:100%;}
-
+#viewBox {@include fullBox($h:90%, $bg:#fcf);}
+.slide_form {@include fullBox($bg:#acf);}
+.slide_wrap {$count : 5; @include fullBox($w:100% * $count);
+   >div{float:left; width:100% / $count; height:100%;
+      $c : (#acc,#fac,#13f,#fa9, #ccc); // 배열형식
+      @for $i from 1 through $count {
+         @if ($i < 10 ) {
+            &.slide_0#{$i} {background-color: nth($c,$i);}
+         }@else{
+            &.slide_#{$i} {background-color: nth($c,$i);}
+         }
+      }//for
+   }// div
+} //.slide_wrap
 // @import "../_temp/slideAll";

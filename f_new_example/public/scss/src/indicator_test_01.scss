@@ -1,0 +1,47 @@
+// indicator_test_01.scss
+/* indicator_test_01.css */
+
+@import "../_basic/var";
+@import "../_basic/mixin";
+@import "../_basic/etc";
+
+
+@mixin hidden(){
+   display:block; width:0; height:0; overflow:hidden;
+}
+
+
+// ====================================
+
+#wrap{width:100%; height:100%;}
+#miniProduct {position:relative; width:450px; height:320px; margin:100px auto;}
+
+
+// 인디케이터
+/* 인디케이터 */
+.indicator {position: absolute; left:50%; transform:translate(-50%); bottom:0; 
+   width:150px; height:40px; 
+   >li {float:left; width: 40px; height: 40px; margin-left:15px;
+   &:nth-child(1){margin-left:0;}
+      >a{display:block; width:100%; height:100%; background-color: $grey; border-radius:40px;
+         span {@include hidden;}
+      }// 인디케이터 a
+   &.active > a {background-color: darken($grey,40%);}
+   } // 인디케이터 li
+}// .indicator 인디케이터(ul)
+
+// 슬라이드 영역
+/* 슬라이드영역 */
+.product {width: 100%; height:250px; background-color: $sub4;
+   >ul { $count : 3;
+         width: 100% * $count; height: 100%; 
+      >li{float:left; width:100% / $count; height:100%; box-sizing:border-box; padding: 20px;
+         >a{display:block; width: 100%; height: 100%; background-repeat:no-repeat; background-position: 50% 50%; background-size:contain;}
+      
+      $url:'../../img/slide_test_01/';
+      &:nth-child(1)>a{background-image: url($url + "slide_01.png");}
+      &:nth-child(2)>a{background-image: url($url + "slide_02.png");}
+      &:nth-child(3)>a{background-image: url($url + "slide_03.png");}
+      }//   li(.product)
+   }//   ul(.product)
+}// .product

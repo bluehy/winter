@@ -25,11 +25,10 @@ $url : "../img/slide_test_01/";
            
             // @mixin img($n){ 
             //    background-image: url($url + "slide_0#{$n}.png");
-            // };
-            
-            &.product_01 > a {display:block; @include image($i:'slide_01.png', $p: 50% 50%);}
-            &.product_02 > a {display:block; @include image($i:'slide_02.png', $p: 50% 50%);}
-            &.product_03 > a {display:block; @include image($i:'slide_03.png', $p: 50% 50%);}
+            // };            
+            &.product_01 > a {display:block; @include image($i:"slide_01.png", $p: 50% 50%);}
+            &.product_02 > a {display:block; @include image($i:"slide_02.png", $p: 50% 50%);}
+            &.product_03 > a {display:block; @include image($i:"slide_03.png", $p: 50% 50%);}
          }//li
          span {@include hidden;}
       }//ul

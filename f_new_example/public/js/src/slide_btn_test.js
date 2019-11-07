@@ -9,8 +9,7 @@
    let productLen = productLi.length;
 
 
-
-   for(let i=0;i <productLen;i++){
+   for(let i=0;i < productLen; i++){
       productLi.eq(i).children('a').css({'backgroundImage':'url("../img/slide_test_01/slide_0' + (i+1) + '.png")'});
    };
 
@@ -51,6 +50,8 @@ const HorizonSlide = function(){
       })
    };    // HorizonSlide();
 // ----------------------------------------------------------------------------------
+
+
 // ----------------------------------------------------------------------------------
 // 세로형 슬라이드 기능
 const VerticalSlide = function(){
@@ -89,6 +90,34 @@ const VerticalSlide = function(){
    });// btn.on('click')
    };    //VerticalSlide();
 // ----------------------------------------------------------------------------------
+
+
+// ----------------------------------------------------------------------------------
+// 간단하게 화면만 바뀌는 기능
+const BasicSlide = function(){
+   let i = 0;
+   
+   btn.on('click',function(e){
+      e.preventDefault();
+      let btnL = $(this).hasClass('next');
+      if(btnL){
+         i++;
+         if(i >= productLen){
+            i = 0;
+         }
+      }else{
+         i--;
+         if(i <= -1){
+            i = productLen-1;
+         }
+      }//버튼 뭘 눌렀지_판단
+      productUl.css({'marginLeft':-100 * i + '%'});
+   });
+};       //BasicSlide();
+
+// ----------------------------------------------------------------------------------
+
+
 // ----------------------------------------------------------------------------------
 // z-index슬라이드형  기능
 

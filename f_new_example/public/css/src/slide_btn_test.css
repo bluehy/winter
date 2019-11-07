@@ -1,6 +1,6 @@
 #miniProduct { position: relative; width: 500px; height: 400px; margin: 10rem auto; }
 
-.btn { width: 150px; height: 70px; position: absolute; bottom: 0; right: 0; }
+.btn { width: 150px; height: 70px; position: absolute; bottom: 0; right: 0; z-index: 1000; }
 
 .btn > button { float: left; width: 70px; height: 70px; font-size: 3rem; background-color: transparent; color: #0c9; }
 
@@ -10,7 +10,7 @@
 
 .btn > button.action { color: #f06; }
 
-.product { width: 100%; height: 300px; background-color: #0c9; }
+.product { width: 100%; height: 300px; background-color: #0c9; overflow: hidden; }
 
 .product > ul { width: 300%; height: 100%; }
 

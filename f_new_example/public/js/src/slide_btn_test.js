@@ -42,7 +42,7 @@ const HorizonSlide = function(){
          }else{//이전버튼클릭시
             i--;
          }//버튼 클릭
-         productUl.animate({'left': -100 * i + '%'},function(){
+         productUl.stop().animate({'left': -100 * i + '%'},function(){
             if(i <= -1){
                i = productLen - 2;
                productUl.css({'left':-100 * i + '%'});
@@ -54,15 +54,45 @@ const HorizonSlide = function(){
 // ----------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------
 // 세로형 슬라이드 기능
-productLi.eq(-1).clone().prependTo(productUl);
-productLi = productUl.find('li');
-productLen = productLi.length;
-let productH = product.outerHeight();
-// console.log(productH);
+const VerticalSlide = function(){
+   productLi.eq(-1).clone().prependTo(productUl);
+   productLi = productUl.find('li');
+   productLen = productLi.length;
+   let productH = product.outerHeight();
+   // console.log(productH);
 
-productUl.css({'width':'100%', 'height':100 * productLen + '%', 'transform': `translateY(${-productH}px)`,'position':'relative','left':0,'top':0});
-productLi.css({'width':'100%', 'height':productH});
+   productUl.css({'width':'100%', 'height':100 * productLen + '%', 'transform': `translateY(${-productH}px)`,'position':'relative','left':0,'top':0});
+   productLi.css({'width':'100%', 'height':productH});
 
+
+   let i = 0;
+
+   btn.on('click',function(e){
+      e.preventDefault();
+      let btnL = $(this).hasClass('next');
+      if(btnL){
+      //next버튼
+         i++;
+         if(i >= productLen-1){
+            i = 0;
+            productUl.css({'top':productH+'px'});
+         }
+      }else{
+      //prev버튼
+         i--;
+      }// if
+      productUl.stop().animate({'top':-productH * i + 'px'},function(){
+         if(i <= -1){
+            i = productLen -2;
+            productUl.css({'top':-productH * i + 'px'});
+         };
+      });
+   });// btn.on('click')
+   };
+   //VerticalSlide();
+// ----------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
+// z-index형 기능
 
 
 })(jQuery);

@@ -1,0 +1,42 @@
+#miniProduct {position:relative; width:700px; height:400px; margin:auto; background-color: $sub5;
+
+/* 버튼 영역 */
+   .mini_btn {position: absolute; top:30%; width: 100%; height: 0;
+      > button {float:right; width: 100px; height: 100px; background-color: transparent;
+         i {width: 100%; height: 100%; font-size: 5rem; color:#333; line-height: 100px;}
+         span {display:block; width:0; height:0; overflow:hidden;}
+      }// button
+      > button:nth-child(2) {float:left; }
+   }// .mini_btn
+
+
+/* 인디케이터 영역 */
+   .indicator {position:absolute; bottom : 1rem; left: 50%; transform:translate(-50%); width: auto; height: auto; padding: 0.5rem; background-color: #ccc; border-radius: 26px;
+      &:after {content:" "; display:block; width:0; height:0; clear:both;}
+      > li {float:left; width: auto; height: auto; margin-right: 0.5rem;
+         &:last-child {margin-right:0;} 
+         > a {display:block; width: 26px; height: 26px; border-radius:26px; background-color: #fff; transition:all 300ms ease;
+            > span {display:block; width:0; height:0; overflow:hidden;}
+         }// a
+         &.action a {width: 26px * 2; background-color: #fa0;}
+      }// li
+   }// .indicator
+
+
+
+/* 슬라이드 영역 */
+   .product_wrap {width: 400px; height: 300px; left:0; right:0; margin:auto; background-color: #fff; overflow:hidden;
+      .product {$count:9; position:relative;
+         width: 100% * $count; height: 100%;
+         >li {float:left; width: 100% / $count; height:100%;
+            > a {display:block; width: 100%; height:100%; }
+         }
+      }//.product
+
+   }//.product_wrap
+
+
+
+
+
+}//#miniProduct

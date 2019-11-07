@@ -1,0 +1,36 @@
+@charset "UTF-8";
+#wrap { width: 100%; height: 100%; }
+
+#miniProduct { position: relative; width: 700px; height: 400px; margin: auto; background-color: #0c9; /* 버튼 영역 */ /* 인디케이터 영역 */ /* 슬라이드 영역 */ }
+
+#miniProduct .mini_btn { position: absolute; top: 30%; width: 100%; height: 0; }
+
+#miniProduct .mini_btn > button { float: right; width: 100px; height: 100px; background-color: transparent; }
+
+#miniProduct .mini_btn > button i { width: 100%; height: 100%; font-size: 5rem; color: #333; line-height: 100px; }
+
+#miniProduct .mini_btn > button span { display: block; width: 0; height: 0; overflow: hidden; }
+
+#miniProduct .mini_btn > button:nth-child(2) { float: left; }
+
+#miniProduct .indicator { position: absolute; bottom: 1rem; left: 50%; transform: translate(-50%); width: auto; height: auto; padding: 0.5rem; background-color: #ccc; border-radius: 26px; }
+
+#miniProduct .indicator:after { content: " "; display: block; width: 0; height: 0; clear: both; }
+
+#miniProduct .indicator > li { float: left; width: auto; height: auto; margin-right: 0.5rem; }
+
+#miniProduct .indicator > li:last-child { margin-right: 0; }
+
+#miniProduct .indicator > li > a { display: block; width: 26px; height: 26px; border-radius: 26px; background-color: #fff; transition: all 300ms ease; }
+
+#miniProduct .indicator > li > a > span { display: block; width: 0; height: 0; overflow: hidden; }
+
+#miniProduct .indicator > li.action a { width: 52px; background-color: #fa0; }
+
+#miniProduct .product_wrap { width: 400px; height: 300px; left: 0; right: 0; margin: auto; background-color: #fff; overflow: hidden; }
+
+#miniProduct .product_wrap .product { position: relative; width: 900%; height: 100%; }
+
+#miniProduct .product_wrap .product > li { float: left; width: 11.11111%; height: 100%; }
+
+#miniProduct .product_wrap .product > li > a { display: block; width: 100%; height: 100%; }

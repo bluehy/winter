@@ -1,0 +1,9 @@
+// slide_test_02.scss
+
+@import "../_basic/var";
+@import "../_basic/mixin";
+@import "../_basic/etc";
+
+#wrap{width:100%; height:100%;}
+
+@import "../_temp/_slide_test_02_slide";

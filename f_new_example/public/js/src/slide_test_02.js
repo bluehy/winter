@@ -25,8 +25,8 @@
 
    // 슬라이드 베이직 세팅 ======================================
    //슬라이드 영역 이미지 추가
-   const imgUrl = "../img/slide_test_02/menu_ (";
-   const ext = ").png";
+   const imgUrl = "../img/slide_test_02/menu_0";
+   const ext = ".png";
 
    for(let i = 0; i < productLen; i++){
       productLi.eq(i).css({'backgroundImage':'url("'+ imgUrl + (i+1) + ext +'")'})

@@ -18,3 +18,7 @@ $rootUnit : 16;
    #{$pro}:$u + px;
    #{$pro}:unit($u) + rem;
 }
+
+@mixin hidden{
+   display:block; width: 0; height: 0; overflow:hidden;
+}

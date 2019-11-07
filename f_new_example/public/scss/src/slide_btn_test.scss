@@ -1,0 +1,16 @@
+// slide_btn_test.scss
+
+@import "../_basic/var";
+@import "../_basic/mixin";
+@import "../_basic/etc";
+
+// ------------------------------------------------------------
+#miniProduct {position:relative; width:500px; height: 400px; margin: 10rem auto;}
+   .btn {width: 150px; height: 70px; position:absolute; bottom: 0; right:0; 
+      >button {float:left; width:70px; height:70px; font-size: 3rem; background-color: transparent; color: $sub5;
+      &.next {float:right;}
+      span {@include hidden;}
+      }//button
+      >button.action {color: $primary;}
+   } // .btn
+   .product {width:100%; height:300px; background-color: $sample;}

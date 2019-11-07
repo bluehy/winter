@@ -18,5 +18,11 @@
    productUl.css({'width':100 * productLen + '%', 'marginLeft':'-100%'});
    productLi.css({'width':100 / productLen + '%'});
 
+// ---------------------------------------------------------------------------
+
+   
+
+
+
 
 })(jQuery);

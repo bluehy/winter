@@ -60,7 +60,7 @@ productLen = productLi.length;
 let productH = product.outerHeight();
 // console.log(productH);
 
-productUl.css({'width':'100%', 'height':100 * productLen + '%', 'transform': `translateY(${-productH}px)`});
+productUl.css({'width':'100%', 'height':100 * productLen + '%', 'transform': `translateY(${-productH}px)`,'position':'relative','left':0,'top':0});
 productLi.css({'width':'100%', 'height':productH});
 
 

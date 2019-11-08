@@ -118,7 +118,7 @@ $.fn.myIndiSlide = function(jsonList, imgList){
    $('head').find('.myStyle').append('.indicator li.action > a{background-color:#70f !important}');
 
    // indicator 클릭 / focus
-   indiLi.children('a').on('focus',function(e){
+   indiLi.children('a').on('focus click',function(e){
       e.preventDefault();
       n = $(this).parent().index();
       indiLi.eq(n).addClass('action');

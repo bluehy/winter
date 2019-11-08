@@ -1,9 +1,13 @@
 // slide_indi_and_btn.js
 
-(function(){
+
+(function($){
+// 플러그인 화
+$.fn.myIndiSlide = function(jsonList, imgList){
+
    // 1. data 불러오기
-   let url = '../data/';
-   let imgUrl = "../img/slide_test_02/";
+   let url = jsonList; //'../data/';
+   let imgUrl = imgList; //"../img/slide_test_02/";
    let rel = null;
 
    $.ajax({
@@ -19,7 +23,7 @@
 
    // ----------------------------------------------------
 
-   const slide = $('#slide_01');
+   const slide = this;
 
    // slide 영역
    slide.append('<div class="slide_wrap"><ul></ul></div>');
@@ -61,7 +65,7 @@
    indicator.parent().css({'position':'relative'});
    indicator.css({'position':'absolute','bottom':0, 'left':'50%','transform':'translateX(-50%)', width:'100%'});
    indicator.find('li').css({'display':'inline-block', marginRight:'0.5rem'});
-   indicator.find('a').css({'display':'block','width': '26px', 'height':'26px','backgroundColor':'#fff','borderRadius':'26px'});
+   indicator.find('a').css({'display':'block','width': '26px', 'height':'26px','backgroundColor':'#ccc','borderRadius':'26px'});
 
 
    // button 디자인
@@ -78,7 +82,8 @@
 
 
    // slide 영역 디자인
-   slideWrap.css({width: '100%', height:'100%'});
+   let thisH = slide.outerHeight();
+   slideWrap.css({width: '100%', height:(thisH - 50)+'px'});
    const slideUl = slideWrap.children('ul');
    // ---------------------------------------
    // li 마지막요소 복제 첨부 후 디자인 수정
@@ -87,7 +92,7 @@
    // ---------------------------------------
    slideLen++;
 
-   slideUl.css({width:100 * slideLen + '%', height: '300px', marginLeft:'-100%',position:'relative',left:0});
+   slideUl.css({width:100 * slideLen + '%', height: '100%', marginLeft:'-100%',position:'relative',left:0});
    slideLi.css({width:100 / slideLen + '%', height: '100%', float:'left',backgroundPosition:'50% 50%',backgroundRepeat:'no-repeat',backgroundSize:'contain'});
 
 
@@ -146,5 +151,9 @@
       indiLi.eq(n).addClass('action');
       indiLi.eq(n).siblings().removeClass('action');
    });
+
+
+
+}; //$.fn.myIndiSlide   
 
 })(jQuery);

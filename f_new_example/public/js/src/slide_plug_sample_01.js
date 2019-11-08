@@ -160,28 +160,24 @@ const ZIndexSlide = function(){
          }
       };//if(btnL)
       productLi.eq(i).css({'zIndex':'100'});
-      productLi.eq(i).fadeIn(function(){
-         productLi.eq(i).siblings().fadeOut(function(){
-            productLi.eq(i).css({'zIndex':0});
-         });
+      productLi.eq(i).fadeIn();
+      productLi.eq(i).siblings().fadeOut(function(){
+         productLi.eq(i).css({'zIndex':0});
       });
    });// btn.on('click')
 
 }; //ZIndexSlide();
 
 // ------------------------------------------------------------------------------------
-product.css({'overflow':'visible'});
+// product.css({'overflow':'visible'});
 // ------------------------------------------------------------------------------------
 // 함수를 객체화처리.
-const obj = {
-   t1 : '001',
-   t2 : function(){return '002'},
-   t3 : '003'
-}
-
-obj.t3;
-obj.t2();
-
+return {
+   basic    : BasicSlide,
+   fade     : ZIndexSlide,
+   horizon  : HorizonSlide,
+   vertical : VerticalSlide
+}; //함수는 return으로 끝남.
 
 // -------------------------------------------------------------------------------------
 };// $.fn.mySlide;

@@ -156,16 +156,29 @@ const ZIndexSlide = function(){
          }
       };//if(btnL)
       productLi.eq(i).css({'zIndex':'100'});
-      productLi.eq(i).fadeIn(function(){
-         productLi.eq(i).siblings().fadeOut(function(){
-            productLi.eq(i).css({'zIndex':0});
-         });
+      productLi.eq(i).fadeIn();
+      productLi.eq(i).siblings().fadeOut(function(){
+         productLi.css({'zIndex':0});
       });
    });// btn.on('click')
 
 }; //ZIndexSlide();
 
 // ------------------------------------------------------------------------------------
-product.css({'overflow':'visible'});
+// product.css({'overflow':'visible'});
+
+
+// const slideList = {
+//    basic    : BasicSlide,
+//    fade     : ZIndexSlide,
+//    horizon  : HorizonSlide,
+//    vertical : VerticalSlide
+// };
+
+// slideList.vertical();
+
+
+
+
 
 })(jQuery);

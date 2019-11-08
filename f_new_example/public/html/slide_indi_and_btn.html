@@ -56,5 +56,31 @@
             $('#slide_02').myIndiSlide(data, img);
          })(jQuery);
       </script>
+
+      <script>
+         let ww = $(window).outerWidth();
+         // 브라우저 크기에 따른 기능
+         const viewBrowser = function(ww){
+            if(ww <= 480){//모바일
+               console.log('모바일용 js 적용중');
+            }else if(ww > 480 && ww <= 1280){//태블릿
+               console.log('태블릿용 js 적용중');
+            }else if(ww > 1280 && ww <= 1600){//랩탑~pc
+               console.log('랩탑~pc용 js 적용중');
+            }else{//pc~full
+               console.log('pc~full용 js 적용중');
+            }
+         }// viewBrowser()
+         viewBrowser(ww);
+
+         // 사이즈 변경시 새로고침
+         $(window).on('resize',function(){
+            let nw = $(window).outerWidth();
+            if (ww !== nw){
+               location.reload();
+               viewBrowser(ww);
+            }
+         });////브라우저 크기가 변경되면, 새로고침 => 기준 사이즈에 따라 다른 기능.
+      </script>
    </body>
 </html>

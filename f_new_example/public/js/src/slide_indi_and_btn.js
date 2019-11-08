@@ -151,9 +151,6 @@ $.fn.myIndiSlide = function(jsonList, imgList){
       indiLi.eq(n).addClass('action');
       indiLi.eq(n).siblings().removeClass('action');
    });
-
-
-
 }; //$.fn.myIndiSlide   
 
 })(jQuery);

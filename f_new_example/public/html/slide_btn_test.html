@@ -64,27 +64,30 @@
 
       <script>
 
-         let fn = function(n){
-            let rel = n + 10;
-            return rel;
-         }
-         console.log( fn(10) );
+         // let fn = function(n){
+         //    let rel = n + 10;
+         //    return rel;
+         // }
+         // console.log( fn(10) );
          
-         let t = function(n){
-            return this.name = n;
+         let t = function(n, r){
+            this.name = n
+            this.rel = r;
             // this : window , new에 의해 생성된 변수.
          }// t function(n){} : this의 name에 n을 지정하는 함수.
          // console.log( t('xido') );
 
 
-         let beforeT = t('xido');
-         console.log(beforeT.name); // undefined(생성,복제해오지 않았기 때문에, this가 접근X, 작동X.
+         // let beforeT = t('xido','this란?');
+         // console.log(beforeT.name); 
+         // undefined(생성,복제해오지 않았기 때문에, this가 접근X, 작동X.
+
 
          // js에서 new 연산자를 붙이면, 
          // 기존의 기능을 복제처리해서 새로 생성한다는 의미.
          // == 생성자
-         let myt = new t('xido');
-         console.log( myt.name ); // 지정한 이름이 뜬다. (객체) _ jQuery에서는 해당 사항을 정의해둔 프레임워크(?)기 때문에 동작이 가능.) -> 인스턴스 처리, 인스턴스, 생성자처리.
+         let myt = new t('xido','this란?');
+         console.log( myt.name, myt.rel ); // 지정한 이름이 뜬다. (객체) _ jQuery에서는 해당 사항을 정의해둔 프레임워크(?)기 때문에 동작이 가능.) -> 인스턴스 처리, 인스턴스, 생성자처리.
 
       </script>
    </body>

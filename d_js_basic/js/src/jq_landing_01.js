@@ -22,6 +22,19 @@
    let myCon01_offset = con_01_offset - (winH / 3 * 2);
 
 
+   // con_02의 위치값 파악하기
+   let con_02_offset = con_02.offset().top;
+
+   //con_02의 위치에서 브라우저의 1/2높이만큼 전에서 구동 처리.
+   let myCon02_offset = con_02_offset - (winH / 2);
+
+
+   // con_03의 위치값 파악하기
+   let con_03_offset = con_03.offset().top;
+
+   //con_03의 위치에서 브라우저 1/2높이만큼 전에서 구동 처리.
+   let myCon03_offset = con_03_offset - (winH / 2);
+
 // -------------------------------------------------------------- 
    win.on('scroll',function(){
       let winScroll = win.scrollTop(); // 브라우저의 스크롤 위치값
@@ -46,12 +59,48 @@
 
       // conBox01기능 : 밖에서 안으로 모이게 만들기
       if(winScroll > myCon01_offset){
-         con_01.find('.narr').fadeIn(500);
+         con_01.find('.narr').children('.img_box').addClass('action');
+         con_01.find('.narr').children('.nar_box').addClass('action');
       }else{
-         con_01.find('.narr').fadeOut(500);
+         con_01.find('.narr').children('.img_box').removeClass('action');
+         con_01.find('.narr').children('.nar_box').removeClass('action');
       }
 
 
+      // conBox2기능 : 뒤집기?
+      if(winScroll > myCon02_offset){
+         setTimeout(function(){  //일정시간만큼 지난 후에 작동.
+            con_02.find('.con_02').addClass('action');
+         },200);
+      }else{
+         con_02.find('.con_02').removeClass('action');
+      }
+
+      // conBox3기능 : scroll처리시 03이미지가  왼쪽에서 오른쪽으로 움직이게 만들기.
+      let n = 0;
+      
+      if(winScroll > myCon03_offset){
+         let myLeft = winScroll - myCon03_offset;
+         
+         let myn = Math.round(myLeft % 7);
+         console.log(myn);
+         if (myn < 10){
+            n = '0' + myn;
+         }else {n = myn;}
+         con_03.find('.mv_bird').css({'left':myLeft + 'px','top':myLeft+ 'px','backgroundImage':'url("../../img/bird_foodieg/bird_' + n + '.png")'});
+         
+      }else{}
+
+
    });   // win.on('scroll')
+
+   // let r = Math.random(); // 랜덤으로 숫자가 나오게 함.
+   // let r = Math.round(4.2); // 반올림
+   // let r = Math.ceil(4.9); // 올림
+   // let r = Math.floor(4.9); // 내림
+   // let r = Math.abs(-3.2); // 절대값
+
+   // console.log(r);
+
 
 })(jQuery);

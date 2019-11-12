@@ -16,18 +16,30 @@
    console.log(myarrPlus);
 
    // ----------------------------------------------------------------
+   const htmlEl = $('html, body');
    const wrap = $('#wrap');
    const scrollEl = wrap.find('.scroll');
+   // 최초의 스크롤 위치값 설정.
+   // $('html, body').scrollTop(myScrollElTop[0]); //위치 고정
+   htmlEl.animate({scrollTop:0});
 
    let myScrollElTop = [];
-   
-   for(let i = 0; i < scrollEl.length; i++){
+   let scrollLen = scrollEl.length;
+   let timed = 700;
+   let easing = ['easeInOutBack', 'easeOutBounce'];
+
+
+   for(let i = 0; i < scrollLen; i++){
       let scrTop = scrollEl.eq(i).offset().top; // 각 .scroll의 위치값(offset().top)을 추출.
       myScrollElTop.push(scrTop);   // 추출해낸 위치값을 순서대로 배열에 추가.
    }; //for문 .scroll들의 위치값을 배열화
    console.log(myScrollElTop);
+
+
+
    // -------------------------------------------------------------------
    let myStatus = true; // ?
+   let useN = 0; 
 
    $(window).on('mousewheel DOMMouseScroll',function(e){
       // e.preventDefault();
@@ -44,23 +56,35 @@
       console.log(n);
 
       // -------------------------------------------------------------------
-      // 최초의 스크롤 위치값 설정.
-      $('html, body').scrollTop(myScrollElTop[0]); //위치 고정
+      // 스크롤하면 화면 이동
+
+      // 함수화 -------------------------
+      const ScrollMagic = function(){
+         // htmlEl.stop().animate({scrollTop:myScrollElTop[useN % scrollLen]},function(){
+         htmlEl.stop().animate({scrollTop:myScrollElTop[useN]}, timed, easing[0], function(){
+            myStatus = true;
+         });
+      };//ScrollMagic();
+      // -------------------------------
 
       if(myStatus){
          myStatus = false; // 트랙패드오류를 막기 위해 들어오자마자 붙잡아두는 기능(?)
          if(n > 0){
-            $('html, body').animate({scrollTop:myScrollElTop[1]},function(){
-               myStatus = true;
-            });
+            useN++;
+            if(useN >= scrollLen){
+               useN = scrollLen - 1;
+            }
          }else{
-            $('html, body').animate({scrollTop:myScrollElTop[0]},function(){
-               myStatus = true;
-            });
-         }
-      }
+            useN--;
+            if(useN <= -1){
+               useN = 0;
+            }
+         }  // useN값 추출.
+         console.log(useN);         
+         ScrollMagic();
+      }// if(myStatus) = true
 
 
-   });
+   });// $(window).on('mousewheel DOMMouseScroll')
 
 })(jQuery);

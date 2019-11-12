@@ -139,9 +139,6 @@
       }// if(myStatus) = true
       
    });// touchend;
-  
-   
-
 
    // });// touchstart;
 
@@ -153,6 +150,5 @@
    //    e.preventDefault();
    //    console.log(e.originalEvent.changedTouches[0].pageY);
    // })
-
 
 })(jQuery);

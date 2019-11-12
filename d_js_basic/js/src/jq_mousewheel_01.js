@@ -44,7 +44,7 @@
    // 스크롤 이동 모션 함수화 -------------------------
    const ScrollMagic = function(){
       // htmlEl.stop().animate({scrollTop:myScrollElTop[useN % scrollLen]},function(){
-      htmlEl.stop().animate({scrollTop:myScrollElTop[useN]}, timed, easing[0], function(){
+      htmlEl.stop().animate({scrollTop:myScrollElTop[useN]}, timed, easing[1], function(){
          myStatus = true;
       });
    };//ScrollMagic();
@@ -114,7 +114,8 @@
    
       // useN 
    $(window).on('touchmove',function(){
-      ScrollMagic();
+      htmlEl.animate({scrollTop:myScrollElTop[useN]},0);
+      // ScrollMagic();
    });   //touchmove
 
    $(window).on('touchend',function(e){

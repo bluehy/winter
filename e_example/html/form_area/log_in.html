@@ -11,6 +11,7 @@
       <meta name="generator" content="illustrator, photoshop, sublimetext, vscode">
 
       <link rel="stylesheet" href="../../fonts/fontawesome/css/all.min.css">
+      <!-- <link rel="stylesheet" href="../../fonts/icomoon/style.css"> -->
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean">
       <link rel="stylesheet" href="../../css/base/reset.css">
       <link rel="stylesheet" href="../../css/base/common.css">
@@ -45,24 +46,46 @@
             <ul>
                <li>
                   <a href="#">
-                     <i></i>
+                     <i class="icon-naver_icon"></i>
                      <span class="hidden">네이버 로그인</span>
                   </a>
                </li>
                <li>
                   <a href="#">
-                     <i></i>
+                     <i class="fab fa-facebook-square"></i>
                      <span class="hidden">페이스북 로그인</span>
                   </a>
                </li>
                <li>
                   <a href="#">
-                     <i></i>
+                     <i class="fab fa-google-plus-square"></i>
                      <span class="hidden">구글 로그인</span>
                   </a>
                </li>
             </ul>
-            <form action="" method=""></form>
+            <form action="#" method="post">
+               <fieldset>
+                  <legend>log in</legend>
+                  <div class="in_form">
+                     <label for="userId" class="hidden">로그인 계정을 입력하세요.</label>
+                     <input type="text" name="userId" id="userId" value="" placeholder="아이디 / 이메일">
+                     <label for="userPw" class="hidden">비밀번호를 입력하세요.</label>
+                     <input type="password" name="userPw" id="userPw" value="" placeholder="비밀번호">
+                  </div>
+                  <div class="btn_form">
+                     <!-- <button type="submit">로그인</button> -->
+                     <input type="submit" name="memberBtn" value="log in" />
+                  </div>
+               </fieldset>
+               <fieldset>
+                  <legend>회원가입 및 계정찾기</legend>
+                  <!-- <button type="submit">회원가입</button>
+                  <button type="submit">아이디/비밀번호찾기</button> -->
+                  <!-- 가져갈 정보가 없어서 a태그로 작성해도 됨. -->
+                  <a href="#">회원가입</a>
+                  <a href="#">아이디 및 비밀번호 찾기</a>
+               </fieldset>
+            </form>
          </div>
          <div class="join">
             <h2>join</h2>

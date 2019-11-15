@@ -3,11 +3,6 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="ico_search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="30px" height="30px" viewBox="-0.5 -0.5 30 30" enable-background="new -0.5 -0.5 30 30" xml:space="preserve">
-<g>
-	<g>
-		<path fill="#03CF5D" d="M29.5,24.5c0,2.75-2.25,5-5,5h-20c-2.75,0-5-2.25-5-5v-20c0-2.75,2.25-5,5-5h20c2.75,0,5,2.25,5,5V24.5z"
-			/>
-	</g>
-	<path fill="#FFFFFF" d="M17.264,23.035l-5.399-8.356v8.356H5.951V6.32h5.786l5.398,8.294V6.32h5.914v16.715H17.264z"/>
-</g>
+<path fill="#333333" d="M24.5-0.5h-20c-2.75,0-5,2.25-5,5v20c0,2.75,2.25,5,5,5h20c2.75,0,5-2.25,5-5v-20
+	C29.5,1.75,27.25-0.5,24.5-0.5z M23.049,23.035h-5.785l-5.399-8.356v8.356H5.951V6.32h5.786l5.398,8.294V6.32h5.914V23.035z"/>
 </svg>

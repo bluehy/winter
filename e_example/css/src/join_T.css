@@ -4,22 +4,22 @@
 
 
 /* joinBox */
-#joinBox {width: 460px; height: auto; min-height: 500px; margin:3rem auto; background-color: #dfdfdf;}
+#joinBox {width: 460px; height: auto; min-height: 500px; margin:3rem auto;}
 #joinBox form {width: 100%; height: auto;}
 
 
    /* 입력폼 */
    #joinBox .input_area {width: 100%; height: auto; min-height: 200px;}
    #joinBox .input_area > ul {width: 100%; height: auto;}
-   #joinBox .input_area > ul > li {width: 100%; height: auto; margin-bottom: 10px; background-color: #ccc;}
-   #joinBox .input_area > ul > li > dl {width: 100%; height: 46px; border:1px solid #777; box-sizing:border-box;}
+   #joinBox .input_area > ul > li {width: 100%; height: auto; margin-bottom: 10px; background-color: #fff;}
+   #joinBox .input_area > ul > li > dl {width: 100%; height: 46px; border:1px solid #ccc; box-sizing:border-box;}
    
-   #joinBox .input_area dt {float:left; width: 10%; height:100%; border-right: 1px solid #777; box-sizing:border-box; text-align:center;}
+   #joinBox .input_area dt {float:left; width: 10%; height:100%; border-right: 1px solid #ccc; box-sizing:border-box; text-align:center;}
    #joinBox .input_area dd {float:left; width: 90%; height: 100%;}
    
    #joinBox .input_area > ul > li > .narr {display: none; width: 100%; height: auto; min-height: 15px; background-color: #fff;}
    
-   #joinBox .input_area dt > label {display: block; width: 100%; height: 100%; font-size:1.5rem; line-height: 1.9; color: #999;}
+   #joinBox .input_area dt > label {display: block; width: 100%; height: 100%; font-size:1.5rem; line-height: 1.9; color: #ccc;}
    #joinBox .input_area dd > input {width: 100%; height: 100%; border:0; }
 
 

@@ -1,0 +1,24 @@
+/* join.css */
+#wrap {width: 100%; height: 100%; padding-top: 50px;}
+
+h1 {width: 194px; height: 46px; margin:auto; margin-bottom: 1rem; background-image: url("../../img/coupang.svg");}
+.in_form {width: 570px; height: auto; margin:auto; padding: 0 60px; margin-bottom:20px;  box-sizing:border-box;}
+
+
+.in_form >form {width: 100%; height:auto;}
+
+.in_form > form .user_form {width: 100%; height: 46px; margin-bottom: 1rem;}
+.in_form > form .user_form input {float:right;width: 90%; height: 100%; background-color: #fff; border:1px solid #ccc;}
+.in_form > form .user_form a {display: block; width: 10%; height: 100%; float:left; text-align:center; border:1px solid #ccc; border-right:0; box-sizing:border-box;}
+.in_form > form .user_form a i {color: #ccc; font-size: 1.5rem; line-height:1.9;}
+
+
+.submit_form {width: 570px; height: auto; margin:auto; margin-bottom: 3rem; padding: 0 60px; box-sizing:border-box;}
+.submit_form > input {width: 100%; height: 52px; margin-bottom: 0.5rem; background-color: #0074e9; border:0; box-shadow:0 0.1rem 0 #333; color: #fff; font-size: 1.2rem; font-weight: bold;}
+.submit_form > p {display: block; width: 100%; height: auto; font-size: 0.8rem; }
+.submit_form > p > a {text-decoration:underline}
+.submit_form > p > em {font-style:normal; font-weight: bold;}
+
+
+footer {width: 100%; height: auto; margin:auto;}
+footer > p {text-align:center; font-size: 0.75rem; text-transform:capitalize;}

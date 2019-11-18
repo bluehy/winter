@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- join_check.html -->
+<html lang="ko-KR">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="description" content="웹페이지 실습에 따른 목차 구성">
+      <meta name="keyword" content="html, css, js, web, design, 웹디자인">
+      <meta name="author" content="hy">
+      <meta name="generator" content="illustrator, photoshop, sublimetext, vscode">
+
+      <link rel="stylesheet" href="../../fonts/fontawesome/css/all.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean">
+      <link rel="stylesheet" href="../../css/base/reset.css">
+      <link rel="stylesheet" href="../../css/base/common.css">
+      <link rel="stylesheet" href="../../css/src/join_check.css">
+
+      <!--[if lte IE 9]>
+         <script src="../../ie/html5shiv/dist/html5shiv.min.js"></script>
+         <script src="../../ie/PIE/PIE.js"></script>
+         <script src="../../ie/respond/dest/respond.min.js"></script>
+      <![endif]-->
+
+      <link rel="shortcut icon" href="../../img/favicon.png" type="image/png">
+      <link rel="apple-touch-icon" href="../../img/favicon.png">
+
+      <title>회원가입 약관 동의 페이지</title>
+   </head>
+<!--  --> 
+   <body>
+  <!-- noscript -->
+      <noscript>
+         <p>현재 접속하고 있는 사이트의 기능의 일부가 원활하게 실행되고 있지 않습니다.<br/>
+         자바스크립트의 기능을 활성화해주세요.</p>
+         <p><a target="_blank" href="http://enable-javascript.com/ko/">자바스크립트 활성화 처리하기</a></p>
+      </noscript>
+
+   <!-- layout =============== -->
+   <div id="wrap">
+      <h2>회원가입 동의서 체크</h2>
+      <form action="#" method="post">
+         <!-- form_termsOfUse -->
+         <fieldset>
+            <legend>회원가입 동의 체크여부 확인</legend>
+            <div class="check all_check">
+               <p>이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택), 프로모션 안내 메일 수신(선택)에 모두 동의합니다.</p>
+            </div>
+            <div class="check required_check">
+               <dl>
+                  <dt>네이버 이용약관 동의(필수)</dt>
+                  <dd>
+                     네이버 필수 약관 내용1
+                  </dd>
+               </dl>
+               <dl>
+                  <dt>개인정보 수집 및 이용에 대한 안내(필수)</dt>
+                  <dd>
+                     네이버 필수 약관 내용2
+                  </dd>
+               </dl>
+            </div>
+            <div class="check option_check">
+               <dl>
+                  <dt>위치정보 이용약관 동의(선택)</dt>
+                  <dd>
+                     네이버 선택 약관 내용
+                  </dd>
+               </dl>
+               <p>이벤트 등 프로모션 알림 메일 수신(선택)</p>
+            </div>
+         </fieldset>
+         <!-- form_button -->
+         <fieldset>
+            <legend>동의서 확인 및 취소</legend>
+            <input type="reset" value="취소">
+            <input type="submit" value="확인">
+            <p>회사, 동아리 등 단체에서 사용할 ID가 필요하세요? <a href="#">단체 회원 가입</a></p>
+         </fieldset>
+      </form>
+   </div>
+   <!-- script ================ -->
+      <script src="../../js/base/jquery-3.4.1.min.js"></script>
+      <script src="../../js/base/jquery-ui.min.js"></script>
+      <script src="../../js/src/join_check.js"></script>
+   </body>
+</html>

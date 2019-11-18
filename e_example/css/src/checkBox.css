@@ -1,0 +1,12 @@
+/* checkBox.css */
+#headBox {width: 100%; height: 165px; padding: 3rem; box-sizing:border-box;}
+#headBox > h1 {width: 240px; height:44px; margin:auto;}
+#headBox a {display: block; width: 100%; height: 100%; background-image: url("../../img/naver.svg"); background-repeat: no-repeat; background-position: 50% 50%; background-size: cover;}
+
+#checkBox {width: 460px; height: auto; margin:auto;}
+.check_area {width: 100%; height:auto; min-height: 300px;}
+
+.confirm_area {width: 100%; height: 61px;}
+
+#footer {width: 100%; height: auto; min-height: 50px;}
+.terms {width: auto; }

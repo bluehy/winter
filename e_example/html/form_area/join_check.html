@@ -46,7 +46,7 @@
             
             <!-- all_check -->
             <div class="check all_check">
-               <input type="checkbox" id="allCheck" name="allCheck" value="회원가입약관 모두 동의">
+               <input type="checkbox" id="allCheck" class="cb_sel" name="allCheck" value="회원가입약관 모두 동의">
                <p>
                   <label for="allCheck">
                      <i class="fas fa-check-square"></i>
@@ -57,7 +57,7 @@
 
             <!-- required_check -->
             <div class="check required_check">
-               <input type="checkbox" name="cirti_01" id="req_cirti_01" value="네이버 이용약관 동의 체크"/>
+               <input type="checkbox" name="cirti_01" class="cb_sel" id="req_cirti_01" value="네이버 이용약관 동의 체크"/>
                <dl>
                   <dt><label for="req_cirti_01"><i class="fas fa-check-square"></i>네이버 이용약관 동의<strong>(필수)</strong></label></dt>
                   <dd>
@@ -66,7 +66,7 @@
                   </dd>
                </dl>
 
-               <input type="checkbox" name="cirti_02" id="req_cirti_02" value="개인정보 수집 및 이용 동의 체크" />
+               <input type="checkbox" name="cirti_02" class="cb_sel" id="req_cirti_02" value="개인정보 수집 및 이용 동의 체크" />
                <dl>
                   <dt><label for="req_cirti_02"><i class="fas fa-check-square"></i>개인정보 수집 및 이용에 대한 안내<strong>(필수)</strong></label></dt>
                   <dd>
@@ -77,7 +77,7 @@
 
             <!-- option_check -->
             <div class="check option_check">
-               <input type="checkbox" name="cirti_03" id="req_cirti_03" value="위치정보 이용 동의 체크" />
+               <input type="checkbox" name="cirti_03" class="cb_sel" id="req_cirti_03" value="위치정보 이용 동의 체크" />
                <dl>
                   <dt><label for="req_cirti_03"><i class="fas fa-check-square"></i>위치정보 이용약관 동의<em>(선택)</em></label></dt>
                   <dd>
@@ -85,10 +85,12 @@
                   </dd>
                </dl>
 
-               <input type="checkbox" name="cirti_04" id="req_cirti_04" value="이벤트 등 프로모션 알림 동의 체크" />
+               <input type="checkbox" name="cirti_04" class="cb_sel" id="req_cirti_04" value="이벤트 등 프로모션 알림 동의 체크" />
                <p><label for="req_cirti_04"><i class="fas fa-check-square"></i>이벤트 등 프로모션 알림 메일 수신<em>(선택)</em></label></p>
             </div>
          </fieldset>
+
+
          <!-- form_button -->
          <fieldset>
             <legend>동의서 확인 및 취소</legend>

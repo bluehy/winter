@@ -22,7 +22,7 @@ body {background-color: #efefef;}
 
             /* 각각 동의체크시 */
             .check input:focus+dl i,.check input:focus+p i {color: #333;}
-            .check input:checked+dl i,.check input:checked+p i {color: #08a600; font-size: 1rem;}
+            .check input:checked+dl i,.check input:checked+p i {color: #08a600;}
 
          /* ---------------------------------------------------- */
             .check > p {font-size: 1rem; font-weight: bold; word-break:keep-all; letter-spacing:-0.05rem;}

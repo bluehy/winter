@@ -43,36 +43,56 @@
          <!-- form_termsOfUse -->
          <fieldset>
             <legend>회원가입 동의 체크여부 확인</legend>
+            
+            <!-- all_check -->
             <div class="check all_check">
-               <p>이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택), 프로모션 안내 메일 수신(선택)에 모두 동의합니다.</p>
+               <input type="checkbox" id="allCheck" name="allCheck" value="회원가입약관 모두 동의">
+               <p>
+                  <label for="allCheck">
+                     <i class="fas fa-check-square"></i>
+                     이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택), 프로모션 안내 메일 수신(선택)에 모두 동의합니다.
+                  </label>
+               </p>
             </div>
+
+            <!-- required_check -->
             <div class="check required_check">
+               <input type="checkbox" name="cirti_01" id="req_cirti_01" value="네이버 이용약관 동의 체크"/>
                <dl>
-                  <dt>네이버 이용약관 동의(필수)</dt>
+                  <dt><label for="req_cirti_01"><i class="fas fa-check-square"></i>네이버 이용약관 동의<strong>(필수)</strong></label></dt>
                   <dd>
-                     네이버 필수 약관 내용1
+                     네이버 이용약관 내용
+                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque dolorem ipsum quaerat! Necessitatibus beatae natus, consequatur debitis pariatur molestiae quia atque numquam nemo. Laborum voluptas amet, commodi voluptatum ad vel!
                   </dd>
                </dl>
+
+               <input type="checkbox" name="cirti_02" id="req_cirti_02" value="개인정보 수집 및 이용 동의 체크" />
                <dl>
-                  <dt>개인정보 수집 및 이용에 대한 안내(필수)</dt>
+                  <dt><label for="req_cirti_02"><i class="fas fa-check-square"></i>개인정보 수집 및 이용에 대한 안내<strong>(필수)</strong></label></dt>
                   <dd>
-                     네이버 필수 약관 내용2
+                     개인정보 수집 및 이용에 대한 안내 내용
                   </dd>
                </dl>
             </div>
+
+            <!-- option_check -->
             <div class="check option_check">
+               <input type="checkbox" name="cirti_03" id="req_cirti_03" value="위치정보 이용 동의 체크" />
                <dl>
-                  <dt>위치정보 이용약관 동의(선택)</dt>
+                  <dt><label for="req_cirti_03"><i class="fas fa-check-square"></i>위치정보 이용약관 동의<em>(선택)</em></label></dt>
                   <dd>
-                     네이버 선택 약관 내용
+                     위치정보 이용약관 내용
                   </dd>
                </dl>
-               <p>이벤트 등 프로모션 알림 메일 수신(선택)</p>
+
+               <input type="checkbox" name="cirti_04" id="req_cirti_04" value="이벤트 등 프로모션 알림 동의 체크" />
+               <p><label for="req_cirti_04"><i class="fas fa-check-square"></i>이벤트 등 프로모션 알림 메일 수신<em>(선택)</em></label></p>
             </div>
          </fieldset>
          <!-- form_button -->
          <fieldset>
             <legend>동의서 확인 및 취소</legend>
+            
             <input type="reset" value="취소">
             <input type="submit" value="확인">
             <p>회사, 동아리 등 단체에서 사용할 ID가 필요하세요? <a href="#">단체 회원 가입</a></p>

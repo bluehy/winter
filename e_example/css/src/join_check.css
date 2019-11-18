@@ -1,25 +1,44 @@
 /* join_checl.css */
-
-#wrap{width: 460px; height: auto; margin:auto; background-color: #dfdfdf;}
+body {background-color: #efefef;}
+#wrap{width: 460px; height: auto; margin:auto;}
 
    #wrap h2 {width:100%; height: auto; margin-bottom: 1rem; text-align:center;}
    form {width: 100%; height: auto;}
    
       #wrap fieldset:first-of-type {width: 100%; height: auto; min-height:50px;}
-         .check {width:100%; height: auto; min-height: 50px; background-color: #adf; margin-bottom: 20px;}
+         .check {width:100%; height: auto; min-height: 50px; margin-bottom: 20px;}
          .check:last-of-type {margin-bottom:0;}
+            .check input {width: 0; height: 0; overflow: hidden; border:0; position: absolute; z-index: -1;}
+            .check label {cursor:pointer;}
+            .check i {font-size:1.1rem; color: #ccc; margin-right: 10px; }
 
-         .check > p {font-size: 1rem; font-weight: bold; text-decoration:underline; word-break:keep-all; letter-spacing:-0.05rem;}
+         .all_check {position: relative; padding-left:20px; box-sizing: border-box;}
+            .all_check > p {text-decoration:underline;}
+            .check.all_check i {position: absolute; top:3px; left:0; font-size:1.4rem;}
 
-         .check > dl {width: 100%; height: auto;}
-         .check > dl > dt {font-size: 1rem; font-weight: bold; text-decoration:underline;}
-         .check > dl > dd {width: 100%; height: 90px; border: 1px solid #555; box-sizing: border-box;}
+            /* 전체동의 체크시 */
+            .all_check > input:focus+p i {color:#333;}
+            .all_check > input:checked+p i {color: #08a600;}
 
+            /* 각각 동의체크시 */
+            .check input:focus+dl i,.check input:focus+p i {color: #333;}
+            .check input:checked+dl i,.check input:checked+p i {color: #08a600; font-size: 1rem;}
+
+         /* ---------------------------------------------------- */
+            .check > p {font-size: 1rem; font-weight: bold; word-break:keep-all; letter-spacing:-0.05rem;}
+
+            .check > dl {width: 100%; height: auto; margin-bottom: 20px;}
+               .check > dl > dt {font-size: 1rem; font-weight: bold;}
+
+               .check > dl > dd {width: 100%; height: 90px; border: 1px solid #555; box-sizing: border-box; padding: 10px; overflow-x : hidden; overflow-y:auto; margin: 5px 0; background-color: #fff;}
+
+            .check strong { font-size: 0.75rem; color: #08a600; font-weight: normal;}
+            .check em {font-size: 0.75rem; color: #08a600; font-weight: normal; font-style:normal;}
 
 
       /* form_button----------------------------------------------------------- */
       /* -------------------------------------------------------------------- */
-      #wrap fieldset:last-of-type {width: 100%; height: auto; min-height: 50px; margin-top: 30px; background-color: #fda;}
+      #wrap fieldset:last-of-type {width: 100%; height: auto; min-height: 50px; margin-top: 30px;}
 
          #wrap fieldset:last-of-type input {width: 220px; height: 60px; color: #fff; font-size: 1.2rem;border: 0;}
          input[type="reset"] {float:left; background-color: #555;}
@@ -28,3 +47,7 @@
             input[type="submit"]:focus {outline: 3px solid #333; font-weight: bold; text-decoration:underline; text-decoration-color: brown;}
 
          #wrap fieldset:last-of-type p {width: 100%; height: auto; clear:both; padding-top: 20px; font-size: 0.875rem; text-align:center;}
+         
+
+      /* form_input----------------------------------------------------------- */
+      /* -------------------------------------------------------------------- */

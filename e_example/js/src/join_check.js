@@ -48,6 +48,7 @@
       (idnIs) ? idN.attr('checked',true).prop('checked',true) : idN.attr('checked',false).prop('checked',false);
       // 삼항 연산자 ==> (조건) ? 참(true)일 때 수행 : 거짓(false)일 때 수행
          // ; 이 삼항연산자 중앙에 들어갈 수 X. 
+         // (조건) 부분에 !로 true/false반대로 뒤집는 것도 가능.
       
       // ----------------------------------
       for (let i = 0; i < cbSel.length; i++) {

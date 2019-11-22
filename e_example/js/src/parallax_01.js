@@ -11,8 +11,9 @@
    let p08 = $('.par_08');
 
    let par = [];
-
+   
    const vb = $('#viewBox');
+
 
    for(let i = 0; i < vb.children('div').length; i++){
       let p = '.par_0' + i;
@@ -30,7 +31,7 @@
 
    win.on('scroll',function(){
       let scroll = win.scrollTop();
-      console.log(scroll);
+      // console.log(scroll);
       // $(par[0]).css({top: -scroll/8})
       // $(par[1]).css({top: -scroll/7})
       // $(par[2]).css({top: -scroll/6})
@@ -44,11 +45,54 @@
       for(let j = 0; j < par.length; j++){
          $(par[j]).css({top: -scroll / (par.length -j)});
       }
-      
+     
    });
-   
 
-   // 하단의 이미지 여백을 해결하는 법
+// ----------------------------------------------------------
+// 내가 풀어본 이미지별 움직임..
+
+   // win.on('scroll',function(){
+      // const cb = $('#conBox');
+      // const cbUl = cb.children('ul');
+      // const cbLi = cbUl.children('li');
+      // let cbLen = cbLi.length;
+      // let cbLiScr = [];
+
+      // for (let k = 0; k < cbLen; k++){
+      //    let scroll = win.scrollTop();
+      //    let st = cbLi.eq(k).offset().top;
+      //    cbLiScr.push(st);
+      //    cbLi.eq(k).find('span').css({ transform: 'translateY(' + (scroll - cbLiScr[k]) / 15 +'px)'});
+      // }
+      // console.log(cbLiScr);
+   // }); 
+// ----------------------------------------------------------
+
+// ----------------------------------------------------------
+// 선생님이 풀어주신 이미지
+
+   const conBox = $('#conBox');
+   const conList = conBox.find('li');
+   const liOffset = [];
+
+
+   for(let i = 0; i < conList.length; i++){
+      liOffset.push(conList.eq(i).offset().top);//const로 선언된 배열에 추가하는 건 가능.
+      // liOffset[i] = conList.eq(i).offset().top;
+   };
+   console.log(liOffset);
+
    
+   win.on('scroll',function(e){
+      e.preventDefault();
+      let scroll = win.scrollTop();
+      let scRel = [];
+      for (let i = 0; i < conList.length; i++){
+         scRel[i] = liOffset[i] - scroll - (winH / 2);   // winH를 더 연산해주는 이유 : 이미지 움직임의 시작점 조절을 위해서
+         conList.eq(i).find('span').css({transform:'translateY('+ -scRel[i] / 10 +'px)'});
+      }
+      console.log(scRel[0]);
+   })
+// ----------------------------------------------------------
 
 })(jQuery);

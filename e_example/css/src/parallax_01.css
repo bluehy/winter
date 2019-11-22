@@ -14,6 +14,24 @@
    .par_08 {z-index: 8; background-image: url('../../img/parallax/parallax8.png');}
 
    /* 하단의 이미지 여백을 해결하는 법 */
-   .par_08:after,.par_08::after {position:absolute; z-index: -1; top:100%; content:" "; display: block; width: 100%; height:500%; background-color: #210002;}
+   .par_08:after,.par_08::after {position:absolute; z-index: -1; top:100%; content:" "; display: block; width: 100%; height:300%; background-color: #210002;}
 
-#conBox {width: 100%; height: 100%; background-color: #210002;}
+#conBox {width: 100%; height: auto; background-color: #fff;}
+   #conBox>h2 {width: 100%; height: 30rem; margin-bottom:2rem; background-image:linear-gradient(#210002 30%, #fff 90%); text-align:center; color:#fff;}
+   #conBox>ul {width: 80%; height: auto; margin:auto; padding: 2rem 0; border:2px solid #ccc; border-left:0; border-right:0;}
+      #conBox>ul>li {width: 100%; height: 20rem; margin-bottom:10rem; background-color: #fff; box-shadow: 0.2rem 0.2rem 0.2rem rgba(0,0,0,0.3); border-radius:0.3rem; overflow:hidden;}
+      #conBox p {float:left; width: 60%; height: 100%; box-sizing: border-box; padding: 1rem; font-size: 2rem;}
+      #conBox .img {float:left; width:40%; height: 100%; background-color: #acf;}
+      #conBox .img>span {display: block; width: 100%; height:100%; background-position: 50% 50%; background-repeat: no-repeat; background-size: cover; transition:all 300ms ease}
+      #conBox li:nth-child(2n) p {float:right;}
+
+      #conBox li:nth-child(1) span {background-image: url('../../img/parallax_02/par_01.jpg');}
+      #conBox li:nth-child(2) span {background-image: url('../../img/parallax_02/par_02.png');}
+      #conBox li:nth-child(3) span {background-image: url('../../img/parallax_02/par_03.png');}
+      #conBox li:nth-child(4) span {background-image: url('../../img/parallax_02/par_04.png');}
+      #conBox li:nth-child(5) span {background-image: url('../../img/parallax_02/par_05.png');}
+      #conBox li:nth-child(6) span {background-image: url('../../img/parallax_02/par_06.png');}
+      #conBox li:nth-child(7) span {background-image: url('../../img/parallax_02/par_07.png');}
+      #conBox li:nth-child(8) span {background-image: url('../../img/parallax_02/par_08.png');}
+      #conBox li:nth-child(9) span {background-image: url('../../img/parallax_02/par_09.png');}
+      #conBox li:nth-child(10) span {background-image: url('../../img/parallax_02/par_10.png');}

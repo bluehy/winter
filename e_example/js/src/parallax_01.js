@@ -29,16 +29,26 @@
    let winH = win.outerHeight();
 
    win.on('scroll',function(){
-      let scroll = win.scrollTop() / 4 * 3 ;
+      let scroll = win.scrollTop();
       console.log(scroll);
-      $(par[0]).css({backgroundPositionY: -scroll/8})
-      $(par[1]).css({backgroundPositionY: -scroll/7})
-      $(par[2]).css({backgroundPositionY: -scroll/6})
-      $(par[3]).css({backgroundPositionY: -scroll/5})
-      $(par[4]).css({backgroundPositionY: -scroll/4})
-      $(par[5]).css({backgroundPositionY: -scroll/3})
-      $(par[6]).css({backgroundPositionY: -scroll/2})
-      $(par[7]).css({backgroundPositionY: -scroll/1})
-      $(par[8]).css({backgroundPositionY: -scroll/0}) // 가까울수록 움직임이 크다
-   })
+      // $(par[0]).css({top: -scroll/8})
+      // $(par[1]).css({top: -scroll/7})
+      // $(par[2]).css({top: -scroll/6})
+      // $(par[3]).css({top: -scroll/5})
+      // $(par[4]).css({top: -scroll/4})
+      // $(par[5]).css({top: -scroll/3})
+      // $(par[6]).css({top: -scroll/2})
+      // $(par[7]).css({top: -scroll/1})
+      // $(par[8]).css({top: -scroll/1}) // 가까울수록 움직임이 크다
+
+      for(let j = 0; j < par.length; j++){
+         $(par[j]).css({top: -scroll / (par.length -j)});
+      }
+      
+   });
+   
+
+   // 하단의 이미지 여백을 해결하는 법
+   
+
 })(jQuery);

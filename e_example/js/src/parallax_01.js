@@ -81,7 +81,7 @@
       // liOffset[i] = conList.eq(i).offset().top;
    };
    console.log(liOffset);
-
+   
    
    win.on('scroll',function(e){
       e.preventDefault();

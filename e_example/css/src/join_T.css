@@ -24,7 +24,7 @@
 
 
    #joinBox .input_area > ul > li.error dl {border-color:#f00;}
-   #joinBox .input_area > ul > li.error .narr{display:block;}
+   #joinBox .input_area > ul > li.error .narr{display:block; color: #f00;}
    
 
    /* 버튼폼 */

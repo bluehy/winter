@@ -56,7 +56,7 @@
                            </label>
                         </dt>
                         <dd>
-                           <input type="text" name="userId" id="userId" value="" placeholder="아이디(이메일)" required="required">
+                           <input type="email" name="userId" id="userId" value="" placeholder="아이디(이메일)" required="required">
                         </dd>
                      </dl>
                      <span class="narr">이메일을 입력하세요.</span>
@@ -71,7 +71,7 @@
                            </label>
                         </dt>
                         <dd>
-                           <input type="password" name="userPw" id="userPw" value="" placeholder="비밀번호(영문 숫자 특수문자 2가지 이상 6~15자 이내)" required>
+                           <input type="password" name="userPw" id="userPw" value="" maxlength ="15" placeholder="비밀번호(영문 숫자 특수문자 2가지 이상 6~15자 이내)" required>
                         </dd>
                      </dl>
                      <span class="narr">비밀번호는 6~15자 이내로 입력하셔야 합니다.</span>
@@ -86,7 +86,7 @@
                            </label>
                         </dt>
                         <dd>
-                           <input type="password" name="userPwR" id="userPwR" value="" placeholder="비밀번호 확인" required>
+                           <input type="password" name="userPwR" id="userPwR" value="" maxlength ="15" placeholder="비밀번호 확인" required>
                         </dd>
                      </dl>
                      <span class="narr">비밀번호가 일치하지 않습니다.</span>

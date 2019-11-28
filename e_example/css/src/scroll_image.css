@@ -1,7 +1,7 @@
 /* scroll_image.css */
 
 #wrap {width: 100%; height:auto;}
-#wrap > * {min-width: 800px;}
+#wrap > * {min-width: 900px;}
 h1 {padding: 2rem; font-size:4rem; text-align:center;}
 h2 {width: 80%; height: auto; margin:auto; padding:2rem; border-top:1px solid #777; font-size:2.5rem; text-align:center;}
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- img_down.html -->
+<head>
+   <meta charset="UTF-8">
+   <title>Document</title>
+</head>
+
+<body>
+   <h1>강제로 이미지 다운받기</h1>
+   <div class="img_down"></div>
+
+   <script src="../js/base/jquery-3.4.1.min.js"></script>
+   <script>                                                                                                                            // 이미지 경로가 패턴이 있는 경우,
+      let addr = 'https://www.apple.com/105/media/us/macbook-pro-16/2019/fa0563a0-8534-4e01-a62a-081b87805fea/anim/hero/large/large_'; // 공통 경로 지정
+      const iDown = $('.img_down');
+      let j,img;
+
+      for(let i = 0; i < 123;i++){
+         if(i<10){
+            j = '000' + i;
+         }else if(i<100){
+            j = '00' + i;
+         }else if(i<1000){
+            j = '0' + i;
+         }else{
+            j = i;
+         }
+         img = addr + j + '.jpg';
+         iDown.append(`<img src="${img}" alt=".">`);
+      };
+
+      // test
+   </script>
+</body>
+</html>

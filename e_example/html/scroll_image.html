@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- scroll_image.html -->
+<html lang="ko-KR">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta name="description" content="웹페이지 실습에 따른 목차 구성">
+      <meta name="keyword" content="html, css, js, web, design, 웹디자인">
+      <meta name="author" content="hy">
+      <meta name="generator" content="illustrator, photoshop, sublimetext, vscode">
+
+      <link rel="stylesheet" href="../fonts/fontawesome/css/all.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean">
+      <link rel="stylesheet" href="../css/base/reset.css">
+      <link rel="stylesheet" href="../css/base/common.css">
+      <link rel="stylesheet" href="../css/src/scroll_image.css">
+
+      <!--[if lte IE 9]>
+         <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+         <script src="../ie/PIE/PIE.js"></script>
+         <script src="../ie/respond/dest/respond.min.js"></script>
+      <![endif]-->
+
+      <link rel="shortcut icon" href="../img/favicon.png" type="image/png">
+      <link rel="apple-touch-icon" href="../img/favicon.png">
+
+      <title>스크롤에 따른 이미지 만들기</title>
+   </head>
+<!--  --> 
+   <body>
+  <!-- noscript -->
+      <noscript>
+         <p>현재 접속하고 있는 사이트의 기능의 일부가 원활하게 실행되고 있지 않습니다.<br/>
+         자바스크립트의 기능을 활성화해주세요.</p>
+         <p><a target="_blank" href="http://enable-javascript.com/ko/">자바스크립트 활성화 처리하기</a></p>
+      </noscript>
+
+   <!-- layout =============== -->
+   <div id="wrap">
+      <h1>스크롤에 따른 이미지 만들기</h1>
+      <h2>참고 : apple 16인치 노트북 이미지</h2>
+      
+
+      <section id="viewBox">
+         <div class="title">
+            <h3>MacBook Pro</h3>
+            <p>The best for the brightest</p>
+         </div>
+         <div class="fix_img"></div>
+         <p>Designed for those who defy limits and change the world, the new MacBook Pro is by far the most powerful notebook we’ve
+         ever made. With an immersive 16-inch Retina display, superfast processors, next-generation graphics, the largest battery
+         capacity ever in a MacBook Pro, a new Magic Keyboard, and massive storage, it’s the ultimate pro notebook for the
+         ultimate user.</p>
+      </section>
+
+
+      <article id="sub_conBox">
+         <div class="title">
+            <h3>Retina Display</h3>
+            <p>A big, beautiful workspace. For doing big, beautiful work.</p>
+         </div>
+         <div class="fix_img">
+            <div class="people_view"></div>
+            <div class="product_view"></div>
+         </div>
+         <p>The new MacBook Pro features a stunning 16-inch Retina display — the largest Retina display ever in a Mac notebook. It
+         produces 500 nits of brightness for spectacular highlights and bright whites, while delivering deep blacks thanks to the
+         precise photo alignment of liquid crystal molecules. And the P3 wide color gamut enables brilliant, true-to-life images
+         and video. So no matter where you are, you’ll see your work in the best possible light.</p>
+      </article>
+
+
+      <article id="video_conBox">
+         <div class="title">
+            <h3>Graphics</h3>
+            <p>Bending reality takes bandwidth.</p>
+         </div>
+         <div class="fix_img">
+            <div class="people_view"><!-- 작가내용 --></div>
+            <div class="product_view"><!-- 영상파트 --></div>
+         </div>
+         <p>The AMD Radeon Pro 5000M series delivers the most graphics horsepower ever in a MacBook Pro. The 16-inch MacBook Pro
+         base model is over two times faster than the previous-generation base model, for seamless playback and faster rendering
+         of ultra-high-definition video. And with the optional 8GB of GDDR6 VRAM, you’ll get up to 80 percent faster performance
+         when executing tasks like color grading in DaVinci Resolve compared with the Radeon Pro Vega 20.</p>
+      </article>
+
+
+      <article id="graph_conBox">
+         <div class="title">
+            <h3>system physics</h3>
+            <p>Unity Editor / Fortnite / Rise of the Tomb Raider / Final Cut Pro X / Blackmagic DaVinci Resolve Studio</p>
+         </div>
+         <div class="physics">
+            <div class="base_model">
+               <h4>기본모델</h4>
+               <div class="now">
+                  <div class="gr"></div>
+                  <p>8-core 16-inch MacBook Pro with Radeon Pro 5500M and 4GB GDDR6</p>
+               </div>
+               <div class="before">
+                  <div class="gr"></div>
+                  <p>8-core 15-inch MacBook Pro with Radeon Pro 560X and 4GB GDDR5 (Baseline)</p>
+               </div>
+               <div class="result">
+                  <p>
+                     <strong>2.1x</strong><br/>
+                     <span>faster demo fly-through15</span>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </article>
+
+
+      <article id="os_conBox">
+         <h3>macOS catalina</h3>
+         <dl>
+            <dt>The power of Mac.<br/>Taken further.</dt>
+            <dd>Dedicated apps for music, TV, and podcasts. Smart new features like Sidecar, powerful technologies for developers, and
+            your favorite iPad apps, now on Mac.</dd>
+            <dd>
+               <a href="#">
+                  <span class="hidden">카탈리나 OS</span>
+                  더 알아보기
+               </a>
+               <i>&gt;</i>
+            </dd>
+         </dl>
+         <p>
+         
+         </p>
+      </article>
+
+   </div>
+   <!-- script ================ -->
+      <script src="../../js/base/jquery-3.4.1.min.js"></script>
+      <script src="../../js/base/jquery-ui.min.js"></script>
+      <script src="../../js/src/scroll_image.js"></script>
+   </body>
+</html>

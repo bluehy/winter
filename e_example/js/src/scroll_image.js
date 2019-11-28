@@ -31,6 +31,7 @@
    viewFix.children('img').eq(0).show();
 // ------------------------------------------------------------------------------
 // 스크롤 기능
+   let t = 0;
    win.on('scroll',function(){
       let thisS = $(this).scrollTop();
       // console.log(thisS);
@@ -42,8 +43,28 @@
       // console.log(op);
       viewBox.find('.title').css({ 'top': (-thisS / 5) + 'px', 'opacity': op});
       // ---------------------------------------------------------------------
-   
+      // 스크롤중 이미지 전환(교체)
+      let imgI = parseInt(thisS / 3000 * 122);
+      if(imgI >= 122){
+         imgI = 122;
+      }
+      viewFix.children('img').eq(imgI).siblings().hide();
+      viewFix.children('img').eq(imgI).show();
+      // -------------------------------------------------------------
+      
+      if(imgI>=122){
+         // t--;
+         // console.log(viewBox.height());
+         let myTop = viewBox.height();
+         console.log(myTop);
+         viewBox.css({position:'static'});
+         // $(window).
+      }
       
    })// win.on('scroll')
+
+
+
+
 
 })(jQuery);

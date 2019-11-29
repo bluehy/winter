@@ -13,11 +13,11 @@ h2 {width: 80%; height: auto; margin:auto; padding:2rem; border-top:1px solid #7
    .title > h3 {font-size:2rem; padding-top: 1rem;}
    .title > p {font-size: 6.5rem; font-weight:bold; line-height:0.9; letter-spacing:-0.1rem;}
 .fix_img {width: 70%; height: auto; min-height: 350px; margin:auto; margin-top:5rem; margin-bottom:5rem; background-color: #fa0;}
-.fix_img ~ p {width: 66%; height: auto; margin:auto; font-size:2.2rem; font-weight: 800; letter-spacing:-0.1rem; color: #777; line-height: 1.2;}
+.fix_img ~ p, .outer_wrap ~ p {width: 66%; height: auto; margin:auto; font-size:2.2rem; font-weight: 800; letter-spacing:-0.1rem; color: #777; line-height: 1.2;}
 
-#viewBox .title {position:relative; z-index: 200;}
-#viewBox .fix_img{position:relative;}
-#viewBox .fix_img > img{ display:none; position:absolute; bottom:0; left:0; width:100%; height: auto;}
+#viewBox .title {position:sticky; z-index: 200;}
+#viewBox .fix_img{height: 800px; position:sticky; top:50px; transform:translateY(-400px);}
+#viewBox .fix_img > img{display:none; margin:auto; width: auto; height: 100%; margin-left:50%; transform:translate(-50%);}
 
 
 

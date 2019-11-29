@@ -3,8 +3,17 @@
    const wrap = $('#wrap');
    const viewBox = wrap.children('#viewBox');
 
-   viewBox.css({'position':'fixed','top':0,'backgroundColor':'#fff'});
-   viewBox.find('.title').css({'position':'relative','top':0})
+   viewBox.find('.fix_img').wrap('<div class="outer_wrap"></div>');
+   $('.outer_wrap').css({'height':'1500px'});
+   viewBox.find('.fix_img').css({position:'sticky', top:'50px'});
+
+   let fixImgOffset = viewBox.find('.fix_img').offset().top;
+   console.log(fixImgOffset);
+
+   // viewBox.css({'position':'fixed','top':0,'backgroundColor':'#fff'});
+   // viewBox.find('.title').css({'position':'relative','top':0})
+// ------------------------------------------------------------------------
+
 
 
 // ------------------------------------------------------------------------
@@ -30,6 +39,10 @@
    viewFix.css({zIndex:50});
    viewFix.children('img').eq(0).show();
 // ------------------------------------------------------------------------------
+
+
+
+// ------------------------------------------------------------------------------
 // 스크롤 기능
    let t = 0;
    win.on('scroll',function(){
@@ -41,25 +54,43 @@
          op = 0;
       }
       // console.log(op);
-      viewBox.find('.title').css({ 'top': (-thisS / 5) + 'px', 'opacity': op});
+      viewBox.find('.title').css({ 'top': (-thisS / 2) + 'px', 'opacity': op});
       // ---------------------------------------------------------------------
-      // 스크롤중 이미지 전환(교체)
-      let imgI = parseInt(thisS / 3000 * 122);
-      if(imgI >= 122){
-         imgI = 122;
+
+      
+      
+      // ---------------------------------------------------------------------
+      // .fix_img 위치 고정인 것처럼 조금 변경하기
+      if (thisS >= fixImgOffset){
+         let i = thisS - fixImgOffset;
+         let imgI = parseInt((thisS - fixImgOffset) / 5);
+
+         // 이미지 위치 고정인것처럼 이동 후 고정
+         if(i > 400){
+            i = 400;
+         }
+         viewBox.find('.fix_img').css({transform:`translateY(${-400+i}px)`});
+         
+         // 스크롤중 이미지 전환(교체)
+         if(imgI >= 122){
+            imgI = 122;
+         }else if(imgI <0){
+            imgI = 0;
+         }
+         viewFix.children('img').eq(imgI).siblings().hide();
+         viewFix.children('img').eq(imgI).show();
       }
-      viewFix.children('img').eq(imgI).siblings().hide();
-      viewFix.children('img').eq(imgI).show();
+            
       // -------------------------------------------------------------
       
-      if(imgI>=122){
-         // t--;
-         // console.log(viewBox.height());
-         let myTop = viewBox.height();
-         console.log(myTop);
-         viewBox.css({position:'static'});
-         // $(window).
-      }
+      // if(imgI>=122){
+      //    // t--;
+      //    // console.log(viewBox.height());
+      //    let myTop = viewBox.height();
+      //    console.log(myTop);
+      //    viewBox.css({position:'static'});
+      //    // $(window).
+      // }
       
    })// win.on('scroll')
 

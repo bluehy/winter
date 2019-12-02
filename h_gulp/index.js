@@ -1,0 +1,1 @@
+console.log('node를 활용하여 결과보기');

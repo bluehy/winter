@@ -76,7 +76,7 @@ const scssOption = {
 
 
 async function convertCss(){
-   gulp.src(url.source+'scss/')
+   gulp.src(url.source+'scss/**/*.scss')
       .pipe( scss(scssOption).on('error',scss.logError) )  // scss모듈 불러와서 옵션 적용(error메시지 확인)
       .pipe( gulp.dest(url.source+'css/') )                    // 컴파일 파일 경로 지정
 };                                                         // node-sass --output-style compact scss --output css

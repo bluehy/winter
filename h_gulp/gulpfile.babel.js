@@ -4,12 +4,13 @@
 
 // -------------------------------------------
 // 모듈 불러오기
-import gulp       from "gulp";
-import corejs     from "core-js";   //
-import mkdir      from "mk-dirs";   // 폴더 생성
-import writeFile  from "write";     // 
-import scss       from "gulp-sass"; //scss 사용
-
+import gulp       from "gulp";         // gulp 호출
+import corejs     from "core-js";      // 
+import mkdir      from "mk-dirs";      // 폴더 생성
+import writeFile  from "write";        // 파일 삽입 및 내용 
+import scss       from "gulp-sass";    // scss 사용
+import sync       from "browser-sync"  // 브라우저 싱크 호출
+const browserSync = sync.create();     // 실제 사용할 browser-sync
 
 // -------------------------------------------
 //기본 폴더위치 설정
@@ -74,26 +75,47 @@ const scssOption = {
 
 };
 
-
+// 2. scss 컴파일 경로 및 옵션 수행 명령 지정
 async function convertCss(){
    gulp.src(url.source+'scss/**/*.scss')
       .pipe( scss(scssOption).on('error',scss.logError) )  // scss모듈 불러와서 옵션 적용(error메시지 확인)
       .pipe( gulp.dest(url.source+'css/') )                    // 컴파일 파일 경로 지정
+      .pipe( browserSync.reload({stream:true}) )
 };                                                         // node-sass --output-style compact scss --output css
                                                            // scss              option             경로 위치
 
 function watch(){
+   convertCss();
    gulp.watch(url.source+'scss/**/*.scss',convertCss); // 실시간 감지 기능 적용 --watch
+};
+
+
+// -------------------------------------------
+// browser-sync 서버구동 실행
+
+function server(){
+   browserSync.init({
+      server:{
+         // 기본폴더
+         baseDir: url.source
+      }
+   })
 };
 
 
 // --------------------------------------------
 // export
-// 걸프 외부에서 실행 명령어
-export const make = gulp.series(makeDir);
-export const mkfile = gulp.series(makeFile);
-const first = gulp.series(makeDir, gulp.parallel(makeFile));
+// 걸프 외부에서 실행 명령어 지정
 
-export const conScss = gulp.series(watch);
+   // 폴더 및 파일 생성
+   export const make = gulp.series(makeDir);
+   export const mkfile = gulp.series(makeFile);
+   const first = gulp.series(makeDir, gulp.parallel(makeFile));
 
-export default first;
+   // gulp-sass to css 컴파일
+   export const conScss = gulp.series(watch);
+
+   // browser-sync 서버구동 + sass to css 컴파일 + 실시간 반영
+   const gulpServer = gulp.parallel(server,conScss,watch);
+   export default gulpServer; 
+   // gulp의 디폴트 수행기능을 지정한다는 의미. = terminal에서 gulp라고 치면 지정해둔 기능을 수행함.
